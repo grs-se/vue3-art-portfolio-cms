@@ -1,6 +1,6 @@
 <template>
   <form
-    class="flex h-6 w-60 items-center rounded-3xl border border-solid border-brand-gray-3"
+    class="flex h-6 w-60 items-center justify-center rounded-3xl border border-solid border-brand-gray-3"
   >
     <font-awesome-icon :icon="['fas', 'search']" class="ml-4 mr-3" />
 
@@ -10,11 +10,20 @@
         <text-input placeholder="Location" @handle-input="updateRole" />
       </div>
     </div>
+
+    <action-button
+      text="Search"
+      type="secondary"
+      class="flex items-center rounded-r-3xl"
+    />
   </form>
 </template>
 
 <script>
+import ActionButton from "@/components/Shared/ActionButton.vue";
+import TextInput from "@/components/Shared/TextInput.vue";
 export default {
   name: "SearchForm",
+  components: { ActionButton, TextInput },
 };
 </script>
