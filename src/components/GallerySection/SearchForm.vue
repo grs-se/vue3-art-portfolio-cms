@@ -7,7 +7,7 @@
     <div class="flex h-full flex-1 flex-nowrap text-base font-light">
       <div class="relative flex h-full flex-1 items-center pr-3">
         <label for="" class="absolute left-0 -top-10">Category</label>
-        <text-input placeholder="Location" @handle-input="updateRole" />
+        <text-input @handle-input="updateRole" />
       </div>
     </div>
 
