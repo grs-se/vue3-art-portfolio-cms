@@ -12,9 +12,9 @@
               v-for="menuItem in menuItems"
               :key="menuItem"
               data-test="main-nav-list-item"
-              class="ml-9 h-full first:ml-0"
+              class="ml-9 h-full text-base first:ml-0"
             >
-              <a href="" class="5 flex h-full items-center py-2">{{
+              <a href="" class="flex h-full items-center py-2">{{
                 menuItem
               }}</a>
             </li>

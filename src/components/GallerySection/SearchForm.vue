@@ -25,5 +25,10 @@ import TextInput from "@/components/Shared/TextInput.vue";
 export default {
   name: "SearchForm",
   components: { ActionButton, TextInput },
+  methods: {
+    updateRole(payload) {
+      console.log(payload);
+    },
+  },
 };
 </script>

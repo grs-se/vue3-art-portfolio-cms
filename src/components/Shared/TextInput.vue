@@ -1,6 +1,7 @@
 <template>
   <input
     type="text"
+    :value="value"
     class="text-md h-full w-full font-normal focus:outline-none"
     :placeholder="placeholder"
     @input="handleInput"
@@ -26,15 +27,15 @@ export default {
     clearInterval(this.interval);
   },
   methods: {
-    handleInput($event) {
-      this.value = $event.target.value;
-      this.$emit("handleInput", this.value);
-    },
     changePlaceholder() {
       this.interval = setInterval(() => {
         const placeholders = ["Painting", "Winchester", "2022", "Imagination"];
         this.placeholder = nextElementInList(placeholders, this.placeholder);
-      }, 2000);
+      }, 3000);
+    },
+    handleInput($event) {
+      this.value = $event.target.value;
+      this.$emit("handleInput", this.value);
     },
   },
 };
