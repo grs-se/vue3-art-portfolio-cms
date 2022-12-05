@@ -1,6 +1,6 @@
 <template>
-	<main class="flex h-full w-full pt-16">
-		<div id="gallery-wrapper" class="w-90 mx-auto flex h-full">
+	<main id="gallery-wrapper" class="flex-auto bg-brand-gray-2 p-8">
+		<div>
 			<artwork-card
 				v-for="artwork in artworks"
 				:key="artwork._id"

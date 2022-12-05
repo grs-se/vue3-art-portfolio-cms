@@ -13,13 +13,13 @@ const routes = [
 		name: "Home",
 		component: HomeView,
 	},
+	// {
+	// 	path: "/gallery",
+	// 	name: "GalleryView",
+	// 	component: GalleryView,
+	// },
 	{
 		path: "/gallery",
-		name: "GalleryView",
-		component: GalleryView,
-	},
-	{
-		path: "/gallery/artworks/results",
 		name: "ArtworkResults",
 		component: ArtworkResultsView,
 	},

@@ -1,5 +1,6 @@
 <template>
-	<header class="w-full text-sm">
+	<header :class="['w-full', 'text-sm', headerHeightClass]">
+		>
 		<div class="fixed top-0 left-0 h-16 w-full bg-white">
 			<div
 				class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
@@ -31,22 +32,30 @@
 					<hamburger-menu />
 				</div>
 			</div>
+			<div class="ml-auto flex h-full items-center">
+				<profile-image v-if="isLoggedIn" />
+				<action-button v-else text="Sign in" @click="loginUser" />
+			</div>
+
+			<the-subnav v-if="isLoggedIn" />
 		</div>
 	</header>
 </template>
 
 <script>
+import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
 
 export default {
 	name: "MainNav",
 	components: {
+		TheSubnav,
 		HamburgerMenu,
 	},
 	data() {
 		return {
 			menuItems: [
-				{ text: "Gallery", url: "/" },
+				{ text: "Gallery", url: "/gallery" },
 				{ text: "Research", url: "/research" },
 				{ text: "Writing", url: "/" },
 				{ text: "Exhibitions", url: "/" },
@@ -54,7 +63,21 @@ export default {
 				{ text: "About", url: "/" },
 				{ text: "Contact", url: "/" },
 			],
+			isLoggedIn: false,
 		};
+	},
+	computed: {
+		headerHeightClass() {
+			return {
+				"h-16": !this.isLoggedIn,
+				"h-32": this.isLoggedIn,
+			};
+		},
+	},
+	methods: {
+		loginUser() {
+			this.isLoggedIn = true;
+		},
 	},
 };
 </script>
