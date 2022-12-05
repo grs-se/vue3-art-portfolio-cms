@@ -1,20 +1,15 @@
 <template>
-  <main-nav />
-  <image-gallery />
-  <search-form />
+	<main-nav />
+	<router-view />
 </template>
 
 <script>
 import MainNav from "@/components/Navigation/MainNav.vue";
-import ImageGallery from "@/components/GallerySection/ImageGallery.vue";
-import SearchForm from "@/components/GallerySection/SearchForm.vue";
 
 export default {
-  name: "App",
-  components: {
-    MainNav,
-    ImageGallery,
-    SearchForm,
-  },
+	name: "App",
+	components: {
+		MainNav,
+	},
 };
 </script>
