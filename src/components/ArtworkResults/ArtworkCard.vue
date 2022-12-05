@@ -1,12 +1,13 @@
 <template>
 	<figure
-		v-for="imageLink in imageLinks"
-		:key="imageLink.id"
 		class="m-2 flex h-full w-60 flex-col justify-center border border-solid p-2"
 	>
-		<img :src="imageLink" class="h-auto w-auto items-center" />
+		<cld-image
+			public-id="store/{{artworks.imageCover}}"
+			class="h-auto w-auto items-center"
+		></cld-image>
 		<figcaption class="">
-			<span>Image Card</span>
+			<span>{{ artworks.title }}</span>
 		</figcaption>
 	</figure>
 </template>
@@ -14,14 +15,16 @@
 <script>
 export default {
 	name: "ArtworkCard",
-	data() {
-		return {
-			imageLinks: [
-				"./public/images/angel-after-da-vinci.jpg",
-				"./public/images/ascending-ladder.jpg",
-				"./public/images/autumn-riverside-chalk-drawing.jpg",
-			],
-		};
+	props: {
+		artworks: {
+			type: Object,
+			required: true,
+		},
+	},
+	computed: {
+		artworkLink() {
+			return `/artworks/${this.artworks.id}`;
+		},
 	},
 };
 </script>
