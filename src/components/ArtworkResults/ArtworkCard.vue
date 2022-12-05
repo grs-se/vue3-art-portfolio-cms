@@ -2,29 +2,28 @@
 	<figure
 		class="m-2 flex h-full w-60 flex-col justify-center border border-solid p-2"
 	>
-		<cld-image
-			public-id="store/{{artworks.imageCover}}"
-			class="h-auto w-auto items-center"
-		></cld-image>
+		<img src="{{artwork.imageCover}}" class="h-auto w-auto items-center" />
 		<figcaption class="">
-			<span>{{ artworks.title }}</span>
+			<span>{{ artwork.title }}</span>
 		</figcaption>
 	</figure>
 </template>
 
 <script>
+// public-id="store/{{artworks.imageCover}}"
+
 export default {
 	name: "ArtworkCard",
 	props: {
-		artworks: {
+		artwork: {
 			type: Object,
 			required: true,
 		},
 	},
-	computed: {
-		artworkLink() {
-			return `/artworks/${this.artworks.id}`;
-		},
-	},
+	// computed: {
+	// 	artworkLink() {
+	// 		return `/artworks/${this.artworks.id}`;
+	// 	},
+	// },
 };
 </script>

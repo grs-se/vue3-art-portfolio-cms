@@ -3,7 +3,7 @@
 		<div id="gallery-wrapper" class="w-90 mx-auto flex h-full">
 			<artwork-card
 				v-for="artwork in artworks"
-				:key="artwork.id"
+				:key="artwork._id"
 				:artwork="artwork"
 			/>
 		</div>
