@@ -1,10 +1,12 @@
 <template>
-	<figure class="m-10 justify-center border border-solid p-2">
-		<img :src="imageCover" class="h-auto w-auto items-center" />
+	<figure
+		class="h-auto w-auto rounded border border-solid border-brand-gray-2 bg-white p-2 hover:shadow-gray"
+	>
+		<img :src="imageCover" class="items-center" />
 		<figcaption class="">
 			<h3>{{ artwork.title }}</h3>
-			<span>{{ artwork.medium[0] }}</span>
-			<span>{{ artwork.date }}</span>
+			<!-- <span>{{ artwork.medium }}</span> -->
+			<!-- <span>{{ artwork.date }}</span> -->
 		</figcaption>
 	</figure>
 </template>

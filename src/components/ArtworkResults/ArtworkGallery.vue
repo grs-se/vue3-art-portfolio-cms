@@ -1,12 +1,13 @@
 <template>
-	<main id="gallery-wrapper" class="flex-auto columns-3 bg-brand-gray-2 p-8">
-		<div>
-			<artwork-card
-				v-for="artwork in artworks"
-				:key="artwork._id"
-				:artwork="artwork"
-			/>
-		</div>
+	<main
+		id="gallery-wrapper"
+		class="grid w-4/5 grid-cols-3 gap-20 bg-brand-gray-2"
+	>
+		<artwork-card
+			v-for="artwork in artworks"
+			:key="artwork._id"
+			:artwork="artwork"
+		/>
 	</main>
 </template>
 
