@@ -2,7 +2,7 @@
 	<main id="gallery-wrapper" class="w-4/5 gap-20 bg-brand-gray-2">
 		<!-- <main id="gallery-wrapper" class="flex h-full w-full pt-16"> -->
 		<div
-			class="mx-auto mt-8 grid h-full w-2/3 gap-8 sm:w-5/6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+			class="mx-auto mt-8 grid sm:w-full sm:grid-cols-1 sm:gap-2 md:w-5/6 md:grid-cols-2 xl:w-5/6 xl:grid-cols-3 xl:gap-8"
 		>
 			<!-- <div class="w-90 mx-auto flex h-full"> -->
 			<artwork-card
