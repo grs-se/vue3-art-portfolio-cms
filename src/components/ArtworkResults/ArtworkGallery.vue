@@ -1,5 +1,5 @@
 <template>
-	<main id="gallery-wrapper" class="flex-auto bg-brand-gray-2 p-8">
+	<main id="gallery-wrapper" class="flex-auto columns-3 bg-brand-gray-2 p-8">
 		<div>
 			<artwork-card
 				v-for="artwork in artworks"
