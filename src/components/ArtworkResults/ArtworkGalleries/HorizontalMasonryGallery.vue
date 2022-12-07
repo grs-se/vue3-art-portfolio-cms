@@ -1,5 +1,5 @@
 <template>
-	<div class="mx-auto p-2 xl:h-80 xl:w-auto">
+	<div class="repeat">
 		<figure
 			class="flex flex-col rounded border border-solid border-brand-gray-2 hover:shadow-gray"
 		>
@@ -10,7 +10,7 @@
 				:src="imageCover"
 				class="items-center justify-center sm:max-h-60 xl:max-h-80"
 			/>
-			<figcaption class="hidden bg-white">
+			<figcaption class="bg-white">
 				<h3>{{ artwork.title }}</h3>
 				<!-- <span>{{ artwork.medium }}</span> -->
 				<!-- <span>{{ artwork.date }}</span> -->
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-	name: "ArtworkCard",
+	name: "HorizontalMasonryGallery",
 	props: {
 		artwork: {
 			type: Object,
@@ -30,8 +30,16 @@ export default {
 	},
 	data() {
 		return {
+			flexWidth: (this.artwork.width.px * 220) / this.artwork.height.px,
+			flexHeight: (this.artwork.height.px / this.artwork.width.px) * 100,
 			imageCover: "public/images/artworks/" + this.artwork.imageCover,
 		};
 	},
 };
 </script>
+
+<style scoped>
+.repeat {
+	/* width: this.flexWidth; */
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-	<header :class="['w-full', 'text-sm', headerHeightClass]">
+	<header :class="['w-full', 'text-sm', 'font-normal', headerHeightClass]">
 		>
 		<div class="fixed top-0 left-0 h-16 w-full bg-white">
 			<div
