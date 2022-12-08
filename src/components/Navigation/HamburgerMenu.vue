@@ -1,8 +1,8 @@
 <template>
-	<div class="space-y-2">
-		<div class="h-0.5 w-8 bg-gray-600"></div>
-		<div class="h-0.5 w-8 bg-gray-600"></div>
-		<div class="h-0.5 w-8 bg-gray-600"></div>
+	<div class="space-y-1">
+		<div class="h-0.5 w-5 bg-gray-600"></div>
+		<div class="h-0.5 w-5 bg-gray-600"></div>
+		<div class="h-0.5 w-5 bg-gray-600"></div>
 	</div>
 </template>
 

@@ -5,14 +5,17 @@
 			<div
 				class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
 			>
+				<div class="h-full items-center sm:flex xl:hidden">
+					<hamburger-menu />
+				</div>
 				<router-link
 					:to="{ name: 'Home' }"
-					class="flex h-full items-center text-xl"
+					class="flex h-full items-center text-xl sm:ml-4"
 					>George Rice-Smith</router-link
 				>
 
 				<nav class="ml-12 h-full">
-					<ul class="m-0 flex h-full list-none p-0">
+					<ul class="m-0 h-full list-none p-0 sm:hidden xl:flex">
 						<li
 							v-for="menuItem in menuItems"
 							:key="menuItem.text"
@@ -28,23 +31,33 @@
 					</ul>
 				</nav>
 
-				<div class="ml-auto flex h-full items-center">
-					<hamburger-menu />
-				</div>
+				<!-- <div class="ml-auto flex h-full items-center">
+					<profile-image v-if="userStore.isLoggedIn" />
+					<action-button v-else text="Sign in" @click="userStore.loginUser" />
+				</div> -->
 			</div>
 
-			<the-subnav v-if="isLoggedIn" />
+			<the-subnav />
+			<!-- <the-subnav v-if="userStore.isLoggedIn" /> -->
 		</div>
 	</header>
 </template>
 
 <script>
+import { mapStores } from "pinia";
+
+import { useUserStore } from "@/stores/user";
+
+// import ActionButton from "@/components/Shared/ActionButton.vue";
+// import ProfileImage from "@/components/Navigation/ProfileImage.vue";
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
 
 export default {
 	name: "MainNav",
 	components: {
+		// ActionButton,
+		// ProfileImage,
 		TheSubnav,
 		HamburgerMenu,
 	},
@@ -63,16 +76,12 @@ export default {
 		};
 	},
 	computed: {
+		...mapStores(useUserStore),
 		headerHeightClass() {
 			return {
-				"h-16": !this.isLoggedIn,
-				"h-32": this.isLoggedIn,
+				"h-16": !this.userStore.isLoggedIn,
+				"h-32": this.userStore.isLoggedIn,
 			};
-		},
-	},
-	methods: {
-		loginUser() {
-			this.isLoggedIn = true;
 		},
 	},
 };
