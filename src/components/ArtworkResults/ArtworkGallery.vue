@@ -1,9 +1,12 @@
 <template>
-	<main id="gallery-wrapper" class="bg-brand-gray-2 p-8">
+	<main id="gallery-wrapper" class="mx-auto w-full bg-brand-gray-2 p-8">
 		<!-- <main id="gallery-wrapper" class="flex h-full w-full pt-16"> -->
 		<div
-			class="mx-auto grid sm:w-full sm:grid-cols-1 sm:gap-2 md:w-5/6 md:grid-cols-2 xl:w-full xl:grid-cols-3 xl:gap-10"
+			class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
 		>
+			<!-- <div
+			class="xl:max mx-auto grid sm:w-full sm:grid-cols-1 sm:gap-2 md:w-5/6 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
+		> -->
 			<!-- <div
 			class="mx-auto mt-8 flex flex-row flex-wrap sm:w-full sm:grid-cols-1 sm:gap-2 md:w-5/6 md:grid-cols-2 xl:w-5/6 xl:grid-cols-3 xl:gap-8"
 		> -->
@@ -45,8 +48,6 @@ import axios from "axios";
 import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
 // import HorizontalMasonryGallery from "@/components/ArtworkResults/ArtworkGalleries/HorizontalMasonryGallery.vue";
 
-import { API_URL } from "@/config.js";
-
 export default {
 	name: "ArtworkGallery",
 	components: {
@@ -81,7 +82,8 @@ export default {
 		},
 	},
 	async mounted() {
-		const response = await axios.get(API_URL + "gallery/");
+		const baseUrl = import.meta.env.VITE_APP_API_URL;
+		const response = await axios.get(`${baseUrl}/gallery`);
 
 		this.artworks = response.data.data.artworks;
 		console.log(this.artworks);
