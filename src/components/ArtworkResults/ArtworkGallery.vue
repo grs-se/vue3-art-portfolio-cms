@@ -44,10 +44,11 @@
 </template>
 
 <script>
-// class="grid w-4/5 grid-cols-3 gap-20 bg-brand-gray-2"
-import axios from "axios";
+import { mapActions, mapState } from "pinia";
+
 import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
 // import HorizontalMasonryGallery from "@/components/ArtworkResults/ArtworkGalleries/HorizontalMasonryGallery.vue";
+import { useArtworksStore, FETCH_ARTWORKS } from "@/stores/artworks";
 
 export default {
 	name: "ArtworkGallery",
@@ -57,7 +58,6 @@ export default {
 	},
 	data() {
 		return {
-			artworks: [],
 			artworksPerPage: 24,
 		};
 	},
@@ -70,24 +70,26 @@ export default {
 			const firstPage = 1;
 			return previousPage >= firstPage ? previousPage : undefined;
 		},
-		nextPage() {
-			const nextPage = this.currentPage + 1;
-			const maxPage = this.artworks.length / this.artworksPerPage;
-			return nextPage <= maxPage ? nextPage : undefined;
-		},
-		displayedArtworks() {
-			const pageNumber = this.currentPage;
-			const firstArtworkIndex = (pageNumber - 1) * this.artworksPerPage;
-			const lastArtworkIndex = pageNumber * this.artworksPerPage;
-			return this.artworks.slice(firstArtworkIndex, lastArtworkIndex);
-		},
+		...mapState(useArtworksStore, {
+			artworks: "artworks",
+			nextPage() {
+				const nextPage = this.currentPage + 1;
+				const maxPage = this.artworks.length / this.artworksPerPage;
+				return nextPage <= maxPage ? nextPage : undefined;
+			},
+			displayedArtworks() {
+				const pageNumber = this.currentPage;
+				const firstArtworkIndex = (pageNumber - 1) * this.artworksPerPage;
+				const lastArtworkIndex = pageNumber * this.artworksPerPage;
+				return this.artworks.slice(firstArtworkIndex, lastArtworkIndex);
+			},
+		}),
 	},
 	async mounted() {
-		const baseUrl = import.meta.env.VITE_APP_API_URL;
-		const response = await axios.get(`${baseUrl}/gallery`);
-
-		this.artworks = response.data.data.artworks;
-		console.log(this.artworks);
+		this.FETCH_ARTWORKS();
+	},
+	methods: {
+		...mapActions(useArtworksStore, [FETCH_ARTWORKS]),
 	},
 };
 </script>
