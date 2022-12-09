@@ -26,6 +26,7 @@
 				<div class="flex items-center justify-center">
 					<router-link
 						v-if="previousPage"
+						role="link"
 						:to="{ name: 'ArtworkResults', query: { page: previousPage } }"
 						class="mx-3 text-sm font-semibold text-brand-blue-1"
 						>Previous</router-link
@@ -33,6 +34,7 @@
 
 					<router-link
 						v-if="nextPage"
+						role="link"
 						:to="{ name: 'ArtworkResults', query: { page: nextPage } }"
 						class="mx-3 text-sm font-semibold text-brand-blue-1"
 						>Next</router-link
@@ -56,11 +58,6 @@ export default {
 		ArtworkCard,
 		// HorizontalMasonryGallery,
 	},
-	data() {
-		return {
-			artworksPerPage: 24,
-		};
-	},
 	computed: {
 		currentPage() {
 			return Number.parseInt(this.$route.query.page || "1");
@@ -74,13 +71,13 @@ export default {
 			artworks: "artworks",
 			nextPage() {
 				const nextPage = this.currentPage + 1;
-				const maxPage = this.artworks.length / this.artworksPerPage;
+				const maxPage = Math.ceil(this.artworks.length / 24);
 				return nextPage <= maxPage ? nextPage : undefined;
 			},
 			displayedArtworks() {
 				const pageNumber = this.currentPage;
-				const firstArtworkIndex = (pageNumber - 1) * this.artworksPerPage;
-				const lastArtworkIndex = pageNumber * this.artworksPerPage;
+				const firstArtworkIndex = (pageNumber - 1) * 24;
+				const lastArtworkIndex = pageNumber * 24;
 				return this.artworks.slice(firstArtworkIndex, lastArtworkIndex);
 			},
 		}),
