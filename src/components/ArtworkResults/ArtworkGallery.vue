@@ -1,5 +1,5 @@
 <template>
-	<main id="gallery-wrapper" class="mx-auto w-full bg-brand-gray-2 p-8">
+	<main id="gallery-wrapper" class="mx-auto mt-16 w-full bg-brand-gray-2 p-8">
 		<!-- <main id="gallery-wrapper" class="flex h-full w-full pt-16"> -->
 		<div
 			data-gallery-mode="grid-cards"
