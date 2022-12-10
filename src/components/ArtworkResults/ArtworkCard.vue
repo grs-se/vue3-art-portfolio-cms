@@ -1,32 +1,37 @@
 <template>
-	<ul>
-		<li v-for="artwork in artworks" :key="artwork._id">
-			<slot
-				:image-cover="artwork.imageCover"
-				:title="artwork.title"
-				:medium="artwork.medium"
-				:dimensions="artwork.dimensions"
-				:year="artwork.year"
-			></slot>
-		</li>
-	</ul>
+	<div class="mx-auto p-2 xl:h-80 xl:w-auto">
+		<figure
+			class="flex flex-col rounded border border-solid border-brand-gray-2 hover:shadow-gray"
+		>
+			<!-- <figure
+		class="m-2 flex h-full w-60 flex-col justify-center rounded border border-solid border-brand-gray-2 bg-white p-2 hover:shadow-gray"
+	> -->
+			<img
+				:src="imageCover"
+				class="items-center justify-center sm:max-h-60 xl:max-h-80"
+			/>
+			<figcaption class="hidden bg-white">
+				<h3>{{ artwork.title }}</h3>
+				<!-- <span>{{ artwork.medium }}</span> -->
+				<!-- <span>{{ artwork.date }}</span> -->
+			</figcaption>
+		</figure>
+	</div>
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
 	name: "ArtworkCard",
+	props: {
+		artwork: {
+			type: Object,
+			required: true,
+		},
+	},
 	data() {
 		return {
-			artworks: [],
+			imageCover: "public/images/artworks/" + this.artwork.imageCover,
 		};
-	},
-	async mounted() {
-		const baseUrl = import.meta.env.VITE_APP_API_URL;
-		const url = `${baseUrl}/gallery`;
-		const response = await axios.get(url);
-		this.artworks = response.data.data.artworks;
 	},
 };
 </script>
