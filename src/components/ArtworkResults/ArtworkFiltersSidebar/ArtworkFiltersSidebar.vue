@@ -9,9 +9,7 @@
 					<action-button text="Clear Filters" type="secondary" />
 				</div>
 			</div>
-			<collapsible-accordian header="Date"
-				><p>Placeholder</p></collapsible-accordian
-			>
+			<artwork-filters-sidebar-categories />
 			<collapsible-accordian header="Medium">
 				<div class="mt-5">
 					<fieldset>
@@ -41,11 +39,23 @@
 </template>
 
 <script>
+import { mapState } from "pinia";
+
+import { useArtworksStore, UNIQUE_CATEGORIES } from "@/stores/artworks";
+
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
+import ArtworkFiltersSidebarCategories from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCategories.vue";
 
 export default {
 	name: "ArtworkFiltersSidebar",
-	components: { ActionButton, CollapsibleAccordian },
+	components: {
+		ActionButton,
+		CollapsibleAccordian,
+		ArtworkFiltersSidebarCategories,
+	},
+	computed: {
+		...mapState(useArtworksStore, [UNIQUE_CATEGORIES]),
+	},
 };
 </script>
