@@ -1,10 +1,14 @@
 import { defineStore } from "pinia";
-import filterValues from "@/utils/filterValues.js";
+import createSet from "@/utils/createSet.js";
 
 import getArtworks from "@/api/getArtworks";
 
+import { useUserStore } from "@/stores/user";
+
 export const FETCH_ARTWORKS = "FETCH_ARTWORKS";
 export const UNIQUE_CATEGORIES = "UNIQUE_CATEGORIES";
+export const FILTERED_ARTWORKS_BY_CATEGORIES =
+	"FILTERED_ARTWORKS_BY_CATEGORIES";
 
 export const useArtworksStore = defineStore("artworks", {
 	state: () => ({
@@ -18,13 +22,19 @@ export const useArtworksStore = defineStore("artworks", {
 	},
 	getters: {
 		[UNIQUE_CATEGORIES](state) {
-			return filterValues(state.artworks, "categories");
-			// const categories = [];
-			// state.artworks.forEach((artwork) => {
-			// 	categories.push(...artwork.categories);
-			// });
-			// const uniqueCategories = [...new Set(categories)];
-			// return uniqueCategories;
+			return createSet(state.artworks, "categories");
+		},
+		[FILTERED_ARTWORKS_BY_CATEGORIES](state) {
+			const userStore = useUserStore();
+
+			if (userStore.selectedCategories.length === 0) {
+				return state.artworks;
+			}
+			console.log(userStore.selectedCategories);
+
+			return state.artworks.filter((artwork) =>
+				userStore.selectedCategories.includes(artwork.categories)
+			);
 		},
 	},
 });

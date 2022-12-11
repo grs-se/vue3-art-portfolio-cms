@@ -2,7 +2,7 @@ import { createPinia, setActivePinia } from "pinia";
 import axios from "axios";
 
 import { useArtworksStore } from "@/stores/artworks";
-import { vi } from "vitest";
+import { useUserStore } from "@/stores/user";
 
 vi.mock("axios");
 
@@ -41,14 +41,51 @@ describe("getters", () => {
 		it("finds unique categories from list of artworks", () => {
 			const store = useArtworksStore();
 			store.artworks = [
-				{ categories: "Google" },
-				{ categories: "Amazon" },
-				{ categories: "Google" },
+				{ categories: ["Painting", "Studio", "Painting"] },
+				{ categories: ["Painting", "Studio", "Painting"] },
+				{ categories: ["Painting", "Studio", "Painting"] },
 			];
 
 			const result = store.UNIQUE_CATEGORIES;
+			console.log(result);
 
 			expect(result).toEqual(new Set(["Painting", "Studio"]));
+		});
+	});
+	describe("FILTERED_ARTWORKS_BY_CATEGORIES", () => {
+		it("identifies artworks that are associated with the given categories", () => {
+			const artworksStore = useArtworksStore();
+			artworksStore.artworks = [
+				{ categories: ["Painting", "Studio", "Painting"] },
+				{ categories: ["Painting", "Imagination", "Drawing"] },
+				{ categories: ["Painting", "Studio", "Painting"] },
+			];
+			const userStore = useUserStore();
+			userStore.selectedCategories = ["Painting", "Imagination"];
+
+			const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
+
+			expect(result).toEqual([{ categories: ["Painting", "Imagination"] }]);
+		});
+	});
+
+	describe("when the user has not selected any artworks", () => {
+		it("returns all artworks", () => {
+			const artworksStore = useArtworksStore();
+			artworksStore.artworks = [
+				{ categories: ["Painting", "Studio"] },
+				{ categories: ["Painting", "Studio"] },
+			];
+			const userStore = useUserStore();
+			userStore.selectedArtworks = [];
+
+			const result = artworksStore.FILTERED_ARTWORKS_BY_ARTWORKS;
+
+			expect(result).toEqual([
+				{ categories: ["Painting", "Studio"] },
+				{ categories: ["Painting", "Studio"] },
+				{ categories: ["Painting", "Studio"] },
+			]);
 		});
 	});
 });

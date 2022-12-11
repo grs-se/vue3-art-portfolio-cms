@@ -1,24 +1,16 @@
 <template>
 	<main id="gallery-wrapper" class="mx-auto mt-16 w-full bg-brand-gray-2 p-8">
-		<!-- <main id="gallery-wrapper" class="flex h-full w-full pt-16"> -->
-		<div
+		<ol
 			data-gallery-mode="grid-cards"
 			class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
 		>
-			<!-- <div
-			class="xl:max mx-auto grid sm:w-full sm:grid-cols-1 sm:gap-2 md:w-5/6 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
-		> -->
-			<!-- <div
-			class="mx-auto mt-8 flex flex-row flex-wrap sm:w-full sm:grid-cols-1 sm:gap-2 md:w-5/6 md:grid-cols-2 xl:w-5/6 xl:grid-cols-3 xl:gap-8"
-		> -->
-			<!-- <div class="w-90 mx-auto flex h-full"> -->
-			<!-- <horizontal-masonry-gallery -->
 			<artwork-card
 				v-for="artwork in displayedArtworks"
 				:key="artwork._id"
 				:artwork="artwork"
 			/>
-		</div>
+		</ol>
+
 		<div class="mx-auto mt-8">
 			<div class="flex flex-row flex-nowrap">
 				<p class="flex-grow text-sm">Page {{ currentPage }}</p>
@@ -50,7 +42,11 @@ import { mapActions, mapState } from "pinia";
 
 import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
 // import HorizontalMasonryGallery from "@/components/ArtworkResults/ArtworkGalleries/HorizontalMasonryGallery.vue";
-import { useArtworksStore, FETCH_ARTWORKS } from "@/stores/artworks";
+import {
+	useArtworksStore,
+	FETCH_ARTWORKS,
+	FILTERED_ARTWORKS_BY_CATEGORIES,
+} from "@/stores/artworks";
 
 export default {
 	name: "ArtworkGallery",
@@ -68,17 +64,22 @@ export default {
 			return previousPage >= firstPage ? previousPage : undefined;
 		},
 		...mapState(useArtworksStore, {
-			artworks: "artworks",
+			FILTERED_ARTWORKS_BY_CATEGORIES,
 			nextPage() {
 				const nextPage = this.currentPage + 1;
-				const maxPage = Math.ceil(this.artworks.length / 24);
+				const maxPage = Math.ceil(
+					this.FILTERED_ARTWORKS_BY_CATEGORIES.length / 24
+				);
 				return nextPage <= maxPage ? nextPage : undefined;
 			},
 			displayedArtworks() {
 				const pageNumber = this.currentPage;
 				const firstArtworkIndex = (pageNumber - 1) * 24;
 				const lastArtworkIndex = pageNumber * 24;
-				return this.artworks.slice(firstArtworkIndex, lastArtworkIndex);
+				return this.FILTERED_ARTWORKS_BY_CATEGORIES.slice(
+					firstArtworkIndex,
+					lastArtworkIndex
+				);
 			},
 		}),
 	},

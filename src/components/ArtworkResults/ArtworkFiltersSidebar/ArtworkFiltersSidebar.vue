@@ -39,10 +39,6 @@
 </template>
 
 <script>
-import { mapState } from "pinia";
-
-import { useArtworksStore, UNIQUE_CATEGORIES } from "@/stores/artworks";
-
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
 import ArtworkFiltersSidebarCategories from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCategories.vue";
@@ -53,9 +49,6 @@ export default {
 		ActionButton,
 		CollapsibleAccordian,
 		ArtworkFiltersSidebarCategories,
-	},
-	computed: {
-		...mapState(useArtworksStore, [UNIQUE_CATEGORIES]),
 	},
 };
 </script>

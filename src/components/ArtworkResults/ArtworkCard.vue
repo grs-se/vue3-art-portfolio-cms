@@ -7,7 +7,7 @@
 		class="m-2 flex h-full w-60 flex-col justify-center rounded border border-solid border-brand-gray-2 bg-white p-2 hover:shadow-gray"
 	> -->
 			<img
-				:src="imageCover"
+				:src="'/images/artworks/' + artwork.imageCover"
 				class="items-center justify-center sm:max-h-60 xl:max-h-80"
 			/>
 			<figcaption class="hidden bg-white">
@@ -27,11 +27,6 @@ export default {
 			type: Object,
 			required: true,
 		},
-	},
-	data() {
-		return {
-			imageCover: "public/images/artworks/" + this.artwork.imageCover,
-		};
 	},
 };
 </script>

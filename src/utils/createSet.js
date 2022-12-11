@@ -1,4 +1,4 @@
-const filterValues = (data, key) => {
+const createSet = (data, key) => {
 	const arr = [];
 
 	data.forEach((object) =>
@@ -6,7 +6,8 @@ const filterValues = (data, key) => {
 			? arr.push(object[key])
 			: arr.push(...object[key])
 	);
-	const set = [...new Set(arr)];
+	const set = new Set(arr);
+	console.log(set);
 	return set;
 };
-export default filterValues;
+export default createSet;
