@@ -24,7 +24,9 @@ describe("actions", () => {
 
 	describe("FETCH_ARTWORKS", () => {
 		it("makes API request and stores received artworks", async () => {
-			axios.get.mockResolvedValue({ data: ["Artwork 1", "Artwork 2"] });
+			axios.get.mockResolvedValue({
+				data: { data: { artworks: ["Artwork 1", "Artwork 2"] } },
+			});
 			const store = useArtworksStore();
 			await store.FETCH_ARTWORKS();
 			expect(store.artworks).toEqual(["Artwork 1", "Artwork 2"]);
@@ -42,14 +44,15 @@ describe("getters", () => {
 			const store = useArtworksStore();
 			store.artworks = [
 				{ categories: ["Painting", "Studio", "Painting"] },
-				{ categories: ["Painting", "Studio", "Painting"] },
+				{ categories: ["Painting", "Imagination", "Drawing"] },
 				{ categories: ["Painting", "Studio", "Painting"] },
 			];
 
 			const result = store.UNIQUE_CATEGORIES;
-			console.log(result);
 
-			expect(result).toEqual(new Set(["Painting", "Studio"]));
+			expect(result).toEqual(
+				new Set(["Painting", "Studio", "Imagination", "Drawing"])
+			);
 		});
 	});
 	describe("FILTERED_ARTWORKS_BY_CATEGORIES", () => {
@@ -74,17 +77,16 @@ describe("getters", () => {
 			const artworksStore = useArtworksStore();
 			artworksStore.artworks = [
 				{ categories: ["Painting", "Studio"] },
-				{ categories: ["Painting", "Studio"] },
+				{ categories: ["Observation", "Print"] },
 			];
 			const userStore = useUserStore();
 			userStore.selectedArtworks = [];
 
-			const result = artworksStore.FILTERED_ARTWORKS_BY_ARTWORKS;
+			const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
 
 			expect(result).toEqual([
 				{ categories: ["Painting", "Studio"] },
-				{ categories: ["Painting", "Studio"] },
-				{ categories: ["Painting", "Studio"] },
+				{ categories: ["Observation", "Print"] },
 			]);
 		});
 	});

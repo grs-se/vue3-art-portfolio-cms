@@ -30,7 +30,7 @@ export const useArtworksStore = defineStore("artworks", {
 			if (userStore.selectedCategories.length === 0) {
 				return state.artworks;
 			}
-			console.log(userStore.selectedCategories);
+			// console.log(userStore.selectedCategories);
 
 			return state.artworks.filter((artwork) =>
 				userStore.selectedCategories.includes(artwork.categories)
