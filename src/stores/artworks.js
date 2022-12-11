@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import filterValues from "@/utils/filterValues.js";
 
 import getArtworks from "@/api/getArtworks";
 
@@ -17,21 +18,13 @@ export const useArtworksStore = defineStore("artworks", {
 	},
 	getters: {
 		[UNIQUE_CATEGORIES](state) {
-			const categories = [];
-			state.artworks.forEach((artwork) => {
-				categories.push(...artwork.categories);
-			});
-			const uniqueCategories = [...new Set(categories)];
-			return uniqueCategories;
+			return filterValues(state.artworks, "categories");
+			// const categories = [];
+			// state.artworks.forEach((artwork) => {
+			// 	categories.push(...artwork.categories);
+			// });
+			// const uniqueCategories = [...new Set(categories)];
+			// return uniqueCategories;
 		},
-		// const uniqueCategories = new Set();
-		// state.artworks.forEach((artwork) => {
-		// 	uniqueCategories.add([artwork.categories]);
-		// 	console.log(uniqueCategories);
-		// 	return uniqueCategories;
-		// 	// return uniqueCategories;
-		// });
-		// },
-		// },
 	},
 });
