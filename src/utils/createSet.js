@@ -7,7 +7,7 @@ const createSet = (data, key) => {
 			: arr.push(...object[key])
 	);
 	const set = new Set(arr);
-	console.log(set);
+	// console.log(set);
 	return set;
 };
 export default createSet;
