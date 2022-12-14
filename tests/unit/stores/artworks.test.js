@@ -60,9 +60,9 @@ describe("getters", () => {
 		it("finds unique locations from list of artworks", () => {
 			const store = useArtworksStore();
 			store.artworks = [
-				{ locations: ["London", "Whitechapel"] },
-				{ locations: ["Paris", "France"] },
-				{ locations: ["Scotland", "Dumfries"] },
+				{ location: ["London", "Whitechapel"] },
+				{ location: ["Paris", "France"] },
+				{ location: ["Scotland", "Dumfries"] },
 			];
 
 			const result = store.UNIQUE_LOCATIONS;
@@ -80,77 +80,55 @@ describe("getters", () => {
 		});
 	});
 
-	describe("FILTERED_ARTWORKS_BY_CATEGORIES", () => {
-		describe("when the user has not selected any artworks", () => {
-			it("returns all artworks", () => {
-				const artworksStore = useArtworksStore();
-				artworksStore.artworks = [
-					{ categories: ["Painting", "Studio"] },
-					{ categories: ["Observation", "Print"] },
-				];
+	describe("INCLUDE_ARTWORK_BY_CATEGORY", () => {
+		describe("when the user has not selected any categories", () => {
+			it("includes artwork", () => {
 				const userStore = useUserStore();
-				userStore.selectedArtworks = [];
+				userStore.selectedCategories = [];
+				const store = useArtworksStore();
+				const artwork = { categories: ["Painting", "Imagination"] };
 
-				const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
+				const result = store.INCLUDE_ARTWORK_BY_CATEGORY(artwork);
 
-				expect(result).toEqual([
-					{ categories: ["Painting", "Studio"] },
-					{ categories: ["Observation", "Print"] },
-				]);
+				expect(result).toBe(true);
 			});
-		});
 
-		it("identifies artworks that are associated with the given categories", () => {
-			const artworksStore = useArtworksStore();
-			artworksStore.artworks = [
-				{ categories: ["Painting", "Studio", "Portrait"] },
-				{ categories: ["Painting", "Imagination", "Drawing"] },
-				{ categories: ["Drawing", "Studio", "Plein Air"] },
-			];
-			const userStore = useUserStore();
-			userStore.selectedCategories = ["Painting", "Imagination"];
+			it("identifies if job is associated with given categories", () => {
+				const userStore = useUserStore();
+				userStore.selectedCategories = ["Painting", "Observation"];
+				const store = useArtworksStore();
+				const artwork = { categories: ["Painting", "Imagination"] };
 
-			const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
+				const result = store.INCLUDE_ARTWORK_BY_CATEGORY(artwork);
 
-			expect(result).toEqual([
-				{ categories: ["Painting", "Studio", "Portrait"] },
-				{ categories: ["Painting", "Imagination", "Drawing"] },
-			]);
+				expect(result).toBe(true);
+			});
 		});
 	});
 
-	describe("FILTERED_ARTWORKS_BY_LOCATIONS", () => {
-		describe("when the user has not selected any artworks", () => {
-			it("returns all artworks", () => {
-				const artworksStore = useArtworksStore();
-				artworksStore.artworks = [
-					{ locations: ["Hampshire", "Alton"] },
-					{ locations: ["London", "Whitechapel"] },
-				];
+	describe("INCLUDE_ARTWORK_BY_LOCATION", () => {
+		describe("when the user has not selected any location", () => {
+			it("includes artwork", () => {
 				const userStore = useUserStore();
-				userStore.selectedCategories = [];
+				userStore.selectedLocations = [];
+				const store = useArtworksStore();
+				const artwork = { location: ["London", "Brick-Lane"] };
 
-				const result = artworksStore.FILTERED_ARTWORKS_BY_LOCATIONS;
+				const result = store.INCLUDE_ARTWORK_BY_LOCATION(artwork);
 
-				expect(result).toEqual([
-					{ locations: ["Hampshire", "Alton"] },
-					{ locations: ["London", "Whitechapel"] },
-				]);
+				expect(result).toBe(true);
 			});
-		});
 
-		it("identifies artworks that are associated with given locations", () => {
-			const artworksStore = useArtworksStore();
-			artworksStore.artworks = [
-				{ locations: ["London", "Brick-Lane"] },
-				{ locations: ["Hampshire"] },
-			];
-			const userStore = useUserStore();
-			userStore.selectedLocations = ["Hampshire"];
+			it("identifies if job is associated with given location", () => {
+				const userStore = useUserStore();
+				userStore.selectedLocations = ["Belgium"];
+				const store = useArtworksStore();
+				const artwork = { location: ["Belgium"] };
 
-			const result = artworksStore.FILTERED_ARTWORKS_BY_LOCATIONS;
+				const result = store.INCLUDE_ARTWORK_BY_LOCATION(artwork);
 
-			expect(result).toEqual([{ locations: ["Hampshire"] }]);
+				expect(result).toBe(true);
+			});
 		});
 	});
 });
