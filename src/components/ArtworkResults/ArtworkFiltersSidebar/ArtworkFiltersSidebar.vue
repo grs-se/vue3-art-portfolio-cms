@@ -10,6 +10,7 @@
 				</div>
 			</div>
 			<artwork-filters-sidebar-categories />
+			<artwork-filters-sidebar-locations />
 			<collapsible-accordian header="Medium">
 				<div class="mt-5">
 					<fieldset>
@@ -42,6 +43,7 @@
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
 import ArtworkFiltersSidebarCategories from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCategories.vue";
+import ArtworkFiltersSidebarLocations from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarLocations.vue";
 
 export default {
 	name: "ArtworkFiltersSidebar",
@@ -49,6 +51,7 @@ export default {
 		ActionButton,
 		CollapsibleAccordian,
 		ArtworkFiltersSidebarCategories,
+		ArtworkFiltersSidebarLocations,
 	},
 };
 </script>
