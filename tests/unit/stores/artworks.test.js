@@ -59,16 +59,19 @@ describe("getters", () => {
 		it("identifies artworks that are associated with the given categories", () => {
 			const artworksStore = useArtworksStore();
 			artworksStore.artworks = [
-				{ categories: ["Painting", "Studio", "Painting"] },
+				{ categories: ["Painting", "Studio", "Portrait"] },
 				{ categories: ["Painting", "Imagination", "Drawing"] },
-				{ categories: ["Painting", "Studio", "Painting"] },
+				{ categories: ["Drawing", "Studio", "Plein Air"] },
 			];
 			const userStore = useUserStore();
 			userStore.selectedCategories = ["Painting", "Imagination"];
 
 			const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
 
-			expect(result).toEqual([{ categories: ["Painting", "Imagination"] }]);
+			expect(result).toEqual([
+				{ categories: ["Painting", "Studio", "Portrait"] },
+				{ categories: ["Painting", "Imagination", "Drawing"] },
+			]);
 		});
 	});
 
