@@ -45,8 +45,7 @@ import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
 import {
 	useArtworksStore,
 	FETCH_ARTWORKS,
-	// FILTERED_ARTWORKS_BY_CATEGORIES,
-	FILTERED_ARTWORKS_BY_LOCATIONS,
+	FILTERED_ARTWORKS,
 } from "@/stores/artworks";
 
 export default {
@@ -65,19 +64,17 @@ export default {
 			return previousPage >= firstPage ? previousPage : undefined;
 		},
 		...mapState(useArtworksStore, {
-			FILTERED_ARTWORKS_BY_LOCATIONS,
+			FILTERED_ARTWORKS,
 			nextPage() {
 				const nextPage = this.currentPage + 1;
-				const maxPage = Math.ceil(
-					this.FILTERED_ARTWORKS_BY_LOCATIONS.length / 24
-				);
+				const maxPage = Math.ceil(this.FILTERED_ARTWORKS.length / 24);
 				return nextPage <= maxPage ? nextPage : undefined;
 			},
 			displayedArtworks() {
 				const pageNumber = this.currentPage;
 				const firstArtworkIndex = (pageNumber - 1) * 24;
 				const lastArtworkIndex = pageNumber * 24;
-				return this.FILTERED_ARTWORKS_BY_LOCATIONS.slice(
+				return this.FILTERED_ARTWORKS.slice(
 					firstArtworkIndex,
 					lastArtworkIndex
 				);
