@@ -7,10 +7,15 @@
 			<h2 class="my-4 w-full text-base font-light">2022-2023</h2>
 		</template>
 	</header-container>
+	<texts-artist-statement />
 </template>
 
 <script>
 import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
+import TextsArtistStatement from "@/components/TextsResults/TextsArtistStatement.vue";
 
-export default { name: "ArtistStatementView", components: { HeaderContainer } };
+export default {
+	name: "ArtistStatementView",
+	components: { HeaderContainer, TextsArtistStatement },
+};
 </script>

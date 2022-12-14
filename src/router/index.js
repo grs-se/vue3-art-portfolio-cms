@@ -29,7 +29,7 @@ const routes = [
 		component: ArtworkView,
 	},
 	{
-		path: "/texts/artist-statement",
+		path: "/text/artist-statement",
 		name: "ArtistStatement",
 		component: ArtistStatementView,
 	},

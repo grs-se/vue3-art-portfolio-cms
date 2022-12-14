@@ -68,7 +68,7 @@ export default {
 				{ text: "Research", url: "/research" },
 				{ text: "Writing", url: "/" },
 				{ text: "Exhibitions", url: "/" },
-				{ text: "Statement", url: "/texts/artist-statement" },
+				{ text: "Statement", url: "/text/artist-statement" },
 				{ text: "About", url: "/" },
 				{ text: "Contact", url: "/" },
 			],
