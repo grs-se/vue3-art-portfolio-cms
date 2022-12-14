@@ -55,7 +55,51 @@ describe("getters", () => {
 			);
 		});
 	});
+
+	describe("UNIQUE_LOCATIONS", () => {
+		it("finds unique locations from list of artworks", () => {
+			const store = useArtworksStore();
+			store.artworks = [
+				{ locations: ["London", "Whitechapel"] },
+				{ locations: ["Paris", "France"] },
+				{ locations: ["Scotland", "Dumfries"] },
+			];
+
+			const result = store.UNIQUE_LOCATIONS;
+
+			expect(result).toEqual(
+				new Set([
+					"London",
+					"Whitechapel",
+					"Paris",
+					"France",
+					"Scotland",
+					"Dumfries",
+				])
+			);
+		});
+	});
+
 	describe("FILTERED_ARTWORKS_BY_CATEGORIES", () => {
+		describe("when the user has not selected any artworks", () => {
+			it("returns all artworks", () => {
+				const artworksStore = useArtworksStore();
+				artworksStore.artworks = [
+					{ categories: ["Painting", "Studio"] },
+					{ categories: ["Observation", "Print"] },
+				];
+				const userStore = useUserStore();
+				userStore.selectedArtworks = [];
+
+				const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
+
+				expect(result).toEqual([
+					{ categories: ["Painting", "Studio"] },
+					{ categories: ["Observation", "Print"] },
+				]);
+			});
+		});
+
 		it("identifies artworks that are associated with the given categories", () => {
 			const artworksStore = useArtworksStore();
 			artworksStore.artworks = [
@@ -75,22 +119,38 @@ describe("getters", () => {
 		});
 	});
 
-	describe("when the user has not selected any artworks", () => {
-		it("returns all artworks", () => {
+	describe("FILTERED_ARTWORKS_BY_LOCATIONS", () => {
+		describe("when the user has not selected any artworks", () => {
+			it("returns all artworks", () => {
+				const artworksStore = useArtworksStore();
+				artworksStore.artworks = [
+					{ locations: ["Hampshire", "Alton"] },
+					{ locations: ["London", "Whitechapel"] },
+				];
+				const userStore = useUserStore();
+				userStore.selectedCategories = [];
+
+				const result = artworksStore.FILTERED_ARTWORKS_BY_LOCATIONS;
+
+				expect(result).toEqual([
+					{ locations: ["Hampshire", "Alton"] },
+					{ locations: ["London", "Whitechapel"] },
+				]);
+			});
+		});
+
+		it("identifies artworks that are associated with given locations", () => {
 			const artworksStore = useArtworksStore();
 			artworksStore.artworks = [
-				{ categories: ["Painting", "Studio"] },
-				{ categories: ["Observation", "Print"] },
+				{ locations: ["London", "Brick-Lane"] },
+				{ locations: ["Hampshire"] },
 			];
 			const userStore = useUserStore();
-			userStore.selectedArtworks = [];
+			userStore.selectedLocations = ["Hampshire"];
 
-			const result = artworksStore.FILTERED_ARTWORKS_BY_CATEGORIES;
+			const result = artworksStore.FILTERED_ARTWORKS_BY_LOCATIONS;
 
-			expect(result).toEqual([
-				{ categories: ["Painting", "Studio"] },
-				{ categories: ["Observation", "Print"] },
-			]);
+			expect(result).toEqual([{ locations: ["Hampshire"] }]);
 		});
 	});
 });
