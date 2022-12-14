@@ -49,6 +49,7 @@ export default {
 		...mapActions(useUserStore, [ADD_SELECTED_LOCATIONS]),
 		selectLocation() {
 			this.ADD_SELECTED_LOCATIONS(this.selectedLocations);
+			this.$router.push({ name: "ArtworkResults" });
 		},
 	},
 };

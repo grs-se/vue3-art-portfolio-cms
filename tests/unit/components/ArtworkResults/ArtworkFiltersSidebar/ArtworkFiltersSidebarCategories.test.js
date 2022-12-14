@@ -11,9 +11,13 @@ describe("ArtworkFiltersSidebarCategories", () => {
 		const pinia = createTestingPinia();
 		const artworksStore = useArtworksStore();
 		const userStore = useUserStore();
+		const $router = { push: vi.fn() };
 
 		render(ArtworkFiltersSidebarCategories, {
 			global: {
+				mocks: {
+					$router,
+				},
 				plugins: [pinia],
 				stubs: {
 					FontAwesomeIcon: true,
@@ -21,7 +25,7 @@ describe("ArtworkFiltersSidebarCategories", () => {
 			},
 		});
 
-		return { artworksStore, userStore };
+		return { artworksStore, userStore, $router };
 	};
 
 	it("renders unique list of categories from artworks", async () => {
@@ -36,20 +40,38 @@ describe("ArtworkFiltersSidebarCategories", () => {
 		expect(categories).toEqual(["London", "Whitechapel"]);
 	});
 
-	it("communicates that user has selected checkbox for categories", async () => {
-		const { artworksStore, userStore } = renderArtworkFilterSidebarCategories();
-		artworksStore.UNIQUE_CATEGORIES = new Set(["Painting", "Imagination"]);
+	describe("when user clicks checkbox", () => {
+		it("communicates that user has selected checkbox for categories", async () => {
+			const { artworksStore, userStore } =
+				renderArtworkFilterSidebarCategories();
+			artworksStore.UNIQUE_CATEGORIES = new Set(["Painting", "Imagination"]);
 
-		const button = screen.getByRole("button", { name: /categories/i });
-		await userEvent.click(button);
+			const button = screen.getByRole("button", { name: /categories/i });
+			await userEvent.click(button);
 
-		const checkbox = screen.getByRole("checkbox", {
-			name: /painting/i,
+			const categoriesCheckbox = screen.getByRole("checkbox", {
+				name: /painting/i,
+			});
+			await userEvent.click(categoriesCheckbox);
+
+			expect(userStore.ADD_SELECTED_CATEGORIES).toHaveBeenCalledWith([
+				"Painting",
+			]);
 		});
-		await userEvent.click(checkbox);
 
-		expect(userStore.ADD_SELECTED_CATEGORIES).toHaveBeenCalledWith([
-			"Painting",
-		]);
+		it("navigates user to artwork results page to see fresh batch of filtered artworks", async () => {
+			const { artworksStore, $router } = renderArtworkFilterSidebarCategories();
+			artworksStore.UNIQUE_CATEGORIES = new Set(["Painting", "Imagination"]);
+
+			const button = screen.getByRole("button", { name: /categories/i });
+			await userEvent.click(button);
+
+			const categoriesCheckbox = screen.getByRole("checkbox", {
+				name: /painting/i,
+			});
+			await userEvent.click(categoriesCheckbox);
+
+			expect($router.push).toHaveBeenCalledWith({ name: "ArtworkResults" });
+		});
 	});
 });

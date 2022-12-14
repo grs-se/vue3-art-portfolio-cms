@@ -11,9 +11,13 @@ describe("ArtworkFiltersSidebarLocations", () => {
 		const pinia = createTestingPinia();
 		const artworksStore = useArtworksStore();
 		const userStore = useUserStore();
+		const $router = { push: vi.fn() };
 
 		render(ArtworkFiltersSidebarLocations, {
 			global: {
+				mocks: {
+					$router,
+				},
 				plugins: [pinia],
 				stubs: {
 					FontAwesomeIcon: true,
@@ -21,7 +25,7 @@ describe("ArtworkFiltersSidebarLocations", () => {
 			},
 		});
 
-		return { artworksStore, userStore };
+		return { artworksStore, userStore, $router };
 	};
 
 	it("renders unique list of locations from artworks", async () => {
@@ -51,6 +55,20 @@ describe("ArtworkFiltersSidebarLocations", () => {
 			await userEvent.click(locationsCheckbox);
 
 			expect(userStore.ADD_SELECTED_LOCATIONS).toHaveBeenCalledWith(["London"]);
+		});
+		it("navigates user to artwork results page to see fresh batch of filtered artworks", async () => {
+			const { artworksStore, $router } = renderArtworkFilterSidebarLocations();
+			artworksStore.UNIQUE_LOCATIONS = new Set(["London", "Brick-Lane"]);
+
+			const button = screen.getByRole("button", { name: /location/i });
+			await userEvent.click(button);
+
+			const locationsCheckbox = screen.getByRole("checkbox", {
+				name: /london/i,
+			});
+			await userEvent.click(locationsCheckbox);
+
+			expect($router.push).toHaveBeenCalledWith({ name: "ArtworkResults" });
 		});
 	});
 });
