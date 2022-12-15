@@ -1,6 +1,10 @@
 <template>
 	<ul>
-		<li v-for="artwork in FILTERED_ARTWORKS" :key="artwork._id">
+		<li
+			v-for="artwork in FILTERED_ARTWORKS"
+			:key="artwork._id"
+			@hover="displayModalOnHover"
+		>
 			<slot
 				:image-cover="artwork.imageCover"
 				:title="artwork.title"
@@ -14,6 +18,7 @@
 
 <script>
 import { mapActions, mapState } from "pinia";
+import ArtworkCardHoverModal from "@/components/ArtworkResults/ArtworkCardHoverModal.vue";
 
 import {
 	useArtworksStore,
@@ -23,6 +28,7 @@ import {
 
 export default {
 	name: "ArtworkCard",
+	components: { ArtworkCardHoverModal },
 	computed: {
 		...mapState(useArtworksStore, {
 			FILTERED_ARTWORKS,
@@ -33,6 +39,7 @@ export default {
 	},
 	methods: {
 		...mapActions(useArtworksStore, [FETCH_ARTWORKS]),
+		displayModalOnHover() {},
 	},
 };
 </script>
