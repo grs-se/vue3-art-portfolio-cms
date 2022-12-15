@@ -1,16 +1,7 @@
 <template>
-	<main id="gallery-wrapper" class="mx-auto mt-16 w-full bg-brand-gray-2 p-8">
-		<ol
-			data-gallery-mode="grid-cards"
-			class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
-		>
-			<artwork-card
-				v-for="artwork in displayedArtworks"
-				:key="artwork._id"
-				:artwork="artwork"
-			/>
-		</ol>
-
+	<main id="gallery-wrapper" class="mx-auto w-full bg-brand-gray-2 p-8">
+		<!-- class="mx-auto h-full w-full rounded border border-solid bg-white p-4" -->
+		<grid-cards-gallery />
 		<div class="mx-auto mt-8">
 			<div class="flex flex-row flex-nowrap">
 				<p class="flex-grow text-sm">Page {{ currentPage }}</p>
@@ -40,7 +31,8 @@
 <script>
 import { mapActions, mapState } from "pinia";
 
-import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
+// import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
+import GridCardsGallery from "@/components/ArtworkResults/ArtworkGalleries/GridCardsGallery.vue";
 // import HorizontalMasonryGallery from "@/components/ArtworkResults/ArtworkGalleries/HorizontalMasonryGallery.vue";
 import {
 	useArtworksStore,
@@ -51,7 +43,8 @@ import {
 export default {
 	name: "ArtworkGallery",
 	components: {
-		ArtworkCard,
+		// ArtworkCard,
+		GridCardsGallery,
 		// HorizontalMasonryGallery,
 	},
 	computed: {

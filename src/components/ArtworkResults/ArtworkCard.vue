@@ -1,32 +1,38 @@
 <template>
-	<div class="mx-auto p-2 xl:h-80 xl:w-auto">
-		<figure
-			class="flex flex-col rounded border border-solid border-brand-gray-2 hover:shadow-gray"
-		>
-			<!-- <figure
-		class="m-2 flex h-full w-60 flex-col justify-center rounded border border-solid border-brand-gray-2 bg-white p-2 hover:shadow-gray"
-	> -->
-			<img
-				:src="'/images/artworks/' + artwork.imageCover"
-				class="items-center justify-center sm:max-h-60 xl:max-h-80"
-			/>
-			<figcaption class="hidden bg-white">
-				<h3>{{ artwork.title }}</h3>
-				<!-- <span>{{ artwork.medium }}</span> -->
-				<!-- <span>{{ artwork.date }}</span> -->
-			</figcaption>
-		</figure>
-	</div>
+	<ul>
+		<li v-for="artwork in FILTERED_ARTWORKS" :key="artwork._id">
+			<slot
+				:image-cover="artwork.imageCover"
+				:title="artwork.title"
+				:medium="artwork.medium"
+				:dimensions="artwork.dimensions"
+				:year="artwork.year"
+			></slot>
+		</li>
+	</ul>
 </template>
 
 <script>
+import { mapActions, mapState } from "pinia";
+
+import {
+	useArtworksStore,
+	FETCH_ARTWORKS,
+	FILTERED_ARTWORKS,
+} from "@/stores/artworks";
+
 export default {
 	name: "ArtworkCard",
-	props: {
-		artwork: {
-			type: Object,
-			required: true,
-		},
+	computed: {
+		...mapState(useArtworksStore, {
+			FILTERED_ARTWORKS,
+		}),
+	},
+	async mounted() {
+		this.FETCH_ARTWORKS();
+	},
+	methods: {
+		...mapActions(useArtworksStore, [FETCH_ARTWORKS]),
 	},
 };
 </script>
