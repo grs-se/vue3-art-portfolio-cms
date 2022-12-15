@@ -11,6 +11,8 @@
 				<img
 					:src="'public/images/artworks/' + imageCover"
 					class="mx-auto max-h-60 place-self-center hover:shadow-gray"
+					@mouseover="hover = true"
+					@mouseleave="hover = false"
 				/>
 			</figure>
 			<figcaption class="hidden bg-white">
@@ -22,11 +24,23 @@
 
 <script>
 import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
+import ArtworkCardHoverModal from "@/components/ArtworkResults/ArtworkCardHoverModal.vue";
 
 export default {
 	name: "GridCardsGallery",
 	components: {
 		ArtworkCard,
+		ArtworkCardHoverModal,
+	},
+	data() {
+		return {
+			hover: false,
+		};
+	},
+	methods: {
+		displayModalOnHover() {
+			console.log("Hover Modal");
+		},
 	},
 };
 </script>
