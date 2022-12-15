@@ -9,7 +9,7 @@
 				
 			> -->
 				<img
-					:src="'public/images/artworks/' + imageCover"
+					:src="'/images/artworks/' + imageCover"
 					class="mx-auto max-h-60 place-self-center hover:shadow-gray"
 					@mouseover="hover = true"
 					@mouseleave="hover = false"
