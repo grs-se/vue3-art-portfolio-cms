@@ -1,6 +1,6 @@
 <template>
 	<artwork-card
-		class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
+		class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-9"
 	>
 		<template #default="{ imageCover, title }">
 			<figure class="flex h-full w-full">
