@@ -20,25 +20,21 @@
 	</form>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import TextInput from "@/components/Shared/TextInput.vue";
 
-export default {
-	name: "ArtworkSearchForm",
-	components: { ActionButton, TextInput },
-	data() {
-		return {
-			category: "",
-		};
-	},
-	methods: {
-		searchForArtworks() {
-			this.$router.push({
-				name: "ArtworkResults",
-				query: { category: this.category },
-			});
-		},
-	},
+const category = ref("");
+
+const router = useRouter();
+
+const searchForArtworks = () => {
+	router.push({
+		name: "ArtworkResults",
+		query: { category: category.value },
+	});
 };
 </script>

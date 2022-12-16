@@ -1,22 +1,20 @@
 import { render, screen } from "@testing-library/vue";
 import { createTestingPinia } from "@pinia/testing";
 
+import { useRoute } from "vue-router";
+vi.mock("vue-router");
+
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import { useArtworksStore } from "@/stores/artworks";
 
 describe("TheSubnav", () => {
-	const renderTheSubnav = (routeName) => {
+	const renderTheSubnav = () => {
 		const pinia = createTestingPinia();
 		const artworksStore = useArtworksStore();
 
 		render(TheSubnav, {
 			global: {
 				plugins: [pinia],
-				mocks: {
-					$route: {
-						name: routeName,
-					},
-				},
 				stubs: {
 					FontAwesomeIcon: true,
 				},
@@ -28,9 +26,9 @@ describe("TheSubnav", () => {
 
 	describe("when user is on gallery page", () => {
 		it("displays artwork count", async () => {
-			const routeName = "ArtworkResults";
+			useRoute.mockReturnValue({ name: "ArtworkResults" });
 
-			const { artworksStore } = renderTheSubnav(routeName);
+			const { artworksStore } = renderTheSubnav();
 			const numberOfArtworks = 16;
 			artworksStore.FILTERED_ARTWORKS = Array(numberOfArtworks).fill({});
 
@@ -41,9 +39,9 @@ describe("TheSubnav", () => {
 
 	describe("when user is not on artworks page", () => {
 		it("does NOT display artwork count", () => {
-			const routeName = "Home";
+			useRoute.mockReturnValue({ name: "Home" });
 
-			const { artworksStore } = renderTheSubnav(routeName);
+			const { artworksStore } = renderTheSubnav();
 			const numberOfArtworks = 16;
 			artworksStore.FILTERED_ARTWORKS = Array(numberOfArtworks).fill({});
 

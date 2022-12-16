@@ -39,6 +39,7 @@ button {
 }
 
 .secondary {
-	@apply flex h-full bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
+	@apply bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
+	/* @apply flex h-full bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white; */
 }
 </style>

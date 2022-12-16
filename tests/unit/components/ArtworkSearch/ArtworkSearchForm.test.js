@@ -1,18 +1,18 @@
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 
+import { useRouter } from "vue-router";
+vi.mock("vue-router");
+
 import ArtworkSearchForm from "@/components/ArtworkSearch/ArtworkSearchForm.vue";
-import { vi } from "vitest";
 
 describe("ArtworkSearchForm", () => {
 	describe("when user submits form", () => {
 		it("directs user to Artwork results page with user's search parameters", async () => {
 			const push = vi.fn();
-			const $router = { push };
-
+			useRouter.mockReturnValue({ push });
 			render(ArtworkSearchForm, {
 				global: {
-					mocks: { $router },
 					stubs: {
 						fontAwesomeIcon: true,
 					},

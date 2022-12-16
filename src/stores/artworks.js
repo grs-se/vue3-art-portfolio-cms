@@ -9,6 +9,7 @@ export const FETCH_ARTWORKS = "FETCH_ARTWORKS";
 export const UNIQUE_CATEGORIES = "UNIQUE_CATEGORIES";
 export const UNIQUE_LOCATIONS = "UNIQUE_LOCATIONS";
 export const FILTERED_ARTWORKS = "FILTERED_ARTWORKS";
+export const SPOTLIGHTS = "SPOTLIGHTS";
 
 const INCLUDE_ARTWORK_BY_CATEGORY = "INCLUDE_ARTWORK_BY_CATEGORY";
 const INCLUDE_ARTWORK_BY_LOCATION = "INCLUDE_ARTWORK_BY_LOCATION";
@@ -42,6 +43,11 @@ export const useArtworksStore = defineStore("artworks", {
 			if (userStore.selectedLocations.length === 0) return true;
 			return artwork.location.some((loc) =>
 				userStore.selectedLocations.includes(loc)
+			);
+		},
+		[SPOTLIGHTS](state) {
+			return state.artworks.filter(
+				(artwork) => artwork.spotlight && artwork.spotlight === true
 			);
 		},
 		[FILTERED_ARTWORKS](state) {

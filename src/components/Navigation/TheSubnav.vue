@@ -14,18 +14,25 @@
 	</div>
 </template>
 
-<script>
-import { mapState } from "pinia";
+<script setup>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 
-import { useArtworksStore, FILTERED_ARTWORKS } from "@/stores/artworks";
+import { useArtworksStore } from "@/stores/artworks";
 
-export default {
-	name: "TheSubnav",
-	computed: {
-		...mapState(useArtworksStore, [FILTERED_ARTWORKS]),
-		onArtworksResultsPage() {
-			return this.$route.name === "ArtworkResults";
-		},
-	},
-};
+const route = useRoute();
+const onArtworksResultsPage = computed(() => route.name === "ArtworkResults");
+
+const artworksStore = useArtworksStore();
+const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
+
+// export default {
+// 	name: "TheSubnav",
+// 	computed: {
+// 		...mapState(useArtworksStore, [FILTERED_ARTWORKS]),
+// 		onArtworksResultsPage() {
+// 			return this.$route.name === "ArtworkResults";
+// 		},
+// 	},
+// };
 </script>
