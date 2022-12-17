@@ -19,14 +19,13 @@
 	</div>
 </template>
 
-<script>
-export default {
-	name: "ArtworkCard",
-	props: {
-		artwork: {
-			type: Object,
-			required: true,
-		},
+<script setup>
+import { computed } from "vue";
+
+const props = defineProps({
+	artwork: {
+		type: Object,
+		required: true,
 	},
-};
+});
 </script>

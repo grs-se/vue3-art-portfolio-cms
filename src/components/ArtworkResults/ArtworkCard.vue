@@ -12,27 +12,13 @@
 	</ul>
 </template>
 
-<script>
-import { mapActions, mapState } from "pinia";
+<script setup>
+import { useArtworksStore } from "@/stores/artworks";
 
-import {
-	useArtworksStore,
-	FETCH_ARTWORKS,
-	FILTERED_ARTWORKS,
-} from "@/stores/artworks";
+import { computed, onMounted } from "vue";
 
-export default {
-	name: "ArtworkCard",
-	computed: {
-		...mapState(useArtworksStore, {
-			FILTERED_ARTWORKS,
-		}),
-	},
-	async mounted() {
-		this.FETCH_ARTWORKS();
-	},
-	methods: {
-		...mapActions(useArtworksStore, [FETCH_ARTWORKS]),
-	},
-};
+const artworksStore = useArtworksStore();
+onMounted(artworksStore.FETCH_ARTWORKS);
+
+const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
 </script>

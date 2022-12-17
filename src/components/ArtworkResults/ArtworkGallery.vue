@@ -35,25 +35,21 @@ import { useRoute } from "vue-router";
 import GridCardsGallery from "@/components/ArtworkResults/ArtworkGalleries/GridCardsGallery.vue";
 import { useArtworksStore } from "@/stores/artworks";
 
+import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
+
 const artworksStore = useArtworksStore();
 onMounted(artworksStore.FETCH_ARTWORKS);
 
-const route = useRoute();
-const currentPage = computed(() => Number.parseInt(route.query.page || "1"));
-
-const previousPage = computed(() => {
-	const previousPage = currentPage.value - 1;
-	const firstPage = 1;
-	return previousPage >= firstPage ? previousPage : undefined;
-});
-
 const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
 
-const nextPage = computed(() => {
-	const nextPage = currentPage.value + 1;
-	const maxPage = Math.ceil(FILTERED_ARTWORKS.value.length / 24);
-	return nextPage <= maxPage ? nextPage : undefined;
-});
+const route = useRoute();
+const currentPage = computed(() => Number.parseInt(route.query.page || "1"));
+const maxPage = computed(() => Math.ceil(FILTERED_ARTWORKS.value.length / 24));
+
+const { previousPage, nextPage } = usePreviousAndNextPages(
+	currentPage,
+	maxPage
+);
 
 const displayedArtworks = computed(() => {
 	const pageNumber = currentPage.value;
@@ -61,41 +57,4 @@ const displayedArtworks = computed(() => {
 	const lastArtworkIndex = pageNumber * 24;
 	return FILTERED_ARTWORKS.value.slice(firstArtworkIndex, lastArtworkIndex);
 });
-
-// export default {
-
-// 	computed: {
-// 		currentPage() {
-// 			return Number.parseInt(this.$route.query.page || "1");
-// 		},
-// 		previousPage() {
-// 			const previousPage = this.currentPage - 1;
-// 			const firstPage = 1;
-// 			return previousPage >= firstPage ? previousPage : undefined;
-// 		},
-// 		...mapState(useArtworksStore, {
-// 			FILTERED_ARTWORKS,
-// 			nextPage() {
-// 				const nextPage = this.currentPage + 1;
-// 				const maxPage = Math.ceil(this.FILTERED_ARTWORKS.length / 24);
-// 				return nextPage <= maxPage ? nextPage : undefined;
-// 			},
-// 			displayedArtworks() {
-// 				const pageNumber = this.currentPage;
-// 				const firstArtworkIndex = (pageNumber - 1) * 24;
-// 				const lastArtworkIndex = pageNumber * 24;
-// 				return this.FILTERED_ARTWORKS.slice(
-// 					firstArtworkIndex,
-// 					lastArtworkIndex
-// 				);
-// 			},
-// 		}),
-// 	},
-// 	async mounted() {
-// 		this.FETCH_ARTWORKS();
-// 	},
-// 	methods: {
-// 		...mapActions(useArtworksStore, [FETCH_ARTWORKS]),
-// 	},
-// };
 </script>
