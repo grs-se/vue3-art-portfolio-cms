@@ -10,6 +10,7 @@ export const UNIQUE_CATEGORIES = "UNIQUE_CATEGORIES";
 export const UNIQUE_LOCATIONS = "UNIQUE_LOCATIONS";
 export const FILTERED_ARTWORKS = "FILTERED_ARTWORKS";
 export const SPOTLIGHTS = "SPOTLIGHTS";
+export const HERO = "HERO";
 
 const INCLUDE_ARTWORK_BY_CATEGORY = "INCLUDE_ARTWORK_BY_CATEGORY";
 const INCLUDE_ARTWORK_BY_LOCATION = "INCLUDE_ARTWORK_BY_LOCATION";
@@ -48,6 +49,11 @@ export const useArtworksStore = defineStore("artworks", {
 		[SPOTLIGHTS](state) {
 			return state.artworks.filter(
 				(artwork) => artwork.spotlight && artwork.spotlight === true
+			);
+		},
+		[HERO](state) {
+			return state.artworks.filter(
+				(artwork) => artwork.hero && artwork.hero === true
 			);
 		},
 		[FILTERED_ARTWORKS](state) {
