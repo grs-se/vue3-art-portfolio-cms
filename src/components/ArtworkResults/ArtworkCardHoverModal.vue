@@ -1,5 +1,5 @@
 <template>
-	<artwork-card>
+	<artwork-cards>
 		<template #default="{ imageCover, title }">
 			<section class="max-w-80 flex max-h-80 flex-col bg-white">
 				<figure>
@@ -10,13 +10,13 @@
 				</figcaption>
 			</section>
 		</template>
-	</artwork-card>
+	</artwork-cards>
 </template>
 <script>
-import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
+import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
 
 export default {
 	name: "ArtworkCardHoverModal",
-	components: { ArtworkCard },
+	components: { ArtworkCards },
 };
 </script>
