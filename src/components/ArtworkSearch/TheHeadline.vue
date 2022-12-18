@@ -3,9 +3,8 @@
 		<h1 class="mb-14 text-8xl font-bold tracking-tighter">
 			<span :class="actionClasses">{{ action }}</span>
 			<br />
-			for everyone
 		</h1>
-		<h2 class="text-3xl font-light">Find your next job at Bobo Corp.</h2>
+		<h2 class="text-3xl font-light"></h2>
 	</section>
 </template>
 
@@ -36,7 +35,7 @@ export default {
 	methods: {
 		changeTitle() {
 			this.interval = setInterval(() => {
-				const actions = ["Build", "Create", "Design", "Code"];
+				const actions = [];
 				this.action = nextElementInList(actions, this.action);
 			}, 3000);
 		},
