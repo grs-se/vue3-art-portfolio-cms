@@ -31,11 +31,13 @@
 				<h2 class="my-4 w-full text-base font-light">Highlights</h2>
 			</template>
 		</header-container>
-		<spot-light class="mt-10 flex flex-row justify-center pb-16">
+		<spot-light
+			class="mt-10 flex w-max flex-row justify-center overflow-y-hidden pb-16"
+		>
 			<template #default="{ imageCover, title, description, medium }">
 				<router-link
 					to="/gallery"
-					class="mx-5 flex h-auto flex-col rounded-lg border bg-white"
+					class="mx-5 flex h-auto max-w-sm flex-col rounded-lg border bg-white"
 				>
 					<img
 						:src="'/images/artworks/' + imageCover"
