@@ -1,5 +1,5 @@
 <template>
-	<section class="w-full bg-gray-900 text-white">
+	<section class="w-full bg-brand-gray-3 text-white">
 		<div class="mx-auto py-16 text-start sm:w-3/4 xl:w-1/2">
 			<div class="footer-row-group">
 				<div

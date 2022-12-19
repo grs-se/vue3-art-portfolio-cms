@@ -1,5 +1,5 @@
 <template>
-	<section id="grid-cards-gallery" class="bg-brand-grey-1">
+	<section id="grid-cards-gallery">
 		<artwork-cards
 			class="mx-auto grid border-l border-t sm:grid-cols-1 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3"
 		>
@@ -8,7 +8,7 @@
 	> -->
 			<template #default="{ imageCover, title }">
 				<figure
-					class="flex h-full w-full border-b border-r border-solid border-brand-gray-1 p-4 hover:bg-white"
+					class="flex h-full w-full border-b border-r border-solid bg-white p-4 hover:bg-white"
 				>
 					<!-- <figure
 				class="flex h-full w-full rounded border border-solid border-brand-gray-2 hover:shadow-gray"

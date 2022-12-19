@@ -5,7 +5,7 @@
 			role="button"
 			@click="open"
 		>
-			<h3 class="text-base font-semibold">{{ header }}</h3>
+			<h3 class="text-base font-normal">{{ header }}</h3>
 
 			<font-awesome-icon :icon="caretIcon" />
 		</div>

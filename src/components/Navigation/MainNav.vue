@@ -6,7 +6,7 @@
 				class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
 			>
 				<div class="h-full items-center sm:flex md:hidden">
-					<hamburger-menu />
+					<hamburger-menu @click="openSideNav" />
 				</div>
 				<router-link
 					:to="{ name: 'Home' }"
@@ -85,6 +85,9 @@ export default {
 	},
 	methods: {
 		...mapActions(useUserStore, ["loginUser"]),
+		openSideNav() {
+			console.log("💥");
+		},
 	},
 };
 </script>

@@ -35,11 +35,16 @@ button {
 }
 
 .primary {
+	/* @apply rounded bg-brand-gray-3 text-white hover:shadow-blue; */
 	@apply rounded bg-brand-blue-1 text-white hover:shadow-blue;
 }
 
 .secondary {
 	@apply bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
 	/* @apply flex h-full bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white; */
+}
+
+.slideShow {
+	@apply rounded-full bg-brand-gray-3;
 }
 </style>

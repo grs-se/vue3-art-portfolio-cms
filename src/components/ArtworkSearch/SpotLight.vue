@@ -5,6 +5,7 @@
 				:image-cover="spotlight.imageCover"
 				:title="spotlight.title"
 				:description="spotlight.description"
+				:medium="spotlight.medium"
 			></slot>
 		</li>
 	</ul>

@@ -31,13 +31,16 @@
 				<h2 class="my-4 w-full text-base font-light">Highlights</h2>
 			</template>
 		</header-container>
-		<spot-light class="flex flex-row justify-center pb-16">
-			<template #default="{ imageCover, title, description }">
+		<spot-light class="mt-10 flex flex-row justify-center pb-16">
+			<template #default="{ imageCover, title, description, medium }">
 				<router-link
 					to="/gallery"
-					class="mx-5 flex h-auto w-72 flex-col rounded-lg border bg-brand-gray-2"
+					class="mx-5 flex h-auto flex-col rounded-lg border bg-white"
 				>
-					<img :src="'/images/artworks/' + imageCover" class="object-contain" />
+					<img
+						:src="'/images/artworks/' + imageCover"
+						class="h-64 content-start object-contain"
+					/>
 
 					<div class="mt-3 h-48 px-6 py-4">
 						<h3 class="text-lg font-medium">
@@ -46,6 +49,9 @@
 						<p class="line-clamp mt-3 text-sm">
 							{{ description }}
 						</p>
+						<!-- <p class="line-clamp mt-3 text-sm">
+							{{ medium }}
+						</p> -->
 					</div>
 
 					<router-link to="/gallery" class="px-6 pb-4 text-sm text-brand-blue-1"
@@ -54,7 +60,13 @@
 				</router-link>
 			</template>
 		</spot-light>
-		<div class="h-32"></div>
+
+		<div class="h-32">
+			<div class="flex justify-between px-40">
+				<!-- <action-button text="<" class="slideShow right-4" />
+				<action-button text=">" class="slideShow left-4" /> -->
+			</div>
+		</div>
 	</main>
 </template>
 
@@ -67,6 +79,7 @@ import TheHeadline from "@/components/ArtworkSearch/TheHeadline.vue";
 import ArtworkSearchForm from "@/components/ArtworkSearch/ArtworkSearchForm.vue";
 import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
 import SpotLight from "@/components/ArtworkSearch/SpotLight.vue";
+import ActionButton from "@/components/Shared/ActionButton.vue";
 
 const artworksStore = useArtworksStore();
 onMounted(artworksStore.FETCH_ARTWORKS);
