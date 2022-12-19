@@ -1,12 +1,14 @@
+import type { Mock } from "vitest";
 import axios from "axios";
 
 import getArtworks from "@/api/getArtworks";
 
 vi.mock("axios");
+const axiosGetMock = axios.get as Mock;
 
 describe("getArtworks", () => {
 	beforeEach(() => {
-		axios.get.mockResolvedValue({
+		axiosGetMock.mockResolvedValue({
 			data: { data: { artworks: [{ id: 1, title: "Haberdashery" }] } },
 		});
 	});

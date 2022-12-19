@@ -4,6 +4,7 @@ import createSet from "@/utils/createSet.js";
 import getArtworks from "@/api/getArtworks";
 
 import { useUserStore } from "@/stores/user";
+import type { Artwork } from "@/api/types";
 
 export const FETCH_ARTWORKS = "FETCH_ARTWORKS";
 export const UNIQUE_CATEGORIES = "UNIQUE_CATEGORIES";
@@ -15,8 +16,12 @@ export const HERO = "HERO";
 const INCLUDE_ARTWORK_BY_CATEGORY = "INCLUDE_ARTWORK_BY_CATEGORY";
 const INCLUDE_ARTWORK_BY_LOCATION = "INCLUDE_ARTWORK_BY_LOCATION";
 
+export interface ArtworksState {
+	artworks: Artwork[];
+}
+
 export const useArtworksStore = defineStore("artworks", {
-	state: () => ({
+	state: (): ArtworksState => ({
 		artworks: [],
 	}),
 	actions: {
@@ -32,17 +37,17 @@ export const useArtworksStore = defineStore("artworks", {
 		[UNIQUE_LOCATIONS](state) {
 			return createSet(state.artworks, "location");
 		},
-		[INCLUDE_ARTWORK_BY_CATEGORY]: () => (artwork) => {
+		[INCLUDE_ARTWORK_BY_CATEGORY]: () => (artwork: Artwork) => {
 			const userStore = useUserStore();
 			if (userStore.selectedCategories.length === 0) return true;
 			return artwork.categories.some((cat) =>
 				userStore.selectedCategories.includes(cat)
 			);
 		},
-		[INCLUDE_ARTWORK_BY_LOCATION]: () => (artwork) => {
+		[INCLUDE_ARTWORK_BY_LOCATION]: () => (artwork: Artwork) => {
 			const userStore = useUserStore();
 			if (userStore.selectedLocations.length === 0) return true;
-			return artwork.location.some((loc) =>
+			return artwork.location.some((loc: string) =>
 				userStore.selectedLocations.includes(loc)
 			);
 		},
@@ -53,10 +58,10 @@ export const useArtworksStore = defineStore("artworks", {
 		},
 		[HERO](state) {
 			return state.artworks.filter(
-				(artwork) => artwork.hero && artwork.hero === true
+				(artwork: Artwork) => artwork.hero && artwork.hero === true
 			);
 		},
-		[FILTERED_ARTWORKS](state) {
+		[FILTERED_ARTWORKS](state): Artwork[] {
 			return state.artworks
 				.filter((artwork) => this.INCLUDE_ARTWORK_BY_CATEGORY(artwork))
 				.filter((artwork) => this.INCLUDE_ARTWORK_BY_LOCATION(artwork));

@@ -1,10 +1,13 @@
+import type { Mock } from "vitest";
 import { createPinia, setActivePinia } from "pinia";
 import axios from "axios";
 
+import type { Artwork } from "@/api/types";
 import { useArtworksStore } from "@/stores/artworks";
 import { useUserStore } from "@/stores/user";
 
 vi.mock("axios");
+const axiosGetMock = axios.get as Mock;
 
 describe("state", () => {
 	beforeEach(() => {
@@ -24,7 +27,7 @@ describe("actions", () => {
 
 	describe("FETCH_ARTWORKS", () => {
 		it("makes API request and stores received artworks", async () => {
-			axios.get.mockResolvedValue({
+			axiosGetMock.mockResolvedValue({
 				data: { data: { artworks: ["Artwork 1", "Artwork 2"] } },
 			});
 			const store = useArtworksStore();
@@ -35,6 +38,24 @@ describe("actions", () => {
 });
 
 describe("getters", () => {
+	const createArtwork = (artwork: Partial<Artwork> = {}): Artwork => ({
+		title: "Artwork",
+		medium: ["Coloured Chalks", "Coloured Chalks on Paper"],
+		imageCover: "artwork.jpg",
+		date: "2022-11-12",
+		description: "lorem ipsum",
+		dimensions: {
+			height: { px: 2653, cm: 0 },
+			width: { px: 3638, cm: 0 },
+			depth: { px: 0, cm: 0 },
+		},
+		sales: { price: 475 },
+		location: ["North Pole", "Jamaica"],
+		categories: ["a", "b", "c"],
+		tags: ["art", "painting"],
+		...artwork,
+	});
+
 	beforeEach(() => {
 		setActivePinia(createPinia());
 	});
@@ -43,9 +64,9 @@ describe("getters", () => {
 		it("finds unique categories from list of artworks", () => {
 			const store = useArtworksStore();
 			store.artworks = [
-				{ categories: ["Painting", "Studio", "Painting"] },
-				{ categories: ["Painting", "Imagination", "Drawing"] },
-				{ categories: ["Painting", "Studio", "Painting"] },
+				createArtwork({ categories: ["Painting", "Studio", "Painting"] }),
+				createArtwork({ categories: ["Painting", "Imagination", "Drawing"] }),
+				createArtwork({ categories: ["Painting", "Studio", "Painting"] }),
 			];
 
 			const result = store.UNIQUE_CATEGORIES;
@@ -60,9 +81,9 @@ describe("getters", () => {
 		it("finds unique locations from list of artworks", () => {
 			const store = useArtworksStore();
 			store.artworks = [
-				{ location: ["London", "Whitechapel"] },
-				{ location: ["Paris", "France"] },
-				{ location: ["Scotland", "Dumfries"] },
+				createArtwork({ location: ["London", "Whitechapel"] }),
+				createArtwork({ location: ["Paris", "France"] }),
+				createArtwork({ location: ["Scotland", "Dumfries"] }),
 			];
 
 			const result = store.UNIQUE_LOCATIONS;
@@ -86,7 +107,9 @@ describe("getters", () => {
 				const userStore = useUserStore();
 				userStore.selectedCategories = [];
 				const store = useArtworksStore();
-				const artwork = { categories: ["Painting", "Imagination"] };
+				const artwork = createArtwork({
+					categories: ["Painting", "Imagination"],
+				});
 
 				const result = store.INCLUDE_ARTWORK_BY_CATEGORY(artwork);
 
@@ -97,7 +120,9 @@ describe("getters", () => {
 				const userStore = useUserStore();
 				userStore.selectedCategories = ["Painting", "Observation"];
 				const store = useArtworksStore();
-				const artwork = { categories: ["Painting", "Imagination"] };
+				const artwork = createArtwork({
+					categories: ["Painting", "Imagination"],
+				});
 
 				const result = store.INCLUDE_ARTWORK_BY_CATEGORY(artwork);
 
@@ -112,7 +137,7 @@ describe("getters", () => {
 				const userStore = useUserStore();
 				userStore.selectedLocations = [];
 				const store = useArtworksStore();
-				const artwork = { location: ["London", "Brick-Lane"] };
+				const artwork = createArtwork({ location: ["London", "Brick-Lane"] });
 
 				const result = store.INCLUDE_ARTWORK_BY_LOCATION(artwork);
 
@@ -123,7 +148,7 @@ describe("getters", () => {
 				const userStore = useUserStore();
 				userStore.selectedLocations = ["Belgium"];
 				const store = useArtworksStore();
-				const artwork = { location: ["Belgium"] };
+				const artwork = createArtwork({ location: ["Belgium"] });
 
 				const result = store.INCLUDE_ARTWORK_BY_LOCATION(artwork);
 
