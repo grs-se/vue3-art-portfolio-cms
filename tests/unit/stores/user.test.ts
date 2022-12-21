@@ -14,7 +14,12 @@ describe("state", () => {
 
 	it("stores categories that the user would like to filter artworks by", () => {
 		const store = useUserStore();
-		expect(store.selectedCategories).toEqual([]);
+		expect(store.selectedArtworkCategories).toEqual([]);
+	});
+
+	it("stores categories that the user would like to filter texts by", () => {
+		const store = useUserStore();
+		expect(store.selectedTextCategories).toEqual([]);
 	});
 });
 
@@ -31,11 +36,19 @@ describe("actions", () => {
 		});
 	});
 
-	describe("ADD_SELECTED_CATEGORIES", () => {
+	describe("ADD_SELECTED_ARTWORK_CATEGORIES", () => {
 		it("updates categories the user has chosen to filter artworks by", () => {
 			const store = useUserStore();
-			store.ADD_SELECTED_CATEGORIES(["Cat1", "Cat2"]);
-			expect(store.selectedCategories).toEqual(["Cat1", "Cat2"]);
+			store.ADD_SELECTED_ARTWORK_CATEGORIES(["Cat1", "Cat2"]);
+			expect(store.selectedArtworkCategories).toEqual(["Cat1", "Cat2"]);
+		});
+	});
+
+	describe("ADD_SELECTED_TEXT_CATEGORIES", () => {
+		it("updates categories the user has chosen to filter texts by", () => {
+			const store = useUserStore();
+			store.ADD_SELECTED_TEXT_CATEGORIES(["Cat1", "Cat2"]);
+			expect(store.selectedTextCategories).toEqual(["Cat1", "Cat2"]);
 		});
 	});
 });
