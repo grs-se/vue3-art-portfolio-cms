@@ -2,7 +2,7 @@ import type { Mock } from "vitest";
 import { createPinia, setActivePinia } from "pinia";
 import axios from "axios";
 
-import { useTextsStore } from "@/stores/texts";
+import { useTextsStore } from "@/stores/texts2";
 import { useUserStore } from "@/stores/user";
 import { createText } from "../../utils/createText";
 

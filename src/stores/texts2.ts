@@ -23,7 +23,7 @@ export const useTextsStore = defineStore("texts", () => {
 	const INCLUDE_TEXT_BY_CATEGORY = computed((text: Text) => {
 		const userStore = useUserStore();
 		if (userStore.selectedTextCategories.length === 0) return true;
-		return text.categories.some((cat) =>
+		return text.categories.some((cat: string) =>
 			userStore.selectedTextCategories.includes(cat)
 		);
 	});
