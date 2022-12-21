@@ -2,7 +2,6 @@ import type { Mock } from "vitest";
 import { createPinia, setActivePinia } from "pinia";
 import axios from "axios";
 
-import type { Artwork } from "@/api/types";
 import { useArtworksStore } from "@/stores/artworks";
 import { useUserStore } from "@/stores/user";
 import { createArtwork } from "../../utils/createArtwork";
@@ -39,29 +38,11 @@ describe("actions", () => {
 });
 
 describe("getters", () => {
-	const createArtwork = (artwork: Partial<Artwork> = {}): Artwork => ({
-		title: "Artwork",
-		medium: ["Coloured Chalks", "Coloured Chalks on Paper"],
-		imageCover: "artwork.jpg",
-		date: "2022-11-12",
-		description: "lorem ipsum",
-		dimensions: {
-			height: { px: 2653, cm: 0 },
-			width: { px: 3638, cm: 0 },
-			depth: { px: 0, cm: 0 },
-		},
-		sales: { price: 475 },
-		location: ["North Pole", "Jamaica"],
-		categories: ["a", "b", "c"],
-		tags: ["art", "painting"],
-		...artwork,
-	});
-
 	beforeEach(() => {
 		setActivePinia(createPinia());
 	});
 
-	describe("UNIQUE_CATEGORIES", () => {
+	describe("UNIQUE_ARTWORK_CATEGORIES", () => {
 		it("finds unique categories from list of artworks", () => {
 			const store = useArtworksStore();
 			store.artworks = [
@@ -70,7 +51,7 @@ describe("getters", () => {
 				createArtwork({ categories: ["Painting", "Studio", "Painting"] }),
 			];
 
-			const result = store.UNIQUE_CATEGORIES;
+			const result = store.UNIQUE_ARTWORK_CATEGORIES;
 
 			expect(result).toEqual(
 				new Set(["Painting", "Studio", "Imagination", "Drawing"])
@@ -78,7 +59,7 @@ describe("getters", () => {
 		});
 	});
 
-	describe("UNIQUE_LOCATIONS", () => {
+	describe("UNIQUE_ARTWORK_LOCATIONS", () => {
 		it("finds unique locations from list of artworks", () => {
 			const store = useArtworksStore();
 			store.artworks = [
@@ -87,7 +68,7 @@ describe("getters", () => {
 				createArtwork({ location: ["Scotland", "Dumfries"] }),
 			];
 
-			const result = store.UNIQUE_LOCATIONS;
+			const result = store.UNIQUE_ARTWORK_LOCATIONS;
 
 			expect(result).toEqual(
 				new Set([
@@ -106,7 +87,7 @@ describe("getters", () => {
 		describe("when the user has not selected any categories", () => {
 			it("includes artwork", () => {
 				const userStore = useUserStore();
-				userStore.selectedCategories = [];
+				userStore.selectedArtworkCategories = [];
 				const store = useArtworksStore();
 				const artwork = createArtwork({
 					categories: ["Painting", "Imagination"],
@@ -117,9 +98,9 @@ describe("getters", () => {
 				expect(result).toBe(true);
 			});
 
-			it("identifies if job is associated with given categories", () => {
+			it("identifies if artwork is associated with given categories", () => {
 				const userStore = useUserStore();
-				userStore.selectedCategories = ["Painting", "Observation"];
+				userStore.selectedArtworkCategories = ["Painting", "Observation"];
 				const store = useArtworksStore();
 				const artwork = createArtwork({
 					categories: ["Painting", "Imagination"],
@@ -136,7 +117,7 @@ describe("getters", () => {
 		describe("when the user has not selected any location", () => {
 			it("includes artwork", () => {
 				const userStore = useUserStore();
-				userStore.selectedLocations = [];
+				userStore.selectedArtworkLocations = [];
 				const store = useArtworksStore();
 				const artwork = createArtwork({ location: ["London", "Brick-Lane"] });
 
@@ -145,9 +126,9 @@ describe("getters", () => {
 				expect(result).toBe(true);
 			});
 
-			it("identifies if job is associated with given location", () => {
+			it("identifies if artwork is associated with given location", () => {
 				const userStore = useUserStore();
-				userStore.selectedLocations = ["Belgium"];
+				userStore.selectedArtworkLocations = ["Belgium"];
 				const store = useArtworksStore();
 				const artwork = createArtwork({ location: ["Belgium"] });
 

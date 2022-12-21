@@ -12,13 +12,13 @@
 
 			<artwork-filters-sidebar-checkbox-group
 				header="Categories"
-				:unique-values="UNIQUE_CATEGORIES"
-				:action="userStore.ADD_SELECTED_CATEGORIES"
+				:unique-values="UNIQUE_ARTWORK_CATEGORIES"
+				:action="userStore.ADD_SELECTED_ARTWORK_CATEGORIES"
 			/>
 			<artwork-filters-sidebar-checkbox-group
 				header="Locations"
-				:unique-values="UNIQUE_LOCATIONS"
-				:action="userStore.ADD_SELECTED_LOCATIONS"
+				:unique-values="UNIQUE_ARTWORK_LOCATIONS"
+				:action="userStore.ADD_SELECTED_ARTWORK_LOCATIONS"
 			/>
 		</section>
 	</div>
@@ -34,8 +34,12 @@ import { useArtworksStore } from "@/stores/artworks";
 import { useUserStore } from "@/stores/user";
 
 const artworksStore = useArtworksStore();
-const UNIQUE_CATEGORIES = computed(() => artworksStore.UNIQUE_CATEGORIES);
-const UNIQUE_LOCATIONS = computed(() => artworksStore.UNIQUE_LOCATIONS);
+const UNIQUE_ARTWORK_CATEGORIES = computed(
+	() => artworksStore.UNIQUE_ARTWORK_CATEGORIES
+);
+const UNIQUE_ARTWORK_LOCATIONS = computed(
+	() => artworksStore.UNIQUE_ARTWORK_LOCATIONS
+);
 
 const userStore = useUserStore();
 </script>

@@ -19,10 +19,10 @@ import { useArtworksStore } from "@/stores/artworks";
 const artworksStore = useArtworksStore();
 onMounted(artworksStore.FETCH_ARTWORKS);
 
-const SPOTLIGHTS = computed(() => artworksStore.SPOTLIGHTS);
+const ARTWORK_SPOTLIGHTS = computed(() => artworksStore.ARTWORK_SPOTLIGHTS);
 
 const displaySpotlights = computed(() => {
-	return SPOTLIGHTS.value;
+	return ARTWORK_SPOTLIGHTS.value;
 });
 
 // import { ref, onMounted } from "vue";

@@ -6,13 +6,13 @@
 				:title="artwork.title"
 				:medium="artwork.medium"
 				:dimensions="artwork.dimensions"
-				:year="artwork.year"
+				:date="artwork.date"
 			></slot>
 		</li>
 	</ol>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { useArtworksStore } from "@/stores/artworks";
 
 import { computed, onMounted } from "vue";
