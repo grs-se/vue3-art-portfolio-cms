@@ -19,7 +19,7 @@ export interface Artwork {
 	};
 	exhibitions?: string[];
 	hero?: boolean;
-	id?: string;
+	id: string;
 	imageCover: string;
 	imageDetails?: string[];
 	location: string[];
@@ -39,18 +39,19 @@ export interface Artwork {
 }
 
 export interface Text {
-	artwork: [];
-	categories: string[];
-	content: string;
-	createdAt: Date;
-	datePublished: Date;
-	dateWritten: Date;
+	artwork?: [];
+	categories?: string[];
+	content: string[];
+	createdAt?: Date;
+	datePublished?: Date;
+	dateWritten?: Date;
 	heading: string;
-	locationWritten: string;
-	publishedAt: string;
-	secretText: boolean;
+	id?: string;
+	locationWritten?: string;
+	publishedAt?: string;
+	secretText?: boolean;
 	slug: string;
-	subHeading: string;
-	user: [];
-	wordCount: number;
+	subHeading?: string;
+	user?: [];
+	wordCount?: number;
 }
