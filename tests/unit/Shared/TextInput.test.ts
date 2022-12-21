@@ -11,7 +11,6 @@ describe("TextInput", () => {
 			},
 		});
 		const input = screen.getByRole("textbox");
-		console.log(emitted());
 		await userEvent.type(input, "NYC");
 		const messages = emitted()["update:modelValue"];
 		expect(messages).toEqual([["N"], ["NY"], ["NYC"]]);

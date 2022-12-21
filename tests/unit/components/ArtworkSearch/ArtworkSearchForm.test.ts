@@ -1,3 +1,4 @@
+import type { Mock } from "vitest";
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 
@@ -6,11 +7,13 @@ vi.mock("vue-router");
 
 import ArtworkSearchForm from "@/components/ArtworkSearch/ArtworkSearchForm.vue";
 
+const useRouterMock = useRouter as Mock;
+
 describe("ArtworkSearchForm", () => {
 	describe("when user submits form", () => {
 		it("directs user to Artwork results page with user's search parameters", async () => {
 			const push = vi.fn();
-			useRouter.mockReturnValue({ push });
+			useRouterMock.mockReturnValue({ push });
 			render(ArtworkSearchForm, {
 				global: {
 					stubs: {

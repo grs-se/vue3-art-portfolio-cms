@@ -14,7 +14,7 @@
 	</div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 
@@ -25,14 +25,4 @@ const onArtworksResultsPage = computed(() => route.name === "ArtworkResults");
 
 const artworksStore = useArtworksStore();
 const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
-
-// export default {
-// 	name: "TheSubnav",
-// 	computed: {
-// 		...mapState(useArtworksStore, [FILTERED_ARTWORKS]),
-// 		onArtworksResultsPage() {
-// 			return this.$route.name === "ArtworkResults";
-// 		},
-// 	},
-// };
 </script>

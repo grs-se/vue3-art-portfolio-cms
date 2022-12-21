@@ -6,8 +6,4 @@
 	</div>
 </template>
 
-<script>
-export default {
-	name: "HamburgerMenu",
-};
-</script>
+<script lang="ts" setup></script>

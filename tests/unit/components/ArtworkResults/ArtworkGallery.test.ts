@@ -1,3 +1,4 @@
+import type { Mock } from "vitest";
 import { render, screen } from "@testing-library/vue";
 import { RouterLinkStub } from "@vue/test-utils";
 import { createTestingPinia } from "@pinia/testing";
@@ -7,10 +8,13 @@ vi.mock("vue-router");
 import ArtworkGallery from "@/components/ArtworkResults/ArtworkGallery.vue";
 import { useArtworksStore } from "@/stores/artworks";
 
+const useRouteMock = useRoute as Mock;
+
 describe("ArtworkGallery", () => {
 	const renderArtworkGallery = () => {
 		const pinia = createTestingPinia();
 		const artworksStore = useArtworksStore();
+		// @ts-expect-error
 		artworksStore.FILTERED_ARTWORKS = Array(30).fill({});
 
 		render(ArtworkGallery, {
@@ -26,7 +30,7 @@ describe("ArtworkGallery", () => {
 	};
 
 	it("fetches artworks", () => {
-		useRoute.mockReturnValue({ query: {} });
+		useRouteMock.mockReturnValue({ query: {} });
 
 		const { artworksStore } = renderArtworkGallery();
 
@@ -34,7 +38,7 @@ describe("ArtworkGallery", () => {
 	});
 
 	// it("displays maximum of 24 artworks", async () => {
-	// 	useRoute.mockReturnValue({ query: { page: "1" } });
+	// 	useRouteMock.mockReturnValue({ query: { page: "1" } });
 
 	// 	const { artworksStore } = renderArtworkGallery();
 	// 	artworksStore.FILTERED_ARTWORKS = Array(30).fill({});
@@ -45,7 +49,7 @@ describe("ArtworkGallery", () => {
 
 	describe("when params exclude page number", () => {
 		it("displays page number 1", () => {
-			useRoute.mockReturnValue({ query: {} });
+			useRouteMock.mockReturnValue({ query: {} });
 
 			renderArtworkGallery();
 
@@ -55,7 +59,7 @@ describe("ArtworkGallery", () => {
 
 	describe("when params include page number", () => {
 		it("displays page number", () => {
-			useRoute.mockReturnValue({ query: { page: "3" } });
+			useRouteMock.mockReturnValue({ query: { page: "3" } });
 
 			renderArtworkGallery();
 
@@ -65,9 +69,10 @@ describe("ArtworkGallery", () => {
 
 	describe("when user is on first page", () => {
 		it("does not show link to previous page", async () => {
-			useRoute.mockReturnValue({ query: { page: "1" } });
+			useRouteMock.mockReturnValue({ query: { page: "1" } });
 
 			const { artworksStore } = renderArtworkGallery();
+			// @ts-expect-error
 			artworksStore.FILTERED_ARTWORKS = Array(24).fill({});
 
 			await screen.findAllByRole("figure");
@@ -76,9 +81,10 @@ describe("ArtworkGallery", () => {
 		});
 
 		it("shows link to next page", async () => {
-			useRoute.mockReturnValue({ query: { page: "1" } });
+			useRouteMock.mockReturnValue({ query: { page: "1" } });
 
 			const { artworksStore } = renderArtworkGallery();
+			// @ts-expect-error
 			artworksStore.FILTERED_ARTWORKS = Array(30).fill({});
 
 			await screen.findAllByRole("figure");
@@ -89,9 +95,10 @@ describe("ArtworkGallery", () => {
 
 	describe("when user is on last page", () => {
 		it("does not show link to next page", async () => {
-			useRoute.mockReturnValue({ query: { page: "2" } });
+			useRouteMock.mockReturnValue({ query: { page: "2" } });
 
 			const { artworksStore } = renderArtworkGallery();
+			// @ts-expect-error
 			artworksStore.FILTERED_ARTWORKS = Array(30).fill({});
 
 			await screen.findAllByRole("figure");
@@ -100,9 +107,10 @@ describe("ArtworkGallery", () => {
 		});
 
 		it("shows link to previous page", async () => {
-			useRoute.mockReturnValue({ query: { page: "2" } });
+			useRouteMock.mockReturnValue({ query: { page: "2" } });
 
 			const { artworksStore } = renderArtworkGallery();
+			// @ts-expect-error
 			artworksStore.FILTERED_ARTWORKS = Array(30).fill({});
 
 			await screen.findAllByRole("figure");

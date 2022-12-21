@@ -43,8 +43,8 @@
 	</header>
 </template>
 
-<script>
-import { mapActions, mapState } from "pinia";
+<script lang="ts" setup>
+import { computed, ref } from "vue";
 
 import { useUserStore } from "@/stores/user";
 
@@ -53,41 +53,22 @@ import ProfileImage from "@/components/Navigation/ProfileImage.vue";
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
 
-export default {
-	name: "MainNav",
-	components: {
-		ActionButton,
-		ProfileImage,
-		TheSubnav,
-		HamburgerMenu,
-	},
-	data() {
-		return {
-			menuItems: [
-				{ text: "Gallery", url: "/gallery" },
-				{ text: "Research", url: "/research" },
-				{ text: "Writing", url: "/" },
-				{ text: "Exhibitions", url: "/" },
-				{ text: "Statement", url: "/text/artist-statement" },
-				{ text: "About", url: "/" },
-				{ text: "Contact", url: "/" },
-			],
-		};
-	},
-	computed: {
-		...mapState(useUserStore, ["isLoggedIn"]),
-		headerHeightClass() {
-			return {
-				"h-16": !this.isLoggedIn,
-				"h-32": this.isLoggedIn,
-			};
-		},
-	},
-	methods: {
-		...mapActions(useUserStore, ["loginUser"]),
-		openSideNav() {
-			console.log("💥");
-		},
-	},
-};
+const menuItems = ref([
+	{ text: "Gallery", url: "/gallery" },
+	{ text: "Research", url: "/research" },
+	{ text: "Writing", url: "/" },
+	{ text: "Exhibitions", url: "/" },
+	{ text: "Statement", url: "/text/artist-statement" },
+	{ text: "About", url: "/" },
+	{ text: "Contact", url: "/" },
+]);
+
+const userStore = useUserStore();
+const loginUser = userStore.loginUser;
+const isLoggedIn = computed(() => userStore.isLoggedIn);
+const headerHeightClass = computed(() => ({
+	"h-16": !isLoggedIn.value,
+	"h-32": isLoggedIn.value,
+}));
+const openSideNav = computed(() => console.log("Open Side Nav"));
 </script>

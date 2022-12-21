@@ -12,11 +12,7 @@
 		</template>
 	</artwork-cards>
 </template>
-<script>
-import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
 
-export default {
-	name: "ArtworkCardHoverModal",
-	components: { ArtworkCards },
-};
+<script lang="ts" setup>
+import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
 </script>

@@ -18,27 +18,20 @@
 	</artwork-card>
 </template>
 
-<script>
+<script lang="ts" setup>
 import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
 
-export default {
-	name: "HorizontalMasonryGallery",
-	components: {
-		ArtworkCard,
-	},
-
-	// props: {
-	// 	artwork: {
-	// 		type: Object,
-	// 		required: true,
-	// 	},
-	// },
-	// data() {
-	// return {
-	// 	flexWidth: (this.artwork.width.px * 220) / this.artwork.height.px,
-	// 	flexHeight: (this.artwork.height.px / this.artwork.width.px) * 100,
-	// 	imageCover: "public/images/artworks/" + this.artwork.imageCover,
-	// };
-	// },
-};
+// props: {
+// 	artwork: {
+// 		type: Object,
+// 		required: true,
+// 	},
+// },
+// data() {
+// return {
+// 	flexWidth: (this.artwork.width.px * 220) / this.artwork.height.px,
+// 	flexHeight: (this.artwork.height.px / this.artwork.width.px) * 100,
+// 	imageCover: "public/images/artworks/" + this.artwork.imageCover,
+// };
+// },
 </script>

@@ -6,13 +6,8 @@
 	/>
 </template>
 
-<script>
-export default {
-	name: "ProfileImage",
-	data() {
-		return {
-			imageLink: "public/images/users/avatar.png",
-		};
-	},
-};
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const imageLink = ref("public/images/users/avatar.png");
 </script>

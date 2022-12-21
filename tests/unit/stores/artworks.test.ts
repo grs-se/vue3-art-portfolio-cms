@@ -5,6 +5,7 @@ import axios from "axios";
 import type { Artwork } from "@/api/types";
 import { useArtworksStore } from "@/stores/artworks";
 import { useUserStore } from "@/stores/user";
+import { createArtwork } from "../../utils/createArtwork";
 
 vi.mock("axios");
 const axiosGetMock = axios.get as Mock;

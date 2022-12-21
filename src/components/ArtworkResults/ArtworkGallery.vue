@@ -28,7 +28,7 @@
 	</main>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
@@ -43,7 +43,9 @@ onMounted(artworksStore.FETCH_ARTWORKS);
 const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
 
 const route = useRoute();
-const currentPage = computed(() => Number.parseInt(route.query.page || "1"));
+const currentPage = computed(() =>
+	Number.parseInt((route.query.page as string) || "1")
+);
 const maxPage = computed(() => Math.ceil(FILTERED_ARTWORKS.value.length / 24));
 
 const { previousPage, nextPage } = usePreviousAndNextPages(

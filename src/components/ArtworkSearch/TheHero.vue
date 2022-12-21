@@ -72,7 +72,7 @@
 	</main>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { useArtworksStore } from "@/stores/artworks";
 
 import { computed, onMounted } from "vue";

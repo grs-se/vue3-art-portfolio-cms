@@ -1,10 +1,10 @@
-const createSet = (data, key) => {
-	const arr = [];
+const createSet = <T>(data: T[], key: T) => {
+	const arr: [] = [];
 
 	data.forEach((item) =>
 		typeof item[key] === "string" ? arr.push(item[key]) : arr.push(...item[key])
 	);
-	const set = new Set(arr);
+	const set = new Set<[]>(arr);
 	// console.log(set);
 	return set;
 };

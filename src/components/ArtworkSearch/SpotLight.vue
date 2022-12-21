@@ -11,7 +11,7 @@
 	</ul>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, onMounted } from "vue";
 
 import { useArtworksStore } from "@/stores/artworks";
@@ -24,4 +24,23 @@ const SPOTLIGHTS = computed(() => artworksStore.SPOTLIGHTS);
 const displaySpotlights = computed(() => {
 	return SPOTLIGHTS.value;
 });
+
+// import { ref, onMounted } from "vue";
+// import axios from "axios";
+
+// const spotlights = ref([]);
+
+// const getSpotlights = async () => {
+// 	const baseUrl = import.meta.env.VITE_APP_API_URL;
+// 	const url = `${baseUrl}/gallery`;
+// 	const response = await axios.get(url);
+// 	const artworks = response.data.data.artworks;
+// 	const spotlights = artworks.filter(
+// 		(artwork) => artwork.spotlight && artwork.spotlights === true
+// 	);
+// 	spotlights.value = response.data.data.artworks;
+// };
+// return state.artworks.filter(
+// 	(artwork) => artwork.spotlight && artwork.spotlight === true
+// );
 </script>

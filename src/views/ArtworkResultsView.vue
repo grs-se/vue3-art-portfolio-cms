@@ -5,12 +5,7 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts" setup>
 import ArtworkGallery from "@/components/ArtworkResults/ArtworkGallery.vue";
 import ArtworkFiltersSidebar from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebar.vue";
-
-export default {
-	name: "ArtworkResultsView",
-	components: { ArtworkGallery, ArtworkFiltersSidebar },
-};
 </script>

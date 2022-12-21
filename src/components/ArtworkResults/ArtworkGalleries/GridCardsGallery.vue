@@ -29,25 +29,15 @@
 	</section>
 </template>
 
-<script>
+<script lang="ts" setup>
+import { computed, ref } from "vue";
+
 import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
 import ArtworkCardHoverModal from "@/components/ArtworkResults/ArtworkCardHoverModal.vue";
 
-export default {
-	name: "GridCardsGallery",
-	components: {
-		ArtworkCards,
-		ArtworkCardHoverModal,
-	},
-	data() {
-		return {
-			hover: false,
-		};
-	},
-	methods: {
-		displayModalOnHover() {
-			console.log("Hover Modal");
-		},
-	},
-};
+const hover = ref(false);
+
+// const displayModalOnHover = computed(() => {
+// 	console.log("Hover modal");
+// });
 </script>

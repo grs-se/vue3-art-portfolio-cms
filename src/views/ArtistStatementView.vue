@@ -10,12 +10,7 @@
 	<texts-artist-statement />
 </template>
 
-<script>
+<script lang="ts" setup>
 import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
 import TextsArtistStatement from "@/components/TextsResults/TextsArtistStatement.vue";
-
-export default {
-	name: "ArtistStatementView",
-	components: { HeaderContainer, TextsArtistStatement },
-};
 </script>

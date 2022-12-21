@@ -19,13 +19,17 @@
 	</div>
 </template>
 
-<script setup>
-import { computed } from "vue";
+<script lang="ts" setup>
+import { computed, type PropType } from "vue";
+
+import type { Artwork } from "@/api/types";
 
 const props = defineProps({
 	artwork: {
-		type: Object,
+		type: Object as PropType<Artwork>,
 		required: true,
 	},
 });
+
+const artworkPageLink = computed(() => `/artworks/results/${props.artwork.id}`);
 </script>

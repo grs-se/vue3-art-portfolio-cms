@@ -12,7 +12,7 @@ export interface Artwork {
 			cm?: number;
 			px: number;
 		};
-		depth: {
+		depth?: {
 			cm?: number;
 			px?: number;
 		};
@@ -36,4 +36,21 @@ export interface Artwork {
 	tags?: string[];
 	title: string;
 	_id?: string;
+}
+
+export interface Text {
+	artwork: [];
+	categories: string[];
+	content: string;
+	createdAt: Date;
+	datePublished: Date;
+	dateWritten: Date;
+	heading: string;
+	locationWritten: string;
+	publishedAt: string;
+	secretText: boolean;
+	slug: string;
+	subHeading: string;
+	user: [];
+	wordCount: number;
 }

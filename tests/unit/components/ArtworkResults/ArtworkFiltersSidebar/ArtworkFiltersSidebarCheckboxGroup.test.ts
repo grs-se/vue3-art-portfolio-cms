@@ -1,3 +1,4 @@
+import type { Mock } from "vitest";
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 import { createTestingPinia } from "@pinia/testing";
@@ -6,17 +7,28 @@ import { useRouter } from "vue-router";
 vi.mock("vue-router");
 
 import ArtworkFiltersSidebarCheckboxGroup from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCheckboxGroup.vue";
-import { vi } from "vitest";
+
+const useRouterMock = useRouter as Mock;
 
 describe("ArtworkFiltersSidebarCheckboxGroup", () => {
-	const createProps = (props = {}) => ({
+	interface ArtworkFiltersSidebarCheckboxGroupProps {
+		header: string;
+		uniqueValues: Set<string>;
+		action: Mock;
+	}
+
+	const createProps = (
+		props: Partial<ArtworkFiltersSidebarCheckboxGroupProps> = {}
+	): ArtworkFiltersSidebarCheckboxGroupProps => ({
 		header: "Some header",
 		uniqueValues: new Set(["ValA", "ValB"]),
 		action: vi.fn(),
 		...props,
 	});
 
-	const renderArtworkFilterSidebarCheckboxGroup = (props) => {
+	const renderArtworkFilterSidebarCheckboxGroup = (
+		props: ArtworkFiltersSidebarCheckboxGroupProps
+	) => {
 		const pinia = createTestingPinia();
 
 		render(ArtworkFiltersSidebarCheckboxGroup, {
@@ -47,7 +59,7 @@ describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 
 	describe("when user clicks checkbox", () => {
 		it("communicates that user has selected checkbox for categories", async () => {
-			useRouter.mockReturnValue({ push: vi.fn() });
+			useRouterMock.mockReturnValue({ push: vi.fn() });
 			const action = vi.fn();
 			const props = createProps({
 				header: "Categories",
@@ -69,7 +81,7 @@ describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 
 		it("navigates user to artwork results page to see fresh batch of filtered artworks", async () => {
 			const push = vi.fn();
-			useRouter.mockReturnValue({ push });
+			useRouterMock.mockReturnValue({ push });
 			const props = createProps({
 				header: "Categories",
 				uniqueValues: new Set(["Painting"]),

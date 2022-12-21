@@ -1,3 +1,4 @@
+import type { Mock } from "vitest";
 import { render, screen } from "@testing-library/vue";
 import { createTestingPinia } from "@pinia/testing";
 
@@ -6,6 +7,8 @@ vi.mock("vue-router");
 
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import { useArtworksStore } from "@/stores/artworks";
+
+const useRouteMock = useRoute as Mock;
 
 describe("TheSubnav", () => {
 	const renderTheSubnav = () => {
@@ -26,10 +29,11 @@ describe("TheSubnav", () => {
 
 	describe("when user is on gallery page", () => {
 		it("displays artwork count", async () => {
-			useRoute.mockReturnValue({ name: "ArtworkResults" });
+			useRouteMock.mockReturnValue({ name: "ArtworkResults" });
 
 			const { artworksStore } = renderTheSubnav();
 			const numberOfArtworks = 16;
+			// @ts-expect-error: Getter is read only
 			artworksStore.FILTERED_ARTWORKS = Array(numberOfArtworks).fill({});
 
 			const artworkCount = await screen.findByText(numberOfArtworks);
@@ -39,10 +43,11 @@ describe("TheSubnav", () => {
 
 	describe("when user is not on artworks page", () => {
 		it("does NOT display artwork count", () => {
-			useRoute.mockReturnValue({ name: "Home" });
+			useRouteMock.mockReturnValue({ name: "Home" });
 
 			const { artworksStore } = renderTheSubnav();
 			const numberOfArtworks = 16;
+			// @ts-expect-error: Getter is read only
 			artworksStore.FILTERED_ARTWORKS = Array(numberOfArtworks).fill({});
 
 			const artworkCount = screen.queryByText(numberOfArtworks);
