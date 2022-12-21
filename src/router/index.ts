@@ -1,11 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import HomeView from "@/views/HomeView.vue";
-// import GalleryView from "@/views/GalleryView.vue";
+import ArtistStatementView from "@/views/ArtistStatementView.vue";
 import ArtworkResultsView from "@/views/ArtworkResultsView.vue";
 import ArtworkView from "@/views/ArtworkView.vue";
-import ArtistStatementView from "@/views/ArtistStatementView.vue";
+import HomeView from "@/views/HomeView.vue";
+// import GalleryView from "@/views/GalleryView.vue";
 import ResearchView from "@/views/ResearchView.vue";
+import TextResultsView from "@/views/TextResultsView.vue";
 
 const routes = [
 	{
@@ -37,6 +38,11 @@ const routes = [
 		path: "/research",
 		name: "Research",
 		component: ResearchView,
+	},
+	{
+		path: "/text",
+		name: "Text",
+		component: TextResultsView,
 	},
 ];
 

@@ -54,9 +54,9 @@ import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
 
 const menuItems = ref([
-	{ text: "Gallery", url: "/gallery" },
-	{ text: "Research", url: "/research" },
-	{ text: "Writing", url: "/" },
+	{ text: "Gallery", url: "/gallery/" },
+	{ text: "Research", url: "/research/" },
+	{ text: "Text", url: "/text/" },
 	{ text: "Exhibitions", url: "/" },
 	{ text: "Statement", url: "/text/artist-statement" },
 	{ text: "About", url: "/" },

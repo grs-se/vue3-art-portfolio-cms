@@ -7,10 +7,10 @@
 			<h2 class="my-4 w-full text-base font-light">2022-2023</h2>
 		</template>
 	</header-container>
-	<texts-artist-statement />
+	<text-artist-statement />
 </template>
 
 <script lang="ts" setup>
 import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
-import TextsArtistStatement from "@/components/TextsResults/TextsArtistStatement.vue";
+import TextArtistStatement from "@/components/TextResults/TextArtistStatement.vue";
 </script>

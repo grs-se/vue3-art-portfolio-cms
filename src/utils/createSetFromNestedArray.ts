@@ -4,7 +4,7 @@ const createSetFromNestedArray = (data: [], key: string) => {
 	data.forEach((item) =>
 		typeof item[key] === "string" ? arr.push(item[key]) : arr.push(...item[key])
 	);
-	const set = new Set<string[]>(arr);
+	const set = new Set<string>(arr);
 	// console.log(set);
 	return set;
 };

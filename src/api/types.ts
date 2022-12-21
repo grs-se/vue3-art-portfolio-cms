@@ -52,6 +52,6 @@ export interface Text {
 	secretText?: boolean;
 	slug: string;
 	subHeading?: string;
-	user?: [];
+	user?: {};
 	wordCount?: number;
 }

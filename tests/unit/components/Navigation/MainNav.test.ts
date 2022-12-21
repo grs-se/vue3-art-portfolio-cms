@@ -44,7 +44,7 @@ describe("MainNav", () => {
 		expect(navigationMenuTexts).toEqual([
 			"Gallery",
 			"Research",
-			"Writing",
+			"Text",
 			"Exhibitions",
 			"Statement",
 			"About",
