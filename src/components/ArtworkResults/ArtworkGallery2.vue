@@ -1,5 +1,8 @@
 <template>
-	<main id="gallery-wrapper" class="mx-auto w-full bg-brand-gray-2 p-8">
+	<main
+		id="gallery-wrapper"
+		class="relative mx-auto w-full bg-brand-gray-2 p-8"
+	>
 		<ol
 			data-gallery-mode="grid-cards"
 			class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-10"
@@ -8,6 +11,7 @@
 				v-for="artwork in displayedArtworks"
 				:key="artwork._id"
 				:artwork="artwork"
+				class=""
 			/>
 		</ol>
 

@@ -6,6 +6,7 @@
 				:title="spotlight.title"
 				:description="spotlight.description"
 				:medium="spotlight.medium"
+				:categories="spotlight.categories"
 			></slot>
 		</li>
 	</ul>

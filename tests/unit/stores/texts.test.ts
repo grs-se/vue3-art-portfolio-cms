@@ -2,7 +2,7 @@ import type { Mock } from "vitest";
 import { createPinia, setActivePinia } from "pinia";
 import axios from "axios";
 
-import { useTextsStore } from "@/stores/texts2";
+import { useTextsStore } from "@/stores/texts";
 import { useUserStore } from "@/stores/user";
 import { createText } from "../../utils/createText";
 
@@ -66,7 +66,7 @@ describe("actions", () => {
 
 describe("INCLUDE_TEXT_BY_CATEGORY", () => {
 	describe("when the user has not selected any categories", () => {
-		it("includes artwork", () => {
+		it("includes text", () => {
 			const userStore = useUserStore();
 			userStore.selectedTextCategories = [];
 			const store = useTextsStore();

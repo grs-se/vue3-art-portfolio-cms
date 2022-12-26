@@ -7,6 +7,7 @@ import HomeView from "@/views/HomeView.vue";
 // import GalleryView from "@/views/GalleryView.vue";
 import ResearchView from "@/views/ResearchView.vue";
 import TextResultsView from "@/views/TextResultsView.vue";
+import TextView from "@/views/TextView.vue";
 
 const routes = [
 	{
@@ -43,6 +44,11 @@ const routes = [
 		path: "/text",
 		name: "Text",
 		component: TextResultsView,
+	},
+	{
+		path: "/text/:id",
+		name: "TextListing",
+		component: TextView,
 	},
 ];
 

@@ -35,9 +35,9 @@ import { computed, ref } from "vue";
 import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
 import ArtworkCardHoverModal from "@/components/ArtworkResults/ArtworkCardHoverModal.vue";
 
-const hover = ref(false);
+const hover = ref<boolean>(false);
 
 // const displayModalOnHover = computed(() => {
-// 	console.log("Hover modal");
+// 	if (hover.value === true);
 // });
 </script>

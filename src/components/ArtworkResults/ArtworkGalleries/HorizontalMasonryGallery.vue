@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import ArtworkCard from "@/components/ArtworkResults/ArtworkCard.vue";
+import ArtworkCard from "@/components/ArtworkResults/ArtworkCard2.vue";
 
 // props: {
 // 	artwork: {

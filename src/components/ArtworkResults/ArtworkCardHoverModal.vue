@@ -3,7 +3,11 @@
 		<template #default="{ imageCover, title }">
 			<section class="max-w-80 flex max-h-80 flex-col bg-white">
 				<figure>
-					<img :src="'public/images/artworks/' + imageCover" alt="" />
+					<img
+						:src="'/images/artworks/' + imageCover"
+						alt=""
+						class="h-60 w-auto"
+					/>
 				</figure>
 				<figcaption class="hidden bg-white">
 					<h3>{{ title }}</h3>

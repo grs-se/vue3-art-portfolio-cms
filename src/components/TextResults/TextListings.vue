@@ -1,10 +1,11 @@
 <template>
-	<main class="flex-auto bg-brand-gray-2 p-8">
+	<main class="w-full flex-auto bg-brand-gray-2 p-8">
 		<ol>
 			<text-listing
 				v-for="text in displayedTexts"
 				:key="text.id"
 				:text="text"
+				class="mx-auto max-w-gallery"
 			/>
 		</ol>
 
@@ -41,6 +42,7 @@ import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
 import TextListing from "@/components/TextResults/TextListing.vue";
+
 import { useTextsStore } from "@/stores/texts";
 
 import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
