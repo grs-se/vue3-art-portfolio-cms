@@ -14,16 +14,19 @@
 				</div>
 			</div>
 
-			<artwork-filters-sidebar-checkbox-group
-				header="Categories"
-				:unique-values="UNIQUE_ARTWORK_CATEGORIES"
-				:action="userStore.ADD_SELECTED_ARTWORK_CATEGORIES"
-			/>
-			<artwork-filters-sidebar-checkbox-group
-				header="Locations"
-				:unique-values="UNIQUE_ARTWORK_LOCATIONS"
-				:action="userStore.ADD_SELECTED_ARTWORK_LOCATIONS"
-			/>
+			<collapsible-accordian header="Categories">
+				<artwork-filters-sidebar-checkbox-group
+					:unique-values="UNIQUE_ARTWORK_CATEGORIES"
+					:action="userStore.ADD_SELECTED_ARTWORK_CATEGORIES"
+				/>
+			</collapsible-accordian>
+
+			<collapsible-accordian header="Locations">
+				<artwork-filters-sidebar-checkbox-group
+					:unique-values="UNIQUE_ARTWORK_LOCATIONS"
+					:action="userStore.ADD_SELECTED_ARTWORK_LOCATIONS"
+				/>
+			</collapsible-accordian>
 		</section>
 	</div>
 </template>
@@ -32,6 +35,7 @@
 import { computed } from "vue";
 
 import ActionButton from "@/components/Shared/ActionButton.vue";
+import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
 import ArtworkFiltersSidebarCheckboxGroup from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCheckboxGroup.vue";
 
 import { useArtworksStore } from "@/stores/artworks";
