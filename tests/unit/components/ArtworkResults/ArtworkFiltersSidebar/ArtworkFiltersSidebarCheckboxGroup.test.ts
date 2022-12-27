@@ -8,11 +8,12 @@ vi.mock("vue-router");
 
 import ArtworkFiltersSidebarCheckboxGroup from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCheckboxGroup.vue";
 
+import { useUserStore } from "@/stores/user";
+
 const useRouterMock = useRouter as Mock;
 
 describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 	interface ArtworkFiltersSidebarCheckboxGroupProps {
-		header: string;
 		uniqueValues: Set<string>;
 		action: Mock;
 	}
@@ -20,7 +21,6 @@ describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 	const createProps = (
 		props: Partial<ArtworkFiltersSidebarCheckboxGroupProps> = {}
 	): ArtworkFiltersSidebarCheckboxGroupProps => ({
-		header: "Some header",
 		uniqueValues: new Set(["ValA", "ValB"]),
 		action: vi.fn(),
 		...props,
@@ -29,28 +29,24 @@ describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 	const renderArtworkFilterSidebarCheckboxGroup = (
 		props: ArtworkFiltersSidebarCheckboxGroupProps
 	) => {
-		const pinia = createTestingPinia();
+		const pinia = createTestingPinia({ stubActions: false });
+		const userStore = useUserStore();
 
 		render(ArtworkFiltersSidebarCheckboxGroup, {
 			props: { ...props },
 			global: {
 				plugins: [pinia],
-				stubs: {
-					FontAwesomeIcon: true,
-				},
 			},
 		});
+
+		return { userStore };
 	};
 
-	it("renders unique list of values", async () => {
+	it("renders unique list of values", () => {
 		const props = createProps({
-			header: "Categories",
 			uniqueValues: new Set(["Painting", "Studio"]),
 		});
 		renderArtworkFilterSidebarCheckboxGroup(props);
-
-		const button = screen.getByRole("button", { name: /categories/i });
-		await userEvent.click(button);
 
 		const categoriesListItems = screen.getAllByRole("listitem");
 		const categories = categoriesListItems.map((node) => node.textContent);
@@ -62,14 +58,10 @@ describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 			useRouterMock.mockReturnValue({ push: vi.fn() });
 			const action = vi.fn();
 			const props = createProps({
-				header: "Categories",
 				uniqueValues: new Set(["Painting", "Studio"]),
 				action,
 			});
 			renderArtworkFilterSidebarCheckboxGroup(props);
-
-			const button = screen.getByRole("button", { name: /categories/i });
-			await userEvent.click(button);
 
 			const categoriesCheckbox = screen.getByRole("checkbox", {
 				name: /painting/i,
@@ -83,19 +75,44 @@ describe("ArtworkFiltersSidebarCheckboxGroup", () => {
 			const push = vi.fn();
 			useRouterMock.mockReturnValue({ push });
 			const props = createProps({
-				header: "Categories",
 				uniqueValues: new Set(["Painting"]),
 			});
 			renderArtworkFilterSidebarCheckboxGroup(props);
-			const button = screen.getByRole("button", { name: /categories/i });
-			await userEvent.click(button);
 
-			const categoriesCheckbox = screen.getByRole("checkbox", {
+			const paintingCheckbox = screen.getByRole("checkbox", {
 				name: /painting/i,
 			});
-			await userEvent.click(categoriesCheckbox);
+			await userEvent.click(paintingCheckbox);
 
 			expect(push).toHaveBeenCalledWith({ name: "ArtworkResults" });
+		});
+	});
+
+	describe("when user clears artwork filters", () => {
+		it("unchecks any checked checkboxes", async () => {
+			useRouterMock.mockReturnValue({ push: vi.fn() });
+			const props = createProps({
+				uniqueValues: new Set(["Painting"]),
+			});
+			const { userStore } = renderArtworkFilterSidebarCheckboxGroup(props);
+
+			const paintingCheckboxBeforeAction = screen.getByRole<HTMLInputElement>(
+				"checkbox",
+				{
+					name: /painting/i,
+				}
+			);
+			await userEvent.click(paintingCheckboxBeforeAction);
+
+			expect(paintingCheckboxBeforeAction.checked).toBe(true);
+
+			userStore.CLEAR_USER_ARTWORK_FILTER_SELECTIONS();
+
+			const paintingCheckboxAfterAction =
+				await screen.findByRole<HTMLInputElement>("checkbox", {
+					name: /painting/i,
+				});
+			expect(paintingCheckboxAfterAction.checked).toBe(false);
 		});
 	});
 });
