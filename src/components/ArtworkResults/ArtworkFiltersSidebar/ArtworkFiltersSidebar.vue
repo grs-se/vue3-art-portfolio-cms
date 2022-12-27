@@ -15,39 +15,23 @@
 			</div>
 
 			<collapsible-accordian header="Categories">
-				<artwork-filters-sidebar-checkbox-group
-					:unique-values="UNIQUE_ARTWORK_CATEGORIES"
-					:action="userStore.ADD_SELECTED_ARTWORK_CATEGORIES"
-				/>
+				<artwork-filters-sidebar-categories />
 			</collapsible-accordian>
 
 			<collapsible-accordian header="Locations">
-				<artwork-filters-sidebar-checkbox-group
-					:unique-values="UNIQUE_ARTWORK_LOCATIONS"
-					:action="userStore.ADD_SELECTED_ARTWORK_LOCATIONS"
-				/>
+				<artwork-filters-sidebar-locations />
 			</collapsible-accordian>
 		</section>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
-import ArtworkFiltersSidebarCheckboxGroup from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCheckboxGroup.vue";
+import ArtworkFiltersSidebarCategories from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCategories.vue";
+import ArtworkFiltersSidebarLocations from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarLocations.vue";
 
-import { useArtworksStore } from "@/stores/artworks";
 import { useUserStore } from "@/stores/user";
-
-const artworksStore = useArtworksStore();
-const UNIQUE_ARTWORK_CATEGORIES = computed(
-	() => artworksStore.UNIQUE_ARTWORK_CATEGORIES
-);
-const UNIQUE_ARTWORK_LOCATIONS = computed(
-	() => artworksStore.UNIQUE_ARTWORK_LOCATIONS
-);
 
 const userStore = useUserStore();
 </script>
