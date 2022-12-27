@@ -26,6 +26,11 @@ import { useRouter } from "vue-router";
 
 import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
 
+import {
+	useUserStore,
+	CLEAR_USER_ARTWORK_FILTER_SELECTIONS,
+} from "@/stores/user";
+
 const props = defineProps({
 	header: {
 		type: String,
@@ -48,4 +53,13 @@ const selectValue = () => {
 	props.action(selectedValues.value);
 	router.push({ name: "ArtworkResults" });
 };
+
+const userStore = useUserStore();
+userStore.$onAction(({ after, name }) => {
+	after(() => {
+		if (name === CLEAR_USER_ARTWORK_FILTER_SELECTIONS) {
+			selectedValues.value = [];
+		}
+	});
+});
 </script>

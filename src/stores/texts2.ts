@@ -16,17 +16,17 @@ export const useTextsStore = defineStore("texts", () => {
 		texts.value = receivedTexts;
 	};
 
-	const UNIQUE_TEXT_CATEGORIES = computed(() => {
+	const UNIQUE_TEXT_CATEGORIES = () => {
 		return createSet(texts.value, "categories");
-	});
+	};
 
-	const INCLUDE_TEXT_BY_CATEGORY = computed(text: Text) => {
+	const INCLUDE_TEXT_BY_CATEGORY = (text: Text) => {
 		const userStore = useUserStore();
 		if (userStore.selectedTextCategories.length === 0) return true;
 		return text.categories.some((cat: string) =>
 			userStore.selectedTextCategories.includes(cat)
 		);
-	});
+	};
 
 	const FILTERED_TEXTS = computed((texts) => {
 		return texts.value.filter((text) => INCLUDE_TEXT_BY_CATEGORY(text));
