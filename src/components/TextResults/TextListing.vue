@@ -17,11 +17,11 @@
 					<div>
 						<ul>
 							<li
-								v-for="location in text.content"
-								:key="location"
-								class="mr-5 inline-block"
+								v-for="item in text.content"
+								:key="item"
+								class="line-clamp mr-5 inline-block"
 							>
-								<span>{{ location }}</span>
+								<span>{{ item }}</span>
 							</li>
 						</ul>
 					</div>
@@ -64,3 +64,12 @@ const props = defineProps({
 
 const textPageLink = computed(() => `/text/${props.text.id}`);
 </script>
+
+<style scoped>
+.line-clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 8;
+	overflow: hidden;
+}
+</style>
