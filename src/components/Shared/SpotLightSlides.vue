@@ -2,7 +2,7 @@
 	<spot-light
 		class="mt-10 flex w-max flex-row justify-center overflow-y-hidden pb-16"
 	>
-		<template #default="{ imageCover, title, description, medium, categories }">
+		<template #default="{ imageCover, title, medium, description, categories }">
 			<router-link
 				to="/gallery"
 				class="mx-5 flex h-auto max-w-sm flex-col rounded-lg border bg-white"

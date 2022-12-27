@@ -1,7 +1,7 @@
 <template>
 	<section id="grid-cards-gallery">
 		<artwork-cards
-			class="mx-auto grid border-l border-t sm:grid-cols-1 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3"
+			class="mx-auto grid border-l border-t sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
 		>
 			<!-- <artwork-card
 		class="mx-auto grid rounded border border-solid bg-white p-4 sm:grid-cols-1 sm:gap-2 md:grid-cols-2 xl:max-w-gallery xl:grid-cols-3 xl:gap-9"
@@ -16,7 +16,7 @@
 			> -->
 					<img
 						:src="'/images/artworks/' + imageCover"
-						class="mx-auto max-h-60 place-self-center hover:shadow-gray"
+						class="mx-auto max-h-64 place-self-center hover:shadow-gray"
 						@mouseover="hover = true"
 						@mouseleave="hover = false"
 					/>

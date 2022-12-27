@@ -4,8 +4,9 @@
 			<slot
 				:image-cover="spotlight.imageCover"
 				:title="spotlight.title"
-				:description="spotlight.description"
 				:medium="spotlight.medium"
+				:dimensions="spotlight.dimensions"
+				:description="spotlight.description"
 				:categories="spotlight.categories"
 			></slot>
 		</li>
