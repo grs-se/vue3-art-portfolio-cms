@@ -38,7 +38,7 @@
 					</figure>
 
 					<div class="px-6 pb-4 text-sm">
-						<span>Category: </span>
+						<!-- <span>Category: </span> -->
 						<router-link to="/gallery" class="capitalize text-brand-blue-1">{{
 							spotlight.categories[0]
 						}}</router-link>

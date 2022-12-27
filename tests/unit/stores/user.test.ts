@@ -1,6 +1,7 @@
 import { createPinia, setActivePinia } from "pinia";
 
 import { useUserStore } from "@/stores/user";
+import { stringifyExpression } from "@vue/compiler-core";
 
 describe("state", () => {
 	beforeEach(() => {
@@ -28,10 +29,10 @@ describe("actions", () => {
 		setActivePinia(createPinia());
 	});
 
-	describe("loginUser", () => {
+	describe("LOGIN_USER", () => {
 		it("logs the user in", () => {
 			const store = useUserStore();
-			store.loginUser();
+			store.LOGIN_USER();
 			expect(store.isLoggedIn).toBe(true);
 		});
 	});
@@ -49,6 +50,19 @@ describe("actions", () => {
 			const store = useUserStore();
 			store.ADD_SELECTED_TEXT_CATEGORIES(["Cat1", "Cat2"]);
 			expect(store.selectedTextCategories).toEqual(["Cat1", "Cat2"]);
+		});
+	});
+
+	describe("CLEAR_USER_ARTWORK_FILTER_SELECTIONS", () => {
+		it("removes all artwork filters that user has chosen", (_) => {
+			const store = useUserStore();
+			store.selectedArtworkCategories = ["Random category"];
+			store.selectedArtworkLocations = ["Random location"];
+
+			store.CLEAR_USER_ARTWORK_FILTER_SELECTIONS();
+
+			expect(store.selectedArtworkCategories).toEqual([]);
+			expect(store.selectedArtworkLocations).toEqual([]);
 		});
 	});
 });

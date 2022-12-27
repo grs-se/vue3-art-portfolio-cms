@@ -1,36 +1,49 @@
+import { ref } from "vue";
 import { defineStore } from "pinia";
 
 export const ADD_SELECTED_ARTWORK_CATEGORIES =
 	"ADD_SELECTED_ARTWORK_CATEGORIES";
 export const ADD_SELECTED_ARTWORK_LOCATIONS = "ADD_SELECTED_ARTWORK_LOCATIONS";
 export const ADD_SELECTED_TEXT_CATEGORIES = "ADD_SELECTED_TEXT_CATEGORIES";
+export const CLEAR_USER_ARTWORK_FILTER_SELECTIONS =
+	"CLEAR_USER_ARTWORK_FILTER_SELECTIONS";
 
-export interface UserState {
-	isLoggedIn: boolean;
-	selectedArtworkCategories: string[];
-	selectedArtworkLocations: string[];
-	selectedTextCategories: string[];
-}
+export const useUserStore = defineStore("user", () => {
+	const isLoggedIn = ref(false);
+	const selectedArtworkCategories = ref<string[]>([]);
+	const selectedArtworkLocations = ref<string[]>([]);
+	const selectedTextCategories = ref<string[]>([]);
 
-export const useUserStore = defineStore("user", {
-	state: (): UserState => ({
-		isLoggedIn: false,
-		selectedArtworkCategories: [],
-		selectedArtworkLocations: [],
-		selectedTextCategories: [],
-	}),
-	actions: {
-		loginUser() {
-			this.isLoggedIn = true;
-		},
-		[ADD_SELECTED_ARTWORK_CATEGORIES](categories: string[]) {
-			this.selectedArtworkCategories = categories;
-		},
-		[ADD_SELECTED_ARTWORK_LOCATIONS](locations: string[]) {
-			this.selectedArtworkLocations = locations;
-		},
-		[ADD_SELECTED_TEXT_CATEGORIES](categories: string[]) {
-			this.selectedTextCategories = categories;
-		},
-	},
+	const LOGIN_USER = () => {
+		isLoggedIn.value = true;
+	};
+
+	const ADD_SELECTED_ARTWORK_CATEGORIES = (categories: string[]) => {
+		selectedArtworkCategories.value = categories;
+	};
+
+	const ADD_SELECTED_ARTWORK_LOCATIONS = (locations: string[]) => {
+		selectedArtworkLocations.value = locations;
+	};
+
+	const ADD_SELECTED_TEXT_CATEGORIES = (categories: string[]) => {
+		selectedTextCategories.value = categories;
+	};
+
+	const CLEAR_USER_ARTWORK_FILTER_SELECTIONS = () => {
+		selectedArtworkCategories.value = [];
+		selectedArtworkLocations.value = [];
+	};
+
+	return {
+		isLoggedIn,
+		selectedArtworkCategories,
+		selectedArtworkLocations,
+		selectedTextCategories,
+		LOGIN_USER,
+		ADD_SELECTED_ARTWORK_CATEGORIES,
+		ADD_SELECTED_ARTWORK_LOCATIONS,
+		ADD_SELECTED_TEXT_CATEGORIES,
+		CLEAR_USER_ARTWORK_FILTER_SELECTIONS,
+	};
 });
