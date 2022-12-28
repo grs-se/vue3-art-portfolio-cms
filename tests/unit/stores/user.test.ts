@@ -72,11 +72,13 @@ describe("actions", () => {
 			const store = useUserStore();
 			store.selectedArtworkCategories = ["Random category"];
 			store.selectedArtworkLocations = ["Random location"];
+			store.tagsSearchTerm = "Landscape";
 
 			store.CLEAR_USER_ARTWORK_FILTER_SELECTIONS();
 
 			expect(store.selectedArtworkCategories).toEqual([]);
 			expect(store.selectedArtworkLocations).toEqual([]);
+			expect(store.tagsSearchTerm).toBe("");
 		});
 	});
 });

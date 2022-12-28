@@ -38,6 +38,7 @@ export const useUserStore = defineStore("user", () => {
 	const CLEAR_USER_ARTWORK_FILTER_SELECTIONS = () => {
 		selectedArtworkCategories.value = [];
 		selectedArtworkLocations.value = [];
+		tagsSearchTerm.value = "";
 	};
 
 	return {
