@@ -1,7 +1,8 @@
 <template>
 	<section class="mb-16">
 		<h1 class="mb-14 text-8xl font-bold tracking-tighter">
-			<span :class="actionClasses">{{ action }}</span>
+			<span>Art Portfolio</span>
+			<!-- <span :class="actionClasses">{{ action }}</span> -->
 			<br />
 		</h1>
 		<h2 class="text-3xl font-light">Based in London, UK</h2>
@@ -24,7 +25,7 @@ const actionClasses = computed(() => {
 
 const changeTitle = () => {
 	interval.value = setInterval(() => {
-		const actions = ["Create", "Code", "Design", "Build"];
+		const actions = ["Artist", "Programmer", "Landscaping"];
 		action.value = nextElementInList(actions, action.value);
 	}, 3000);
 };
@@ -35,15 +36,15 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.create {
+.artist {
 	color: #1a73e8;
 }
 
-.code {
+.programmer {
 	color: #34a853;
 }
 
-.design {
+.landscaping {
 	color: #f9ab00;
 }
 
