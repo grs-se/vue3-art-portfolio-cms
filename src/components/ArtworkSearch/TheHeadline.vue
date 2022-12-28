@@ -1,11 +1,11 @@
 <template>
 	<section class="mb-16">
-		<h1 class="mb-14 text-8xl font-bold tracking-tighter">
-			<span>Art Portfolio</span>
+		<h1 class="hero-header mb-14 font-normal tracking-tighter">
+			<span>George Rice-Smith</span>
 			<!-- <span :class="actionClasses">{{ action }}</span> -->
 			<br />
 		</h1>
-		<h2 class="text-3xl font-light">Based in London, UK</h2>
+		<h2 class="text-3xl font-light">Artist based in London, UK</h2>
 	</section>
 </template>
 
@@ -36,6 +36,9 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+.hero-header {
+	font-size: 2.8rem;
+}
 .artist {
 	color: #1a73e8;
 }
