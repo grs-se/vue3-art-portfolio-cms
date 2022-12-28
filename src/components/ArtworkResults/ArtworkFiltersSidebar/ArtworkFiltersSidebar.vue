@@ -5,6 +5,8 @@
 		<section class="pb-5">
 			<artwork-filters-sidebar-prompt />
 
+			<artwork-filters-sidebar-tags />
+
 			<collapsible-accordian header="Categories">
 				<artwork-filters-sidebar-categories />
 			</collapsible-accordian>
@@ -21,4 +23,5 @@ import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
 import ArtworkFiltersSidebarCategories from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCategories.vue";
 import ArtworkFiltersSidebarLocations from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarLocations.vue";
 import ArtworkFiltersSidebarPrompt from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarPrompt.vue";
+import ArtworkFiltersSidebarTags from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarTags.vue";
 </script>
