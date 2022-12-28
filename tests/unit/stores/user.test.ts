@@ -22,6 +22,11 @@ describe("state", () => {
 		const store = useUserStore();
 		expect(store.selectedTextCategories).toEqual([]);
 	});
+
+	it("stores user's search term for tags, themes, subjects, symbols, and categories", () => {
+		const store = useUserStore();
+		expect(store.tagsSearchTerm).toBe("");
+	});
 });
 
 describe("actions", () => {
@@ -53,8 +58,17 @@ describe("actions", () => {
 		});
 	});
 
+	describe("UPDATE_TAGS_SEARCH_TERM", () => {
+		it("receives search term for tags the user has entered", () => {
+			const store = useUserStore();
+			store.tagsSearchTerm = "";
+			store.UPDATE_TAGS_SEARCH_TERM("Landscape");
+			expect(store.tagsSearchTerm).toBe("Landscape");
+		});
+	});
+
 	describe("CLEAR_USER_ARTWORK_FILTER_SELECTIONS", () => {
-		it("removes all artwork filters that user has chosen", (_) => {
+		it("removes all artwork filters that user has chosen", () => {
 			const store = useUserStore();
 			store.selectedArtworkCategories = ["Random category"];
 			store.selectedArtworkLocations = ["Random location"];

@@ -138,4 +138,41 @@ describe("getters", () => {
 			});
 		});
 	});
+
+	describe("INCLUDE_ARTWORK_BY_TAG", () => {
+		it("identifies if artwork includes user's search term", () => {
+			const userStore = useUserStore();
+			userStore.tagsSearchTerm = "Archetype";
+			const store = useArtworksStore();
+			const artwork = createArtwork({ tags: ["Archetype"] });
+
+			const result = store.INCLUDE_ARTWORK_BY_TAG(artwork);
+
+			expect(result).toBe(true);
+		});
+
+		it("handles inconsistent character casing", () => {
+			const userStore = useUserStore();
+			userStore.tagsSearchTerm = "arcHeType";
+			const store = useArtworksStore();
+			const artwork = createArtwork({ tags: ["Archetype"] });
+
+			const result = store.INCLUDE_ARTWORK_BY_TAG(artwork);
+
+			expect(result).toBe(true);
+		});
+
+		describe("when the user has not entered any search term", () => {
+			it("includes artwork", () => {
+				const userStore = useUserStore();
+				userStore.tagsSearchTerm = "";
+				const store = useArtworksStore();
+				const artwork = createArtwork({ tags: ["Archetype"] });
+
+				const result = store.INCLUDE_ARTWORK_BY_TAG(artwork);
+
+				expect(result).toBe(true);
+			});
+		});
+	});
 });
