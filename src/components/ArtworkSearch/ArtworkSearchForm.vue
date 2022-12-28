@@ -7,8 +7,8 @@
 
 		<div class="flex h-full flex-1 flex-nowrap text-base font-light">
 			<div class="relative flex h-full flex-1 items-center pr-3">
-				<label for="category" class="absolute left-0 -top-10">Category</label>
-				<text-input id="category" v-model="category" />
+				<label for="tag" class="absolute left-0 -top-10">Themes</label>
+				<text-input id="tag" v-model="tag" placeholder="Landscape" />
 			</div>
 		</div>
 
@@ -27,14 +27,14 @@ import { useRouter } from "vue-router";
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import TextInput from "@/components/Shared/TextInput.vue";
 
-const category = ref("");
+const tag = ref("");
 
 const router = useRouter();
 
 const searchForArtworks = () => {
 	router.push({
 		name: "ArtworkResults",
-		query: { category: category.value },
+		query: { tag: tag.value },
 	});
 };
 </script>
