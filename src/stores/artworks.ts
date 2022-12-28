@@ -12,9 +12,10 @@ export const UNIQUE_ARTWORK_LOCATIONS = "UNIQUE_ARTWORK_LOCATIONS";
 export const FILTERED_ARTWORKS = "FILTERED_ARTWORKS";
 export const ARTWORK_SPOTLIGHTS = "ARTWORK_SPOTLIGHTS";
 export const ARTWORK_HERO = "ARTWORK_HERO";
-
-const INCLUDE_ARTWORK_BY_CATEGORY = "INCLUDE_ARTWORK_BY_CATEGORY";
-const INCLUDE_ARTWORK_BY_LOCATION = "INCLUDE_ARTWORK_BY_LOCATION";
+export const INCLUDE_ARTWORK_BY_CATEGORY = "INCLUDE_ARTWORK_BY_CATEGORY";
+export const INCLUDE_ARTWORK_BY_LOCATION = "INCLUDE_ARTWORK_BY_LOCATION";
+export const INCLUDE_ARTWORK_BY_TAG = "INCLUDE_ARTWORK_BY_TAG";
+export const SORT_ARTWORKS_BY_DATE = "SORT_ARTWORKS_BY_DATE";
 
 export interface ArtworksState {
 	artworks: Artwork[];
@@ -61,10 +62,19 @@ export const useArtworksStore = defineStore("artworks", {
 				(artwork: Artwork) => artwork.hero && artwork.hero === true
 			);
 		},
+		[INCLUDE_ARTWORK_BY_TAG]: () => (artwork: Artwork) => {
+			const userStore = useUserStore();
+			if (userStore.tagsSearchTerm.length === 0) return true;
+			return artwork.tags.some((tag: string) =>
+				userStore.tagsSearchTerm.toLowerCase().includes(tag.toLowerCase())
+			);
+		},
+		// [SORT_ARTWORKS_BY_DATE_ASCENDING](state) {},
 		[FILTERED_ARTWORKS](state): Artwork[] {
 			return state.artworks
 				.filter((artwork) => this.INCLUDE_ARTWORK_BY_CATEGORY(artwork))
-				.filter((artwork) => this.INCLUDE_ARTWORK_BY_LOCATION(artwork));
+				.filter((artwork) => this.INCLUDE_ARTWORK_BY_LOCATION(artwork))
+				.filter((artwork) => this.INCLUDE_ARTWORK_BY_TAG(artwork));
 		},
 	},
 });

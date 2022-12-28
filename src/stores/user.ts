@@ -13,6 +13,7 @@ export const useUserStore = defineStore("user", () => {
 	const selectedArtworkCategories = ref<string[]>([]);
 	const selectedArtworkLocations = ref<string[]>([]);
 	const selectedTextCategories = ref<string[]>([]);
+	const tagsSearchTerm = ref("");
 
 	const LOGIN_USER = () => {
 		isLoggedIn.value = true;
@@ -30,6 +31,10 @@ export const useUserStore = defineStore("user", () => {
 		selectedTextCategories.value = categories;
 	};
 
+	const UPDATE_TAGS_SEARCH_TERM = (term: string) => {
+		tagsSearchTerm.value = term;
+	};
+
 	const CLEAR_USER_ARTWORK_FILTER_SELECTIONS = () => {
 		selectedArtworkCategories.value = [];
 		selectedArtworkLocations.value = [];
@@ -40,10 +45,12 @@ export const useUserStore = defineStore("user", () => {
 		selectedArtworkCategories,
 		selectedArtworkLocations,
 		selectedTextCategories,
+		tagsSearchTerm,
 		LOGIN_USER,
 		ADD_SELECTED_ARTWORK_CATEGORIES,
 		ADD_SELECTED_ARTWORK_LOCATIONS,
 		ADD_SELECTED_TEXT_CATEGORIES,
+		UPDATE_TAGS_SEARCH_TERM,
 		CLEAR_USER_ARTWORK_FILTER_SELECTIONS,
 	};
 });
