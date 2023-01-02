@@ -5,17 +5,17 @@
 			<div
 				class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
 			>
-				<div class="h-full items-center sm:flex md:hidden">
+				<div class="h-full items-center xs:flex md:hidden">
 					<hamburger-menu @click="openSideNav" />
 				</div>
 				<router-link
 					:to="{ name: 'Home' }"
-					class="flex h-full items-center text-xl sm:ml-4 md:ml-0"
+					class="flex h-full items-center text-xl xs:ml-4 md:ml-0"
 					>George Rice-Smith</router-link
 				>
 
 				<nav class="ml-12 h-full">
-					<ul class="m-0 h-full list-none p-0 sm:hidden xl:flex">
+					<ul class="m-0 h-full list-none p-0 xs:hidden xl:flex">
 						<li
 							v-for="menuItem in menuItems"
 							:key="menuItem.text"

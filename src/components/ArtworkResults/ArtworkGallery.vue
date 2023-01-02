@@ -1,5 +1,8 @@
 <template>
-	<main id="gallery-wrapper" class="mx-auto w-full bg-brand-gray-2 p-8">
+	<main
+		id="gallery-wrapper"
+		class="mx-auto w-full bg-brand-gray-2 py-8 sm:px-0 md:px-8"
+	>
 		<!-- class="mx-auto h-full w-full rounded border border-solid bg-white p-4" -->
 		<grid-cards-gallery />
 		<div class="mx-auto mt-8">

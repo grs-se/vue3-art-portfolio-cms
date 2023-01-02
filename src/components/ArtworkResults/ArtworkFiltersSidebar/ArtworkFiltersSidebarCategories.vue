@@ -1,5 +1,6 @@
 <template>
 	<artwork-filters-sidebar-checkbox-group
+		class="capitalize"
 		:unique-values="UNIQUE_ARTWORK_CATEGORIES"
 		:action="userStore.ADD_SELECTED_ARTWORK_CATEGORIES"
 	/>
