@@ -58,7 +58,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 
 import ActionButton from "@/components/Shared/ActionButton.vue";
 
@@ -72,14 +72,17 @@ onMounted(artworksStore.FETCH_ARTWORKS);
 const spotlights = computed(() => artworksStore.ARTWORK_SPOTLIGHTS);
 
 const maxSpotlights = spotlights.value.length;
-console.log(maxSpotlights, "💥");
+
+const renderSlideShow = () => {
+	console.log(maxSpotlights, "💥");
+	const slides = document.querySelectorAll(".slide");
+	// console.log(slides);
+	const maxSlide = slides.length;
+	// console.log(maxSlide);
+};
 
 onMounted(() => {
-	// artworksStore.FETCH_ARTWORKS;
-	const slides = document.querySelectorAll(".slide");
-	console.log(slides);
-	const maxSlide = slides.length;
-	console.log(maxSlide);
+	renderSlideShow();
 });
 
 // const curSlide = ref([]);
