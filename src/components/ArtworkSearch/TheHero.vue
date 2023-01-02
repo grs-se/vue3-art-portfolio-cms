@@ -4,7 +4,7 @@
 			<div class="grid grid-cols-12">
 				<div class="col-span-2 col-start-1"></div>
 
-				<div class="col-span-2 col-start-3 mb-20 self-end">
+				<div class="col-span-3 col-start-3 self-center">
 					<the-headline />
 					<artwork-search-form class="" />
 				</div>
@@ -26,10 +26,10 @@
 
 		<header-container>
 			<template #title>
-				<h1 class="w-full text-4xl font-normal">Recent Paintings</h1>
+				<h1 class="w-full text-4xl font-normal">Recent Highlights</h1>
 			</template>
 			<template #subtitle>
-				<h2 class="my-4 w-full text-base font-light">Highlights</h2>
+				<h2 class="my-4 w-full text-base font-light">Paintings and Drawings</h2>
 			</template>
 		</header-container>
 		<slide-show />

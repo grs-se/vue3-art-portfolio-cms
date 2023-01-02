@@ -7,7 +7,7 @@
 
 		<div class="flex h-full flex-1 flex-nowrap text-base font-light">
 			<div class="relative flex h-full flex-1 items-center pr-3">
-				<!-- <label for="tag" class="absolute left-0 -top-10">Themes</label> -->
+				<label for="tag" class="absolute left-0 -top-10">Portfolio</label>
 				<text-input id="tag" v-model="tag" :placeholder="searchTerm" />
 			</div>
 		</div>
@@ -53,7 +53,7 @@ const changeSearchTerm = () => {
 	interval.value = setInterval(() => {
 		const searchTerms = ["Painting", "Drawing", "Studio", "Archetype"];
 		searchTerm.value = nextElementInList(searchTerms, searchTerm.value);
-	}, 3000);
+	}, 2200);
 };
 onMounted(changeSearchTerm);
 

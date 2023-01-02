@@ -1,6 +1,6 @@
 <template>
-	<section class="mb-16">
-		<h1 class="hero-header mb-14 font-normal tracking-tighter">
+	<section class="mb-24">
+		<h1 class="hero-header mb-10 font-normal">
 			<span>George Rice-Smith</span>
 			<!-- <span :class="actionClasses">{{ action }}</span> -->
 			<br />
