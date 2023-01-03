@@ -6,7 +6,9 @@
 				class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
 			>
 				<div class="h-full items-center xs:flex md:hidden">
-					<hamburger-menu @click="openSideNav" />
+					<button @click="isActive = !isActive">
+						<hamburger-menu />
+					</button>
 				</div>
 				<router-link
 					:to="{ name: 'Home' }"
@@ -39,6 +41,7 @@
 
 			<!-- <the-subnav /> -->
 			<the-subnav v-if="isLoggedIn" />
+			<!-- <side-nav v-if="isActive" /> -->
 		</div>
 	</header>
 </template>
@@ -52,6 +55,7 @@ import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "@/components/Navigation/ProfileImage.vue";
 import TheSubnav from "@/components/Navigation/TheSubnav.vue";
 import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
+// import SideNav from "@/components/Navigation/SideNav.vue";
 
 const menuItems = ref([
 	{ text: "Gallery", url: "/gallery/" },
@@ -70,5 +74,5 @@ const headerHeightClass = computed(() => ({
 	"h-16": !isLoggedIn.value,
 	"h-32": isLoggedIn.value,
 }));
-const openSideNav = computed(() => console.log("Open Side Nav"));
+const isActive = ref(false);
 </script>

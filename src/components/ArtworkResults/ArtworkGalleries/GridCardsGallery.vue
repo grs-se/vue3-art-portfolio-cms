@@ -1,5 +1,6 @@
 <template>
 	<section id="grid-cards-gallery">
+		<!-- <artwork-cards class="mx-auto border-l border-t sm:columns-2 xl:columns-5"> -->
 		<artwork-cards
 			class="mx-auto border-l border-t sm:columns-2 xl:grid xl:grid-cols-3"
 		>
@@ -16,7 +17,7 @@
 			> -->
 					<img
 						:src="'/images/artworks/' + imageCover"
-						class="mx-auto place-self-center hover:shadow-gray xs:max-h-full xl:max-h-64"
+						class="mx-auto place-self-center hover:shadow-gray xs:max-h-full xl:max-h-72"
 						@mouseover="hover = true"
 						@mouseleave="hover = false"
 					/>

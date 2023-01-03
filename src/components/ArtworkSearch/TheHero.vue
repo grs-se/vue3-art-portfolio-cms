@@ -1,10 +1,10 @@
 <template>
 	<main class="flex h-auto flex-col">
 		<section class="pt-10 pb-20">
-			<div class="grid grid-cols-12">
+			<div class="xl:grid xl:grid-cols-12 lg:flex lg:flex-col">
 				<div class="col-span-2 col-start-1"></div>
 
-				<div class="col-span-3 col-start-3 self-center">
+				<div class="col-span-3 col-start-3 self-center pb-12 sm:w-1/2 sm:px-8">
 					<the-headline />
 					<artwork-search-form class="" />
 				</div>
