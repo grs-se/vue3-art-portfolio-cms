@@ -1,0 +1,2301 @@
+[
+	{
+		"title": "Autumn, Riverside",
+		"medium": ["Coloured Chalks", "Coloured Chalks on Paper"],
+		"imageCover": "autumn-riverside-chalk-drawing.jpg",
+		"date": "2022-11-12",
+		"dimensions": {
+			"height": { "px": 2653, "cm": 0 },
+			"width": { "px": 3638, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "This chalk drawing was a breakthrough for me in that it made a break from the darker palette and mood I had become accustomed to. Sat on a bench near the river Itchen in the late Autumn I a calm ectasy as this new way of working flowed easily and intuitively.",
+		"sales": { "price": 475 },
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "drawing"],
+		"tags": [
+			"observation",
+			"autumn",
+			"landscape",
+			"drawing",
+			"chalk",
+			"pastel",
+			"trees",
+			"riverside"
+		],
+		"spotlight": true,
+		"hero": true
+	},
+
+	{
+		"title": "Water-Meadows and St. Catherine's Hill, End of Summer",
+		"medium": ["Oil", "Oil on paper"],
+		"imageCover": "water-meadows-and-st.-catherine's-hill,-end-of-summer.jpg",
+		"date": "2022-10-28",
+		"dimensions": {
+			"height": { "px": 1726, "cm": 0 },
+			"width": { "px": 2477, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Many times I had walked past this place near St.Cross in Winchester, and had not full recongised its specialness. One morning, the last day of Autumn, I mustered the energy and walked out with heavy bags of painting equipment and relished every moment of the experience of painting this remarkable scene. The scene reminded me of the golden heavenly realms of Poussing or Balthus, and I hope I came some way to communicating this.",
+		"sales": { "price": 575 },
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "painting"],
+		"tags": [
+			"observation",
+			"christianity",
+			"landscape",
+			"painting",
+			"plein-aire",
+			"water-meadows",
+			"trees",
+			"hill",
+			"st-cross",
+			"autumn"
+		],
+		"spotlight": true
+	},
+	{
+		"title": "View of St Cross from St Catherine's Hill",
+		"medium": ["Coloured Chalks", "Coloured Chalks on Paper"],
+		"imageCover": "view-of-st-cross-from-st-catherine's-hill.jpg",
+		"date": "2022-08-23",
+		"dimensions": {
+			"height": { "px": 5290, "cm": 0 },
+			"width": { "px": 7535, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 295 },
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "drawing"],
+		"tags": [
+			"observation",
+			"christianity",
+			"landscape",
+			"drawing",
+			"st-cross",
+			"pastel",
+			"chalk",
+			"space"
+		]
+	},
+	{
+		"title": "Couple",
+		"medium": ["acrylic", "acrylic on board"],
+		"imageCover": "couple.jpg",
+		"date": "2022-08-23",
+		"dimensions": {
+			"height": { "px": 5475, "cm": 0 },
+			"width": { "px": 5315, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 295 },
+		"location": ["winchester", "hampshire"],
+		"categories": ["studio", "painting"],
+		"tags": [
+			"charity",
+			"couple",
+			"christianity",
+			"religion",
+			"relationship",
+			"imagination",
+			"archetype"
+		]
+	},
+	{
+		"title": "St Peter's",
+		"medium": ["acrylic", "acrylic on paper"],
+		"imageCover": "st-peter's.jpg",
+		"date": "2022-09-06",
+		"dimensions": {
+			"height": { "px": 7559, "cm": 0 },
+			"width": { "px": 5734, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 295 },
+		"location": ["winchester", "hampshire"],
+		"categories": ["studio", "painting"],
+		"tags": [
+			"helper",
+			"charity",
+			"church",
+			"marriage",
+			"couple",
+			"imagination",
+			"archetype",
+			"christianity",
+			"religion"
+		]
+	},
+	{
+		"title": "Ascending Ladder",
+		"medium": ["acrylic", "acrylic on sketchbook cover"],
+		"imageCover": "ascending-ladder.jpg",
+		"date": "2022-09-06",
+		"dimensions": {
+			"height": { "px": 5684, "cm": 0 },
+			"width": { "px": 7552, "cm": 0 },
+			"depth": { "px": 0.5, "cm": 0 }
+		},
+		"sales": { "price": 375 },
+		"location": ["winchester", "hampshire"],
+		"categories": ["studio", "painting"],
+		"tags": [
+			"ladder",
+			"helper",
+			"charity",
+			"imagination",
+			"archetype",
+			"christianity",
+			"religion",
+			"boat"
+		]
+	},
+	{
+		"_id": "628e7f732e7a018364da8e60",
+		"title": "Down By the River",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "down-by-the-river.jpg",
+		"date": "2022-04-16",
+		"dimensions": {
+			"height": { "px": 2829, "cm": 0 },
+			"width": { "px": 4259, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "plein-aire", "painting", "oil"],
+		"tags": [
+			"observation",
+			"landscape",
+			"plein-aire",
+			"painting",
+			"winchester",
+			"hampshire",
+			"oil"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"_id": "628e7f732e7a018364da8e61",
+		"title": "St Cross Seen Through Allotments",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "st-cross-seen-through-allotments.jpg",
+		"date": "2022-04-15",
+		"dimensions": {
+			"height": { "px": 3187, "cm": 0 },
+			"width": { "px": 4143, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "plein-aire", "painting", "oil"],
+		"tags": [
+			"observation",
+			"landscape",
+			"plein-aire",
+			"painting",
+			"winchester",
+			"hampshire",
+			"oil"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"_id": "628e7f732e7a018364da8e62",
+		"title": "St Cross and Sky",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "st-cross-and-sky.jpg",
+		"date": "2022-04-14",
+		"dimensions": {
+			"height": { "px": 3048, "cm": 0 },
+			"width": { "px": 4037, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "plein-aire", "painting", "oil"],
+		"tags": [
+			"observation",
+			"landscape",
+			"plein-aire",
+			"painting",
+			"winchester",
+			"hampshire",
+			"oil"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Execution",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "execution.jpg",
+		"date": "2022-03-01",
+		"dimensions": {
+			"height": { "px": 3268, "cm": 0 },
+			"width": { "px": 3288, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Archetype (Collage)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "archetype-(collage).jpg",
+		"date": "2021-12-26",
+		"sales": { "price": 475 },
+		"dimensions": {
+			"height": { "px": 4624, "cm": 0 },
+			"width": { "px": 6936, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Woman in Landscape",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "woman-in-landscape.jpg",
+		"date": "2021-12-26",
+		"dimensions": {
+			"height": { "px": 1292, "cm": 0 },
+			"width": { "px": 973, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"_id": "628e7f732e7a018364da8e65",
+		"title": "Woman II",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "woman-ii.jpg",
+		"date": "2021-12-19",
+		"dimensions": {
+			"height": { "px": 1250, "cm": 0 },
+			"width": { "px": 975, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Gathering",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "gathering.jpg",
+		"date": "2021-12-18",
+		"dimensions": {
+			"height": { "px": 1299, "cm": 0 },
+			"width": { "px": 966, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Figure Outside Pub",
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "figure-outside-pub.jpg",
+		"date": "2021-12-18",
+		"dimensions": {
+			"height": { "px": 1315, "cm": 0 },
+			"width": { "px": 973, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "oil", "studio", "figure"],
+		"tags": ["observation", "portraiture", "portrait", "drawing", "figure"]
+	},
+	{
+		"title": "Girl in Street",
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "girl-in-street.jpg",
+		"date": "2021-12-18",
+		"dimensions": {
+			"height": { "px": 1291, "cm": 0 },
+			"width": { "px": 971, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "oil", "studio", "figure"],
+		"tags": ["observation", "portraiture", "portrait", "drawing", "figure"]
+	},
+	{
+		"title": "Transcendence",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "transcendence.jpg",
+		"date": "2021-12-12",
+		"dimensions": {
+			"height": { "px": 3304, "cm": 0 },
+			"width": { "px": 4071, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Penitance",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "penitance.jpg",
+		"date": "2021-12-12",
+		"dimensions": {
+			"height": { "px": 3341, "cm": 0 },
+			"width": { "px": 2673, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+
+	{
+		"title": "Madonna and Child",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "madonna-and-child.jpg",
+		"date": "2021-12-12",
+		"dimensions": {
+			"height": { "px": 3086, "cm": 0 },
+			"width": { "px": 3966, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Marriage",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "marriage.jpg",
+		"date": "2021-10-29",
+		"dimensions": {
+			"height": { "px": 1350, "cm": 0 },
+			"width": { "px": 889, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil", "religious"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Castle Door",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "castle-door.jpg",
+		"date": "2021-02-15",
+		"dimensions": {
+			"height": { "px": 3468, "cm": 0 },
+			"width": { "px": 4624, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 125 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil", "naive"],
+		"tags": ["sleep", "dream", "castle", "door"],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Maquette",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "maquette-red-man,-ghost,-vitrine,-train-track,-silence.jpg",
+		"date": "2021-02-15",
+		"dimensions": {
+			"height": { "px": 3046, "cm": 0 },
+			"width": { "px": 4387, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "train tracks, spiral sun, half-vitrine, blackbird, red man, pink cyprus tree, ghost, cursor, grey fog, white space, silence.",
+		"location": ["winchester", "hampshire"],
+		"categories": ["studio", "imagination", "painting", "oil"],
+		"tags": ["painting", "winchester", "hampshire", "oil"],
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Objects",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "objects-stick-traintrack.jpg",
+		"date": "2021-01-03",
+		"dimensions": {
+			"height": { "px": 3025, "cm": 0 },
+			"width": { "px": 3988, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": ["imagination", "studio", "sleep"],
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Winchester Cathedral",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "winchester-cathedral.jpg",
+		"date": "2021-06-29",
+		"dimensions": {
+			"height": { "px": 2112, "cm": 0 },
+			"width": { "px": 3732, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "plein-aire", "painting", "oil"],
+		"tags": [
+			"observation",
+			"landscape",
+			"plein-aire",
+			"painting",
+			"winchester",
+			"hampshire",
+			"oil",
+			"cathedral",
+			"underpainting",
+			"grid",
+			"unfinished"
+		],
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Five Bridges Road",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "five-bridges-road-iii.jpg",
+		"date": "2021-03-05",
+		"dimensions": {
+			"height": { "px": 3160, "cm": 0 },
+			"width": { "px": 4200, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "landscape", "plein-aire", "painting", "oil"],
+		"tags": ["landscape", "plein-aire", "painting", "winchester"],
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+
+	{
+		"title": "Poem (woman, goalkeeper, reclining nude)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "poem-(woman,-goal-keeper,-reclining-nude).jpg",
+		"date": "2021-11-20",
+		"dimensions": {
+			"height": { "px": 3715, "cm": 0 },
+			"width": { "px": 3380, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Poem (white tree by river, lamentation, abstraction)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "poem-(white-tree-by-river,-lamentation,-abstraction).jpg",
+		"date": "2021-10-09",
+		"dimensions": {
+			"height": { "px": 2898, "cm": 0 },
+			"width": { "px": 3914, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Poem (father, blossoming cherry tree, figure walking towards arch and into woman)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "poem-(father,-blossoming-tree,-figure-walking-towards-arch-into-woman).jpg",
+		"date": "2021-10-08",
+		"dimensions": {
+			"height": { "px": 3008, "cm": 0 },
+			"width": { "px": 4332, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Woman in Red Landscape",
+		"imageCover": "woman-in-red-landscape-(ii).jpg",
+		"date": "2021-04-08",
+		"medium": ["Oil on canvas board"],
+		"dimensions": {
+			"height": { "px": 3217, "cm": 0 },
+			"width": { "px": 2517, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "red", "archetype"],
+		"tags": ["abyss", "void", "figure-in-landscape", "red", "woman"]
+	},
+	{
+		"title": "River From Five Bridges Road",
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "river-from-five-bridges-road.webp",
+		"date": "2021-09-18",
+		"dimensions": {
+			"height": { "px": 3107, "cm": 0 },
+			"width": { "px": 3941, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "oil", "plein-aire", "landscape"],
+		"tags": ["landscape", "river", "sky"],
+		"spotlight": true
+	},
+	{
+		"title": "St Catherine's Hill",
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "st-catherine's-hill.jpg",
+		"date": "2021-02-27",
+		"dimensions": {
+			"height": { "px": 3190, "cm": 0 },
+			"width": { "px": 4254, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["observation", "oil", "plein-aire", "landscape"],
+		"tags": ["hill", "st-cross", "sky"]
+	},
+	{
+		"title": "Parts",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "parts.jpg",
+		"date": "2020-12-29",
+		"dimensions": {
+			"height": { "px": 3300, "cm": 0 },
+			"width": { "px": 3274, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["winchester", "hampshire"],
+		"categories": ["imagination", "studio", "oil"],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		],
+		"ratingPersonal": 4.3,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37
+	},
+	{
+		"title": "Lucifer",
+		"secretArtwork": true,
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "lucifer.jpg",
+		"date": "2020-07-18",
+		"dimensions": {
+			"height": { "px": 3572, "cm": 0 },
+			"width": { "px": 2613, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"location": ["alton", "hampshire"],
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.2,
+		"ratingsQuantity": 17,
+		"categories": [
+			"imagination",
+			"painting",
+			"studio",
+			"archetype",
+			"religious"
+		],
+		"tags": ["imagination", "painting", "studio", "archetype"]
+	},
+	{
+		"title": "Valley Seen From Edge of Ackender Woods, Alton",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "valley-seen-from-edge-of-ackender-woods,-alton.jpg",
+		"date": "2019-07-16",
+		"dimensions": {
+			"height": { "px": 1072, "cm": 0 },
+			"width": { "px": 1440, "cm": 0 },
+			"depth": { "px": 42, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 350 },
+		"location": ["alton", "hampshire"],
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.5,
+		"ratingsQuantity": 32,
+		"categories": [
+			"observation",
+			"landscape",
+			"religious",
+			"painting",
+			"plein-aire"
+		],
+		"tags": ["landscape", "watercolour", "loneliness", "plein-aire"]
+	},
+	{
+		"title": "Musician",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "musician-(red).jpg",
+		"date": "2020-07-15",
+		"dimensions": {
+			"height": { "px": 3726, "cm": 0 },
+			"width": { "px": 2794, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 475 },
+		"location": ["alton", "hampshire"],
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.2,
+		"ratingsQuantity": 17,
+		"categories": ["imagination", "painting", "studio", "archetype"],
+		"tags": ["imagination", "painting", "studio", "archetype"]
+	},
+	{
+		"title": "Collapse-(Red)",
+		"medium": ["Coloured Chalks", "Coloured Chalks on Paper"],
+		"imageCover": "collapse-(red-ii).jpg",
+		"date": "2020-07-12",
+		"dimensions": {
+			"height": { "px": 3446, "cm": 0 },
+			"width": { "px": 2888, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 285 },
+		"location": ["alton", "hampshire"],
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.2,
+		"ratingsQuantity": 17,
+		"categories": ["imagination", "painting", "studio", "archetype"],
+		"tags": ["imagination", "painting", "studio", "archetype"]
+	},
+	{
+		"title": "Awakening",
+		"medium": ["Oil on canvas board"],
+		"imageCover": "awakening-(red).jpg",
+		"date": "2020-06-07",
+		"dimensions": {
+			"height": { "px": 2877, "cm": 0 },
+			"width": { "px": 2896, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 385 },
+		"location": ["alton", "hampshire"],
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"categories": ["imagination", "painting", "archetype"],
+		"tags": [
+			"dream",
+			"loneliness",
+			"archetype",
+			"sleep",
+			"awakening",
+			"red-landscape"
+		]
+	},
+	{
+		"title": "Dafodils, Easter 2019",
+		"medium": ["Coloured Chalks", "Coloured Chalks on Paper"],
+		"imageCover": "dafodils-easter-2019.jpg",
+		"date": "2020-04-05",
+		"dimensions": {
+			"height": { "px": 560, "cm": 0 },
+			"width": { "px": 817, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 285 },
+		"location": ["alton", "hampshire"],
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.2,
+		"ratingsQuantity": 17,
+		"categories": ["observation", "drawing", "nature"],
+		"tags": [
+			"observation",
+			"plein-aire",
+			"easter",
+			"religious",
+			"nature",
+			"loneliness",
+			"nature"
+		]
+	},
+	{
+		"title": "Sunset, Burning Trees, Ackender Woods",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "sunset-burning-tree,-ackender-woods.jpg",
+		"date": "2020-04-12",
+		"dimensions": {
+			"height": { "px": 4305, "cm": 0 },
+			"width": { "px": 2968, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 475 },
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "nature", "plein-aire", "painting"],
+		"tags": [
+			"observation",
+			"portraiture",
+			"portrait",
+			"drawing",
+			"figure",
+			"tree",
+			"nature"
+		]
+	},
+	{
+		"title": "Horse, Ackender Woods",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "horse-ackender-woods.jpg",
+		"date": "2020-04-08",
+		"dimensions": {
+			"height": { "px": 2585, "cm": 0 },
+			"width": { "px": 3611, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 475 },
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "nature", "plein-aire", "painting"],
+		"tags": [
+			"observation",
+			"nature",
+			"plein-aire",
+			"painting",
+			"hampshire",
+			"horse"
+		]
+	},
+	{
+		"title": "Lamentation",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "lamentation.jpg",
+		"date": "2019-07-01",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 572, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"ratingPersonal": 4,
+		"sales": { "price": 785 },
+		"location": ["alton", "hampshire"],
+		"categories": [
+			"imagination",
+			"religious",
+			"archetype",
+			"painting",
+			"oil",
+			"studio",
+			"figure"
+		],
+		"tags": ["imagination", "abstract", "oil", "studio"]
+	},
+	{
+		"title": "Angel After Da Vinci",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "angel-after-da-vinci.jpg",
+		"date": "2019-06-20",
+		"dimensions": {
+			"height": { "px": 3541, "cm": 0 },
+			"width": { "px": 2833, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 900 },
+		"location": ["alton", "hampshire"],
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.6,
+		"ratingsQuantity": 43,
+		"categories": [
+			"imagination",
+			"figure",
+			"archetype",
+			"religious",
+			"painting",
+			"studio"
+		],
+		"tags": [
+			"imagination",
+			"studio",
+			"abyss",
+			"void",
+			"prodigal son",
+			"sea",
+			"loneliness"
+		],
+		"spotlight": true
+	},
+	{
+		"title": "Walking Man",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "walking-man.jpg",
+		"date": "2019-05-21",
+		"dimensions": {
+			"height": { "px": 3269, "cm": 0 },
+			"width": { "px": 2535, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 900 },
+		"location": ["alton", "hampshire", "london"],
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.6,
+		"ratingsQuantity": 43,
+		"categories": ["imagination", "painting", "studio"],
+		"tags": [
+			"imagination",
+			"studio",
+			"abyss",
+			"void",
+			"prodigal son",
+			"sea",
+			"loneliness",
+			"figure",
+			"archetype",
+			"religious"
+		],
+		"themes": {
+			"majorThemes": ["loneliness", "prodigal son"]
+		},
+		"motifs": [""],
+		"symbols": ["sea"],
+		"spotlight": true
+	},
+	{
+		"title": "Man Sat in Alton Town Park",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "man-with-dementia-sat-in-alton-town-park.jpg",
+		"date": "2019-01-12",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1087, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"sold": true,
+		"priceSold": 100,
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "drawing", "figure"],
+		"tags": ["old-age"]
+	},
+
+	{
+		"title": "Great Portland Street",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "great-portland-street.jpg",
+		"date": "2019-01-25",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 603, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		],
+		"tags": ["street", "urban"]
+	},
+	{
+		"title": "Trafalgar Square",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "trafalgar-square.jpg",
+		"date": "2019-01-17",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 602, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		],
+		"tags": ["urban"]
+	},
+	{
+		"title": "Waitrose",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "waitrose.jpg",
+		"date": "2019-02-01",
+		"dimensions": {
+			"height": { "px": 793, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "urban", "drawing", "figure"],
+		"tags": ["observation", "urban", "alton", "hampshire", "drawing", "figure"]
+	},
+	{
+		"title": "Path and Hill, Along Edge of Ackender Woods",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "edge-of-ackender-woods-towards-hilltops.jpg",
+		"date": "2019",
+		"dimensions": {
+			"height": { "px": 2556, "cm": 0 },
+			"width": { "px": 3847, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 350 },
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "nature", "plein-aire", "painting"],
+		"tags": ["observation", "nature", "plein-aire", "painting"]
+	},
+	{
+		"title": "Grosvenor Square",
+		"medium": ["Graphite", "Graphite on paper"],
+		"imageCover": "grosvenor-square.jpg",
+		"date": "2018-05-16",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 619, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		],
+		"tags": [
+			"observation",
+			"urban",
+			"london",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		]
+	},
+	{
+		"title": "Saint Sebastian",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "st-sebastian.jpg",
+		"date": "2018-12-25",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1052, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 305 },
+		"location": ["alton", "hampshire"],
+		"ratingPersonal": 4,
+		"ratingsAverage": 4.1,
+		"ratingsQuantity": 17,
+		"categories": [
+			"imagination",
+			"figure",
+			"religious",
+			"painting",
+			"studio",
+			"grotesque",
+			"naive"
+		],
+		"tags": ["imagination", "studio", "abyss", "void", "sea", "loneliness"]
+	},
+	{
+		"title": "Wedding",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "wedding.jpg",
+		"date": "2018-04-01",
+		"dimensions": {
+			"height": { "px": 756, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 600 },
+		"location": ["london"],
+		"categories": ["imagination", "figure"],
+		"tags": ["figure"]
+	},
+	{
+		"title": "Back to the Sandcastle",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "back-to-the-sandcastle.jpg",
+		"date": "2018-07-25",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1058, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 305 },
+		"location": ["london", "london-fields"],
+		"ratingPersonal": 4,
+		"ratingsAverage": 4.1,
+		"ratingsQuantity": 17,
+		"categories": [
+			"imagination",
+			"figure",
+			"religious",
+			"painting",
+			"studio",
+			"grotesque",
+			"naive"
+		],
+		"tags": ["imagination", "studio", "abyss", "void", "sea", "loneliness"]
+	},
+	{
+		"title": "Chance",
+		"medium": ["Watercolour", "Watercolour on Paper"],
+		"imageCover": "chance.jpg",
+		"date": "2018-03-01",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1060, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"ratingPersonal": 4,
+		"sales": { "price": 310 },
+		"location": ["london"],
+		"categories": [
+			"imagination",
+			"religious",
+			"archetype",
+			"painting",
+			"watercolour",
+			"studio",
+			"figure"
+		],
+		"tags": ["watercolour", "abyss", "chance"]
+	},
+	{
+		"title": "Woman",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "woman.jpg",
+		"date": "2018-04-01",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 592, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 600 },
+		"location": ["london"],
+		"categories": ["imagination", "figure"],
+		"tags": ["figure"]
+	},
+	{
+		"title": "Sleeping Figure in Landscape",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "sleeping-figure-in-landscape.jpg",
+		"date": "2017-11-27",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 844, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 475 },
+		"location": ["london"],
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.7,
+		"ratingsQuantity": 37,
+		"categories": [
+			"imagination",
+			"figure",
+			"archetype",
+			"religious",
+			"painting",
+			"studio"
+		],
+		"tags": [
+			"imagination",
+			"studio",
+			"sleep",
+			"abyss",
+			"addiction",
+			"void",
+			"death",
+			"suicide",
+			"figure-in-landscape"
+		]
+	},
+	{
+		"title": "Victoria Park 1",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "victoria-park-1.jpg",
+		"date": "2017-08-01",
+		"dimensions": {
+			"height": { "px": 756, "cm": 0 },
+			"width": { "px": 1000, "cm": 0 },
+			"depth": { "px": 42, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 475 },
+		"location": ["london"],
+		"ratingPersonal": 5,
+		"ratingsAverage": 4.3,
+		"ratingsQuantity": 13,
+		"categories": [
+			"observation",
+			"landscape",
+			"religious",
+			"painting",
+			"plein-aire",
+			"oil"
+		],
+		"tags": ["loneliness", "plein-aire"]
+	},
+	{
+		"title": "Henry, Whittling",
+		"medium": ["Charcoal", "Charcoal on paper"],
+		"imageCover": "henry-whittling.jpg",
+		"date": "2017-06-21",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1013, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": [
+			"observation",
+			"portraiture",
+			"portrait",
+			"drawing",
+			"figure"
+		],
+		"tags": ["observation", "portraiture", "portrait", "drawing", "figure"]
+	},
+	{
+		"title": "Leda",
+		"medium": ["Charcoal", "Charcoal on paper"],
+		"imageCover": "leda.jpg",
+		"date": "2017-06-20",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 574, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": [
+			"imagination",
+			"studio",
+			"old-masters",
+			"preliminary",
+			"drawing",
+			"figure"
+		],
+		"tags": ["leda", "woman", "old-masters"]
+	},
+	{
+		"title": "Ackender Woods",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "ackender-woods.jpg",
+		"date": "2017-06-20",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 575, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "watercolour"],
+		"tags": ["ackender-woods", "trees", "woodland", "forest", "path"]
+	},
+	{
+		"title": "Musician Playing on the Shores of the Apocalypse",
+		"medium": ["Oil", "Oil on canvas board"],
+		"imageCover": "musician-playing-on-the-shores-of-the-apocalypse.jpg",
+		"date": "2017-06-20",
+		"dimensions": {
+			"height": { "px": 858, "cm": 0 },
+			"width": { "px": 847, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "finsbury-park"],
+		"categories": [
+			"imagination",
+			"oil",
+			"studio",
+			"archetype",
+			"classical",
+			"religious"
+		],
+		"tags": ["musician", "music", "archetype", "shore"]
+	},
+	{
+		"title": "Self-portrait, Finsbury Park",
+		"secretArtwork": true,
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "self-portrait-finsbury-park(lost).jpg",
+		"date": "2017-06-16",
+		"dimensions": {
+			"height": { "px": 2182, "cm": 0 },
+			"width": { "px": 1616, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "finsbury-park"],
+		"categories": ["observation", "oil", "studio", "self-portrait", "portrait"],
+		"tags": ["self", "self-portrait", "portrait"]
+	},
+	{
+		"title": "Southbank (Memories)",
+		"medium": ["Ink", "Ink on paper"],
+		"imageCover": "southbank-(memories).jpg",
+		"date": "2017-06-13",
+		"dimensions": {
+			"height": { "px": 769, "cm": 0 },
+			"width": { "px": 1142, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 125 },
+		"destroyed": false,
+		"location": ["london", "southbank", "train"],
+		"categories": ["imagination", "naive", "studio"],
+		"tags": ["southbank", "breakup"]
+	},
+	{
+		"title": "Sculpted",
+		"medium": ["Ink", "Ink on paper"],
+		"imageCover": "sculpted.jpg",
+		"date": "2017-06-12",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1070, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 125 },
+		"destroyed": false,
+		"location": ["london", "finsbury-park"],
+		"categories": ["imagination", "studio", "naive"],
+		"tags": ["mother", "girlfriend"]
+	},
+	{
+		"title": "Dreaming Over Alton",
+		"medium": ["Ink", "Ink on paper"],
+		"imageCover": "dreaming-over-alton.jpg",
+		"date": "2017-06-11",
+		"dimensions": {
+			"height": { "px": 521, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "finsbury-park"],
+		"categories": ["imagination", "studio", "naive"],
+		"tags": ["imagination", "naive", "studio"]
+	},
+	{
+		"title": "Man and Woman",
+		"medium": ["Ink", "Ink on paper"],
+		"imageCover": "man-and-woman.jpg",
+		"date": "2016-07-28",
+		"dimensions": {
+			"height": { "px": 773, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": ["caricature", "grotesque", "satire", "imagination", "naive"],
+		"tags": ["city", "satire"]
+	},
+	{
+		"title": "Fieldgate Street, Whitechapel",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "fieldgate-street-whitechapel.jpg",
+		"date": "2016-07-25",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1033, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"landscape",
+			"plein-aire",
+			"drawing",
+			"observation",
+			"urban",
+			"street"
+		],
+		"tags": ["urban", "street"]
+	},
+	{
+		"title": "Lincoln's Inn Fields",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "lincoln's-inn-fields.jpg",
+		"date": "2016-07-21",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1064, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"landscape",
+			"plein-aire",
+			"drawing",
+			"observation",
+			"urban",
+			"street"
+		],
+		"tags": ["space", "outdoor", "landscape", "city", "drawing"]
+	},
+	{
+		"title": "Self-Portrait, Shadwell",
+		"medium": ["Charcoal", "Charcoal on paper"],
+		"imageCover": "self-portrait-shadwell.jpg",
+		"date": "2016-07-19",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 591, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 225 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "shadwell"],
+		"categories": ["portrait", "self-portrait", "drawing"],
+		"tags": ["portrait", "self-portrait", "drawing"]
+	},
+	{
+		"title": "The Ambassadors Theatre",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "the-ambassadors-theatre.jpg",
+		"date": "2016-07-17",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1039, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		],
+		"tags": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		]
+	},
+	{
+		"title": "clifftops",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "clifftops.jpg",
+		"date": "2016-06-08",
+		"dimensions": {
+			"height": { "px": 797, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"location": ["alton", "hampshire"],
+		"categories": ["imagination", "abstract", "oil", "studio"],
+		"tags": ["imagination", "abstract", "oil", "studio"]
+	},
+	{
+		"title": "bedroom",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "bedroom.jpg",
+		"date": "2016-06-10",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1003, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": true,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "abstract", "oil", "studio"],
+		"tags": ["imagination", "abstract", "oil", "studio"]
+	},
+	{
+		"title": "bricklane",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "bricklane.jpg",
+		"date": "2016-06-09",
+		"dimensions": {
+			"height": { "px": 812, "cm": 0 },
+			"width": { "px": 1012, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": true,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "abstract", "oil", "studio"],
+		"tags": ["imagination", "abstract", "oil", "studio"]
+	},
+	{
+		"title": "southbank",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "southbank.jpg",
+		"date": "2016-06-11",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 999, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "abstract", "oil", "studio", "naive"],
+		"tags": ["imagination", "abstract", "oil", "studio"]
+	},
+	{
+		"title": "St Jerome with Borris",
+		"medium": ["Oil", "Oil"],
+		"imageCover": "st.-jerome-with-borris.jpg",
+		"date": "2016-06-08",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1038, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "satire", "oil", "studio"],
+		"tags": ["satire", "adonis", "st-jerome", "boris"]
+	},
+	{
+		"title": "trench",
+		"medium": ["Oil", "Oil on paper"],
+		"imageCover": "trench.jpg",
+		"date": "2016-06-07",
+		"dimensions": {
+			"height": { "px": 782, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "abstract", "oil", "studio", "naive"],
+		"tags": ["trench", "eyes", "ladder"]
+	},
+	{
+		"title": "Dreaming Shepherd",
+		"medium": ["Oil", "Oil on canvas board"],
+		"imageCover": "dreaming-shepherd.jpg",
+		"date": "2016-06-07",
+		"dimensions": {
+			"height": { "px": 2839, "cm": 0 },
+			"width": { "px": 3845, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "abstract", "oil", "studio", "archetype"],
+		"tags": ["shepherd", "dream"]
+	},
+	{
+		"title": "Journey Beyond the Gate",
+		"medium": ["Charcoal", "Charcoal on paper"],
+		"imageCover": "journey-beyond-the-gate.jpg",
+		"date": "2016-06-06",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 653, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "brick-lane"],
+		"categories": ["imagination", "naive", "studio"],
+		"tags": ["tortoise", "gate", "journey"]
+	},
+	{
+		"title": "Wishing",
+		"medium": ["Charcoal", "Charcoal on paper"],
+		"imageCover": "wishing.jpg",
+		"date": "2016-06-05",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1052, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "whitechapel", "south-bank"],
+		"categories": ["imagination", "naive", "studio"],
+		"tags": ["wish", "marriage", "broken"]
+	},
+	{
+		"title": "Voyage",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "voyage.jpg",
+		"date": "2016-06-04",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 998, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["london", "whitechapel"],
+		"categories": ["imagination", "studio", "naive"],
+		"tags": ["journey", "voyage", "boat", "sea"]
+	},
+	{
+		"title": "Nymph",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "nymph.jpg",
+		"date": "2016-06-03",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 962, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["hampshire", "alton"],
+		"categories": ["imagination", "studio", "naive"],
+		"tags": ["nymph"]
+	},
+	{
+		"title": "pet",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "pet.jpg",
+		"date": "2016-06-03",
+		"dimensions": {
+			"height": { "px": 778, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["hampshire", "alton"],
+		"categories": ["imagination", "naive", "studio"],
+		"tags": ["animal", "ladder", "tiny", "kindness"]
+	},
+	{
+		"title": "beach",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "beach.jpg",
+		"date": "2016-06-01",
+		"dimensions": {
+			"height": { "px": 760, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["alton", "hampshire"],
+		"categories": ["imagination", "abstract", "studio", "naive"],
+		"tags": ["beach"]
+	},
+	{
+		"title": "Floating Head",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "floating-head.jpg",
+		"date": "2016-06-02",
+		"dimensions": {
+			"height": { "px": 736, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["alton", "hampshire"],
+		"categories": ["imagination", "watercolour", "studio", "naive"],
+		"tags": ["head", "floating", "water"]
+	},
+	{
+		"title": "conservatory",
+		"medium": ["Watercolour", "Watercolour on paper"],
+		"imageCover": "conservatory.jpg",
+		"date": "2016-06-03",
+		"dimensions": {
+			"height": { "px": 771, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 665 },
+		"destroyed": false,
+		"location": ["alton", "hampshire"],
+		"categories": ["imagination", "abstract", "oil", "studio"],
+		"tags": ["imagination", "abstract", "oil", "studio"]
+	},
+	{
+		"title": "Stubborn Habits",
+		"medium": ["Charcoal", "Charcoal on Paper"],
+		"imageCover": "stubborn-habits.jpg",
+		"date": "2016-06-04",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1052, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 320 },
+		"location": ["london"],
+		"categories": [
+			"imagination",
+			"religious",
+			"archetype",
+			"drawing",
+			"studio",
+			"naive"
+		],
+		"tags": ["door", "wall", "path"]
+	},
+	{
+		"title": "Marbles and Worms",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "marbles-and-worms.jpg",
+		"date": "2016",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1054, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton"],
+		"categories": ["imagination", "watercolour", "figure", "studio"],
+		"tags": ["drawing", "figure"]
+	},
+	{
+		"title": "Chapman-House-Shadwell",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "chapman-house-shadwell.jpg",
+		"date": "2016-07-25",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 550, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london"],
+		"categories": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		],
+		"tags": [
+			"observation",
+			"urban",
+			"drawing",
+			"watercolour",
+			"street",
+			"plein-aire"
+		]
+	},
+	{
+		"title": "chawton-valley",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "chawton-valley.jpg",
+		"date": "2014-05-20",
+		"dimensions": {
+			"height": { "px": 377, "cm": 0 },
+			"width": { "px": 500, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "chawton", "hampshire"],
+		"categories": ["observation", "nature", "plein-aire", "painting"],
+		"tags": ["observation", "nature", "plein-aire", "painting"]
+	},
+	{
+		"title": "Portrait, Young Man (RDS)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "portrait-young-man-(rds).jpg",
+		"date": "2014-05-19",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 656, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "rds"],
+		"categories": ["observation", "portrait", "portraiture"],
+		"tags": ["observation", "observation", "portrait", "portraiture"]
+	},
+	{
+		"title": "Portrait, Moss (RDS)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "moss-(rds).jpg",
+		"date": "2014-05-10",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 594, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "rds"],
+		"categories": ["observation", "portrait", "portraiture"],
+		"tags": ["observation", "observation", "portrait", "portraiture"]
+	},
+	{
+		"title": "Madonna, After Titian",
+		"medium": ["Charcoal", "Charcoal on paper"],
+		"imageCover": "madonna,-after-titian.jpg",
+		"date": "2014-05-20",
+		"dimensions": {
+			"height": { "px": 1002, "cm": 0 },
+			"width": { "px": 980, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "chawton", "hampshire", "national-gallery"],
+		"categories": ["observation", "drawing", "national-gallery", "old-masters"],
+		"tags": ["observation", "drawing", "national-gallery", "old-masters"]
+	},
+	{
+		"title": "Still Life with Mirror, Alton",
+		"medium": ["Oil", "Oil on unstretched canvas"],
+		"imageCover": "still-life-with-mirror,-alton.jpg",
+		"date": "2014-03-12",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 667, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "still-life"],
+		"tags": ["observation", "still-life"]
+	},
+	{
+		"title": "Farnham Train Station",
+		"medium": ["Graphite", "Graphite on prepared paper"],
+		"imageCover": "farnham-train-station.jpg",
+		"date": "2014-03-12",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 935, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["observation"],
+		"tags": ["observation"]
+	},
+	{
+		"title": "Dreaming Boy",
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "dreaming-boy.jpg",
+		"date": "2014-03-12",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 977, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["imagination", "drawing", "figure", "archetype"],
+		"tags": ["drawing", "imagination", "figure", "archetype"]
+	},
+	{
+		"title": "Still Life, Alton",
+		"medium": ["Gouache", "Gouache on Paper"],
+		"imageCover": "still-life-with-apples,-bowl,-and-vase.jpg",
+		"date": "2013-12-12",
+		"dimensions": {
+			"height": { "px": 735, "cm": 0 },
+			"width": { "px": 980, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["alton", "hampshire"],
+		"categories": ["observation", "still-life"],
+		"tags": ["observation", "still-life"]
+	},
+	{
+		"title": "Woman Nude, Madrid",
+		"medium": ["Oil", "Oil on unstretched canvas"],
+		"imageCover": "woman-nude,-madrid.jpg",
+		"date": "2013-10-23",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 369, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["madrid", "rds"],
+		"categories": ["observation", "nude", "old-masters"],
+		"tags": ["observation", "still-life", "old-masters", "madrid"]
+	},
+	{
+		"title": "Grapes",
+		"medium": ["Oil", "Oil on unstretched canvas"],
+		"imageCover": "grapes.jpg",
+		"date": "2013-10-22",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 1067, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["madrid", "rds"],
+		"categories": ["observation", "still-life", "old-masters"],
+		"tags": ["observation", "still-life", "old-masters", "madrid"]
+	},
+	{
+		"title": "Starbucks, Madrid",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "starbucks-madrid.jpg",
+		"date": "2013-10-17",
+		"dimensions": {
+			"height": { "px": 727, "cm": 0 },
+			"width": { "px": 980, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"sales": { "price": 300 },
+		"location": ["madrid", "rds"],
+		"categories": [
+			"observation",
+			"portraiture",
+			"portrait",
+			"drawing",
+			"figure"
+		],
+		"tags": ["observation", "portraiture", "portrait", "drawing", "figure"]
+	},
+	{
+		"title": "Study After Fra Angelico",
+		"medium": ["Gouache", "Gouache on Paper"],
+		"imageCover": "study-after-fra-angelico.jpg",
+		"date": "2013-10-21",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 951, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["madrid", "rds"],
+		"categories": ["observation", "figure", "old-masters"],
+		"tags": ["observation", "figure", "old-masters", "madrid"]
+	},
+	{
+		"title": "Pignano",
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "pignano.jpg",
+		"date": "2013-07-12",
+		"dimensions": {
+			"height": { "px": 784, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["pignano", "italy", "rds"],
+		"categories": ["observation", "painting", "landscape", "plein-aire"],
+		"tags": ["italy", "pignano", "plein-aire"]
+	},
+	{
+		"title": "Still Life with Skull",
+		"secretArtwork": true,
+		"medium": ["Oil", "Oil on Board"],
+		"imageCover": "still-life-with-skull-(rds).jpg",
+		"date": "2013-06-20",
+		"dimensions": {
+			"height": { "px": 3960, "cm": 0 },
+			"width": { "px": 2901, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "rds"],
+		"categories": ["observation", "still-life"],
+		"tags": ["observation"]
+	},
+	{
+		"title": "Crucifixion",
+		"medium": ["Coloured chalks", "Coloured chalks on paper"],
+		"imageCover": "crucifixion.jpg",
+		"date": "2013",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 701, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "rds", "national-gallery", "trafalgar-square"],
+		"categories": ["imagination", "drawing", "figure"],
+		"tags": ["observation", "drawing", "figure"]
+	},
+	{
+		"title": "After Titian",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "after-titian.jpg",
+		"date": "2012-12-10",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 836, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "rds", "national-gallery", "trafalgar-square"],
+		"categories": ["observation", "drawing", "figure"],
+		"tags": ["studies"]
+	},
+	{
+		"title": "Lamentation (after Bellini)",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "study-after-bellini's-lamentation-of-christ.jpg",
+		"date": "2012-12-10",
+		"dimensions": {
+			"height": { "px": 738, "cm": 0 },
+			"width": { "px": 1100, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "national-gallery", "trafalgar-square", "rds"],
+		"categories": ["observation", "old-masters", "national-gallery"],
+		"tags": ["observation", "drawing", "figure"]
+	},
+	{
+		"title": "Detail Study After Michelangelo's Crucifixion of St. Peter",
+		"medium": ["Oil", "Oil on canvas"],
+		"imageCover": "detail-study-after-michelangelo's-crucifixion-of-st.-peter.jpg",
+		"date": "2012-12-09",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 586, "cm": 0 },
+			"depth": { "px": 0, "cm": 0 }
+		},
+		"sales": { "price": 350 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "national-gallery", "trafalgar-square"],
+		"categories": ["observation", "old-masters", "national-gallery"],
+		"tags": ["observation", "drawing", "figure"]
+	},
+	{
+		"title": "Listening",
+		"medium": ["Charcoal", "Charcoal on Newsprint Paper"],
+		"imageCover": "listening.jpg",
+		"date": "2012",
+		"dimensions": {
+			"height": { "px": 800, "cm": 0 },
+			"width": { "px": 590, "cm": 0 },
+			"depth": { "px": 28, "cm": 0 }
+		},
+		"sales": { "price": 450 },
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dis parturient montes nascetur ridiculus mus mauris. Mattis enim ut tellus elementum. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. ",
+		"location": ["london", "rds"],
+		"categories": ["observation", "drawing", "figure"],
+		"tags": ["observation", "drawing", "figure"]
+	}
+]

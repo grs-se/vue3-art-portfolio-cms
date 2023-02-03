@@ -1,0 +1,83 @@
+[
+  {
+    "name": {
+      "names": ["Piero della Francesca"]
+    },
+    "location": {
+      "description": "Sansepolcro, Italy",
+      "type": "Point",
+      "coordinates": [12.1212194,43.5734107]
+    },
+    "knownFor": ["Painting", "Fresco", "Mathmatics", "Geometry"],
+    "born": {
+      "dob": ["c. 1415", 1415],
+      "pob": "Borgo Santo Sansepolcro"
+    },
+    "died": {
+      "dod": ["12 October 1492", 1492],
+      "pod": "San Sepolcro"
+    },
+    "characteristics": [
+      "serene humanism",
+      "use of geometric forms",
+      "perspective"
+    ],
+    "famousWorks": [
+      {
+        "title": "The History of the True Cross",
+        "location": "Church of San Franesco in the Tuscan town of Arezzo",
+        "coords": "",
+        "image": ""
+      },
+      {
+        "title": "The Baptism of Christ",
+        "location": "The National Gallery, London",
+        "coords": "",
+        "image": ""
+      }
+    ]
+  },
+  {
+    "name": {
+      "names": ["Titian", "Tiziano Vecelli", "Vecellio"]
+    },
+    "location": {
+      "countryOfOrigin": "Italy",
+      "description": "Pieve di Cadore, near Belluno",
+      "type": "Point",
+      "coordinates": [12.3678385, 46.4267543]
+    },
+    "knownFor": ["Painting", "Fresco", "Mathmatics", "Geometry"],
+    "born": {
+      "dob": ["c. 1488/90", 1488],
+      "pob": ""
+    },
+    "died": {
+      "dod": ["27 August 1576", 1576],
+      "age": "87/88",
+      "pod": "Venice"
+    },
+    "characteristics": [
+      "The Sun Admist Small Stars",
+      "portraits",
+      "landscape backgrounds",
+      "mythological and religious subjects"
+    ],
+    "famousWorks": [
+      {
+        "title": "Noli me tangere",
+        "date": "1511-15",
+        "location": "The National Gallery, London",
+        "coords": "",
+        "image": ""
+      },
+      {
+        "title": "Bacchus and Ariadne",
+        "date": "1511-15",
+        "location": "The National Gallery, London",
+        "coords": "",
+        "image": ""
+      }
+    ]
+  }
+]
