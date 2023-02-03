@@ -6,12 +6,14 @@ const imageUpload = require("../middleware/imageUpload");
 
 const router = express.Router();
 
-router.route("/").post(
-	// authController.protect,
-	// authController.restrictTo('artist', 'admin', 'gallerist'),
-	imageUpload,
-	uploadImages
-);
+router
+	.route("/")
+	.post(
+		authController.protect,
+		authController.restrictTo("artist", "admin", "gallerist"),
+		imageUpload,
+		uploadImages
+	);
 
 router.route("/listImages").get(listImages);
 

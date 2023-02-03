@@ -1,9 +1,10 @@
 const express = require("express");
 const artworkController = require("../controllers/artworkController");
 const authController = require("../controllers/authController");
-const imageUpload = require("../middleware/imageUpload");
 const textRouter = require("./textRoutes");
 const reviewRouter = require("./reviewRoutes");
+const { uploadImages, listImages } = require("../controllers/uploadController");
+const imageUpload = require("../middleware/imageUpload");
 
 const {
 	setNestedRouteFilterCategories
@@ -51,6 +52,8 @@ router
 	.post(
 		authController.protect,
 		authController.restrictTo("artist", "admin", "gallerist"),
+		imageUpload,
+		uploadImages,
 		artworkController.createArtwork
 	);
 

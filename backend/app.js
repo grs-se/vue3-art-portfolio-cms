@@ -28,6 +28,7 @@ csp(app);
 app.use("/images/artworks", express.static(path.join(__dirname, "images")));
 app.use(express.static(path.join(__dirname, "dist")));
 
+// Use temp file storage
 app.use(
 	fileUpload({
 		useTempFiles: true
@@ -45,8 +46,8 @@ const limiter = rateLimit({
 	windowMs: 60 * 60 * 1000,
 	message: "Too many requests from this IP, please try again in an hour!"
 });
-app.use("/api", limiter);
 // limits requests to all routes starting with '/'
+app.use("/api", limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: "10kb" }));

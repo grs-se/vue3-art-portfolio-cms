@@ -15,5 +15,5 @@ module.exports = function(app) {
 	app.use("/api/v1/exhibitions", exhibitionRouter);
 	app.use("/api/v1/artist-research", artistRouter);
 	app.use("/api/v1/sales", purchaseRouter);
-	app.use("/api/v1/uploadImages", uploadRouter);
+	app.use("/api/v1/upload", uploadRouter);
 };
