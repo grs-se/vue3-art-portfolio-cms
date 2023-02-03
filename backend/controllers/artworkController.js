@@ -124,14 +124,7 @@ exports.getArtworkByTitle = catchAsync(async (req, res, next) => {
 
 exports.getAllArtworks = factory.getAll(Artwork);
 
-exports.getArtworkById = factory.getOneById(
-	Artwork,
-	{
-		path: "texts",
-		select: "heading"
-	},
-	"mainGallery"
-);
+exports.getArtworkById = factory.getOneById(Artwork);
 // exports.getArtwork = factory.getOne(Artwork);
 exports.createArtwork = factory.createOne(Artwork);
 exports.updateArtwork = factory.updateOne(Artwork);
