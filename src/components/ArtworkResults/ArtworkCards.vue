@@ -1,6 +1,8 @@
 <template>
 	<ol>
 		<li v-for="artwork in FILTERED_ARTWORKS" :key="artwork._id" class="">
+			<!-- <CloudImage image-name="artwork.imageCover" /> -->
+
 			<slot
 				:image-cover="artwork.imageCover"
 				:title="artwork.title"
@@ -14,6 +16,7 @@
 
 <script lang="ts" setup>
 import { useArtworksStore } from "@/stores/artworks";
+// import CloudImage from "@/components/CloudImage/CloudImage.vue";
 
 import { computed, onMounted } from "vue";
 

@@ -14,10 +14,7 @@
 					:key="hero.id"
 					class="col-span-5 col-start-7 self-center justify-self-center"
 				>
-					<img
-						class="object-contain"
-						:src="'/images/artworks/' + hero.imageCover"
-					/>
+					<img class="object-contain" :src="'images/' + hero.imageCover" />
 				</div>
 
 				<div class="col-span-1 col-start-12"></div>

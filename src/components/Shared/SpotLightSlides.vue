@@ -7,10 +7,7 @@
 				to="/gallery"
 				class="mx-5 flex h-auto max-w-sm flex-col rounded-lg border bg-white"
 			>
-				<img
-					:src="'/images/artworks/' + imageCover"
-					class="h-64 content-start object-contain"
-				/>
+				<img :src="imageCover" class="h-64 content-start object-contain" />
 
 				<div class="mt-3 h-48 px-6 py-4">
 					<h3 class="text-lg font-medium">

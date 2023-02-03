@@ -1,5 +1,5 @@
-const path = require("path");
 const express = require("express");
+const path = require("path");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const { csp } = require("./utils/helmet_csp_config");
@@ -25,7 +25,7 @@ app.use(cors({ origin: "*" }));
 csp(app);
 
 // Serving static files
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images/artworks", express.static(path.join(__dirname, "images")));
 app.use(express.static(path.join(__dirname, "dist")));
 
 app.use(

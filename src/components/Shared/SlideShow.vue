@@ -10,7 +10,7 @@
 				>
 					<figure class="flex flex-col justify-center">
 						<img
-							:src="'/images/artworks/' + spotlight.imageCover"
+							:src="'images/' + spotlight.imageCover"
 							class="max-h-80 content-start object-contain"
 						/>
 
@@ -154,7 +154,7 @@ onMounted(() => {
 					class="slide mx-5 flex h-auto max-w-sm flex-col rounded-lg border bg-white"
 				>
 					<img
-						:src="'/images/artworks/' + spotlight.imageCover"
+						:src="spotlight.imageCover"
 						class="h-64 content-start object-contain"
 					/>
 

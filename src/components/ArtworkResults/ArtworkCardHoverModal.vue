@@ -4,7 +4,7 @@
 			<section class="max-w-80 flex max-h-80 flex-col bg-white">
 				<figure>
 					<img
-						:src="'/images/artworks/' + imageCover"
+						:src="imageCover"
 						alt=""
 						class="h-60 w-auto"
 					/>

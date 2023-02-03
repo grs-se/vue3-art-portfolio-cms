@@ -9,6 +9,14 @@ import {
 	faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
+// import { Cloudinary } from "@cloudinary/vue";
+
+// Cloudinary.config({
+// 	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+// 	api_key: process.env.CLOUDINARY_API_KEY,
+// 	api_secret: process.env.CLOUDINARY_API_SECRET,
+// });
+
 import "@/index.css";
 import router from "@/router";
 import App from "@/App.vue";

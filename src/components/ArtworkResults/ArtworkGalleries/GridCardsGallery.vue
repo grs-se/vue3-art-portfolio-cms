@@ -16,7 +16,7 @@
 				
 			> -->
 					<img
-						:src="'/images/artworks/' + imageCover"
+						:src="'images/' + imageCover"
 						class="mx-auto place-self-center hover:shadow-gray xs:max-h-full xl:max-h-72"
 						@mouseover="hover = true"
 						@mouseleave="hover = false"
