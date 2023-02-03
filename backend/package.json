@@ -1,16 +1,14 @@
 {
-	"name": "grs-artist-0.1",
-	"version": "1.0.0",
-	"description": "Client-side rendered web application for artists to display and manage their portolio",
+	"name": "grs-artist-cms",
+	"version": "2.0.0",
+	"description": "Artist's CMS API Server ",
 	"scripts": {
 		"start": "node server.js",
 		"dev": "SET NODE_ENV=development&& nodemon server.js",
 		"start:prod": "SET NODE_ENV=production&& nodemon server.js",
 		"debug": "ndb server.js",
-		"delete-data": "SET NODE_ENV=LOADER&& node ./src/assets/data/import-dev-data.js --delete",
-		"import-data": "SET NODE_ENV=LOADER&& node ./src/assets/data/import-dev-data.js --import",
-		"watch:js": "parcel watch ./public/js/index.js --out-dir ./dist/js --out-file bundle.js",
-		"build:js": "parcel build ./public/js/index.js --out-dir ./dist/js --out-file bundle.js"
+		"delete-data": "SET NODE_ENV=LOADER&& node .data/import-dev-data.js --delete",
+		"import-data": "SET NODE_ENV=LOADER&& node .data/import-dev-data.js --import"
 	},
 	"author": "George Rice-Smith",
 	"license": "ISC",

@@ -2,7 +2,7 @@ const express = require("express");
 // const artworkController = require('../controllers/artworkController');
 const authController = require("../controllers/authController");
 const { uploadImages, listImages } = require("../controllers/uploadController");
-const imageUpload = require("../middlewares/imageUpload");
+const imageUpload = require("../middleware/imageUpload");
 
 const router = express.Router();
 

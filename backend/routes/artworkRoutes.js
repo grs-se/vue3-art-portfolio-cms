@@ -1,14 +1,14 @@
 const express = require("express");
 const artworkController = require("../controllers/artworkController");
 const authController = require("../controllers/authController");
-const imageUpload = require("../middlewares/imageUpload");
+const imageUpload = require("../middleware/imageUpload");
 const textRouter = require("./textRoutes");
 const reviewRouter = require("./reviewRoutes");
 
 const {
-	setNestedRouteFilterCategories,
+	setNestedRouteFilterCategories
 } = require("../controllers/handlerFactory");
-const { ARTWORK_NESTED_ROUTE_CATEGORIES } = require("../../config/config");
+const { ARTWORK_NESTED_ROUTE_CATEGORIES } = require("../config/constants");
 
 const router = express.Router();
 

@@ -6,10 +6,12 @@ import getTexts from "@/api/getTexts";
 import { useUserStore } from "@/stores/user";
 import type { Text } from "@/api/types";
 
-export const FETCH_TEXTS = "FETCH_TEXTS";
-export const UNIQUE_TEXT_CATEGORIES = "UNIQUE_TEXT_CATEGORIES";
-export const INCLUDE_TEXT_BY_CATEGORY = "INCLUDE_TEXT_BY_CATEGORY";
-export const FILTERED_TEXTS = "FILTERED_TEXTS";
+import {
+	FETCH_TEXTS,
+	UNIQUE_TEXT_CATEGORIES,
+	INCLUDE_TEXT_BY_CATEGORY,
+	FILTERED_TEXTS,
+} from "@/stores/constants";
 
 export interface TextsState {
 	texts: Text[];

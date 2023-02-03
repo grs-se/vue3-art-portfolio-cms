@@ -26,7 +26,7 @@
 								{{ dimensions.height.px }} x {{ dimensions.width.px }}cm
 							</p>
 						</div> -->
-							<p class="line-clamp mt-3 text-sm">
+							<p class="line-clamp mt-3 text-justify text-sm">
 								{{ spotlight.description }}
 							</p>
 							<div class="pb-4 text-sm">

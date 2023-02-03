@@ -2,9 +2,9 @@ const express = require("express");
 const textController = require("../controllers/textController");
 const authController = require("../controllers/authController");
 const {
-	setNestedRouteFilterCategories,
+	setNestedRouteFilterCategories
 } = require("../controllers/handlerFactory");
-const { TEXT_NESTED_ROUTE_CATEGORIES } = require("../../config/config");
+const { TEXT_NESTED_ROUTE_CATEGORIES } = require("../config/constants");
 
 const router = express.Router({ mergeParams: true });
 
