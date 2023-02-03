@@ -55,3 +55,16 @@ export interface Text {
 	user?: {};
 	wordCount?: number;
 }
+
+export interface User {
+	name: string;
+	email: string;
+	photo?: string;
+	role: string;
+	password: string;
+	passwordConfirm: string;
+	passwordChangedAt: Date;
+	passwordResetToken: String;
+	passwordResetExpires: Date;
+	active: boolean;
+}

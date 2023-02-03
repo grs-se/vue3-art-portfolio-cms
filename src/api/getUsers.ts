@@ -4,5 +4,9 @@ import type { User } from "@/api/types";
 
 const getUsers = async () => {
 	const baseUrl = import.meta.env.VITE_APP_API_URL;
-	const url = `${baseUrl}/`;
+	const url = `${baseUrl}/users`;
+	const response = await axios.get<User[]>(url);
+	return response.data.data.users;
 };
+
+export default getUsers;
