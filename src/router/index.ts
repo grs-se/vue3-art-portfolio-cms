@@ -8,6 +8,7 @@ import HomeView from "@/views/HomeView.vue";
 import ResearchView from "@/views/ResearchView.vue";
 import TextResultsView from "@/views/TextResultsView.vue";
 import TextView from "@/views/TextView.vue";
+// import LoginRegisterView from "@/views/LoginRegisterView.vue"
 
 const routes = [
 	{
