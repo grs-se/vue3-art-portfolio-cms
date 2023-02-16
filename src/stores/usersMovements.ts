@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 
 import { fetchWrapper } from "@/helpers";
 import { useAuthStore } from "@/stores";
+import type { User } from "@/api/types";
 
 const baseUrl = `${import.meta.env.VITE_API_URL}/users`;
 
@@ -18,7 +19,7 @@ export const useUsersStore = defineStore({
 		user: {},
 	}),
 	actions: {
-		async [REGISTER_USER](user) {
+		async [REGISTER_USER](user: User) {
 			await fetchWrapper.post(`${baseUrl}/register`, user);
 		},
 		async [FETCH_USERS]() {
@@ -29,7 +30,7 @@ export const useUsersStore = defineStore({
 				this.users = { error };
 			}
 		},
-		async [FETCH_USER](id) {
+		async [FETCH_USER](id: string) {
 			this.user = { loading: true };
 			try {
 				this.user = await fetchWrapper.get(`${baseUrl}/${id}`);
@@ -37,7 +38,7 @@ export const useUsersStore = defineStore({
 				this.user = { error };
 			}
 		},
-		async [UPDATE_USER](id, params) {
+		async [UPDATE_USER](id: string, params: string[]) {
 			await fetchWrapper.put(`${baseUrl}/${id}`, params);
 
 			// update stored user if the logged in user updated their own record
@@ -51,7 +52,7 @@ export const useUsersStore = defineStore({
 				authStore.user = user;
 			}
 		},
-		async [DELETE_USER](id) {
+		async [DELETE_USER](id: string) {
 			// add isDeleting prop to user being deleted
 			this.users.find((x) => x.id === id).isDeleting = true;
 
