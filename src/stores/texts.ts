@@ -6,12 +6,10 @@ import getTexts from "@/api/getTexts";
 import { useUserStore } from "@/stores/user";
 import type { Text } from "@/api/types";
 
-import {
-	FETCH_TEXTS,
-	UNIQUE_TEXT_CATEGORIES,
-	INCLUDE_TEXT_BY_CATEGORY,
-	FILTERED_TEXTS,
-} from "@/stores/constants";
+export const FETCH_TEXTS = "FETCH_TEXTS";
+export const UNIQUE_TEXT_CATEGORIES = "UNIQUE_TEXT_CATEGORIES";
+export const INCLUDE_TEXT_BY_CATEGORY = "INCLUDE_TEXT_BY_CATEGORY";
+export const FILTERED_TEXTS = "FILTERED_TEXTS";
 
 export interface TextsState {
 	texts: Text[];
@@ -35,7 +33,7 @@ export const useTextsStore = defineStore("texts", {
 		[INCLUDE_TEXT_BY_CATEGORY]: () => (text: Text) => {
 			const userStore = useUserStore();
 			if (userStore.selectedTextCategories.length === 0) return true;
-			return text.categories.some((cat) =>
+			return text.categories.some((cat: string) =>
 				userStore.selectedTextCategories.includes(cat)
 			);
 		},
