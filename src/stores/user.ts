@@ -11,13 +11,6 @@ export const ADD_SELECTED_TEXT_CATEGORIES = "ADD_SELECTED_TEXT_CATEGORIES";
 export const CLEAR_USER_ARTWORK_FILTER_SELECTIONS =
 	"CLEAR_USER_ARTWORK_FILTER_SELECTIONS";
 
-// import {
-// 	ADD_SELECTED_ARTWORK_CATEGORIES,
-// 	ADD_SELECTED_ARTWORK_LOCATIONS,
-// 	ADD_SELECTED_TEXT_CATEGORIES,
-// 	CLEAR_USER_ARTWORK_FILTER_SELECTIONS,
-// } from "@/stores/constants";
-
 export const useUserStore = defineStore("user", () => {
 	const users = ref<User[]>([]);
 	const isLoggedIn = ref(false);
@@ -35,16 +28,6 @@ export const useUserStore = defineStore("user", () => {
 	const LOGIN_USER = async () => {
 		isLoggedIn.value = true;
 	};
-
-	// const LOGIN_USER = async (email, password) {
-	// 	try {
-	// 		const res = await axios({
-	// 			method: 'POST',
-	// 			url:
-
-	// 		})
-	// 	}
-	// };
 
 	const ADD_SELECTED_ARTWORK_CATEGORIES = (categories: string[]) => {
 		selectedArtworkCategories.value = categories;
