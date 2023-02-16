@@ -4,6 +4,10 @@ require("@rushstack/eslint-patch/modern-module-resolution");
 module.exports = {
 	root: true,
 	extends: [
+		// "@vue/typescript/recommended",
+		// "plugin:vue/vue3-recommended",
+		// "@vue/standard",
+		///////
 		"plugin:vue/vue3-recommended",
 		"eslint:recommended",
 		"@vue/eslint-config-typescript",
@@ -24,5 +28,7 @@ module.exports = {
 				endOfLine: "auto",
 			},
 		],
+		"@typescript-eslint/no-unused-vars": "error",
+		"vue/script-setup-uses-vars": "error",
 	},
 };

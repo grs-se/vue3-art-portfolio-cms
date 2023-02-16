@@ -8,6 +8,9 @@ module.exports = {
 			fontFamily: {
 				sans: ["FuturaPTW02-Book", ...defaultTheme.fontFamily.sans],
 			},
+			borderWidth: {
+				1: "1px",
+			},
 			colors: {
 				"brand-gray-1": "#dadce0",
 				"brand-gray-2": "#e8eaed",

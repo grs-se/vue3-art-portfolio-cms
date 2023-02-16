@@ -35,7 +35,9 @@
 
 				<div class="ml-auto flex h-full items-center">
 					<profile-image v-if="isLoggedIn" />
-					<action-button v-else text="Sign in" @click="LOGIN_USER" />
+					<router-link v-else to="/LoginRegister">
+						<action-button text="Sign in" @click="LOGIN_USER" />
+					</router-link>
 				</div>
 			</div>
 

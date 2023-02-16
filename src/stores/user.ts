@@ -1,6 +1,9 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
 
+import getUsers from "@/api/getUsers";
+import type { User } from "@/api/types";
+
 export const ADD_SELECTED_ARTWORK_CATEGORIES =
 	"ADD_SELECTED_ARTWORK_CATEGORIES";
 export const ADD_SELECTED_ARTWORK_LOCATIONS = "ADD_SELECTED_ARTWORK_LOCATIONS";
@@ -8,16 +11,40 @@ export const ADD_SELECTED_TEXT_CATEGORIES = "ADD_SELECTED_TEXT_CATEGORIES";
 export const CLEAR_USER_ARTWORK_FILTER_SELECTIONS =
 	"CLEAR_USER_ARTWORK_FILTER_SELECTIONS";
 
+// import {
+// 	ADD_SELECTED_ARTWORK_CATEGORIES,
+// 	ADD_SELECTED_ARTWORK_LOCATIONS,
+// 	ADD_SELECTED_TEXT_CATEGORIES,
+// 	CLEAR_USER_ARTWORK_FILTER_SELECTIONS,
+// } from "@/stores/constants";
+
 export const useUserStore = defineStore("user", () => {
+	const users = ref<User[]>([]);
 	const isLoggedIn = ref(false);
 	const selectedArtworkCategories = ref<string[]>([]);
 	const selectedArtworkLocations = ref<string[]>([]);
 	const selectedTextCategories = ref<string[]>([]);
 	const tagsSearchTerm = ref("");
 
-	const LOGIN_USER = () => {
+	const FETCH_USERS = async () => {
+		// isLoggedIn.value = true;
+		const users = await getUsers();
+		users.value = users;
+	};
+
+	const LOGIN_USER = async () => {
 		isLoggedIn.value = true;
 	};
+
+	// const LOGIN_USER = async (email, password) {
+	// 	try {
+	// 		const res = await axios({
+	// 			method: 'POST',
+	// 			url:
+
+	// 		})
+	// 	}
+	// };
 
 	const ADD_SELECTED_ARTWORK_CATEGORIES = (categories: string[]) => {
 		selectedArtworkCategories.value = categories;
@@ -42,11 +69,13 @@ export const useUserStore = defineStore("user", () => {
 	};
 
 	return {
+		users,
 		isLoggedIn,
 		selectedArtworkCategories,
 		selectedArtworkLocations,
 		selectedTextCategories,
 		tagsSearchTerm,
+		FETCH_USERS,
 		LOGIN_USER,
 		ADD_SELECTED_ARTWORK_CATEGORIES,
 		ADD_SELECTED_ARTWORK_LOCATIONS,

@@ -9,4 +9,10 @@ const getArtworks = async () => {
 	return response.data.data.artworks;
 };
 
+// const postArtworks = async () => {
+// 	const url = `${baseUrl}/uploadArtworks`;
+// 	const response = await axios.post<Artwork[]>(url);
+// 	return response.data.data.artworks;
+// };
+
 export default getArtworks;
