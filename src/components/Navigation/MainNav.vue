@@ -1,3 +1,34 @@
+<script lang="ts" setup>
+import { computed, ref } from "vue";
+
+import { useUserMovementsStore } from "@/stores/userMovements";
+
+import ActionButton from "@/components/Shared/ActionButton.vue";
+import ProfileImage from "@/components/Navigation/ProfileImage.vue";
+import TheSubnav from "@/components/Navigation/TheSubnav.vue";
+import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
+// import SideNav from "@/components/Navigation/SideNav.vue";
+
+const menuItems = ref([
+	{ text: "Gallery", url: "/gallery/" },
+	{ text: "Research", url: "/research/" },
+	{ text: "Text", url: "/text/" },
+	{ text: "Exhibitions", url: "/" },
+	{ text: "Statement", url: "/text/artist-statement" },
+	{ text: "About", url: "/" },
+	{ text: "Contact", url: "/" },
+]);
+
+const userStore = useUserMovementsStore();
+const LOGIN_USER = userStore.LOGIN_USER;
+const isLoggedIn = computed(() => userStore.isLoggedIn);
+const headerHeightClass = computed(() => ({
+	"h-16": !isLoggedIn.value,
+	"h-32": isLoggedIn.value,
+}));
+const isActive = ref(false);
+</script>
+
 <template>
 	<header :class="['w-full', 'text-sm', 'font-normal', headerHeightClass]">
 		>
@@ -47,34 +78,3 @@
 		</div>
 	</header>
 </template>
-
-<script lang="ts" setup>
-import { computed, ref } from "vue";
-
-import { useUserStore } from "@/stores/user";
-
-import ActionButton from "@/components/Shared/ActionButton.vue";
-import ProfileImage from "@/components/Navigation/ProfileImage.vue";
-import TheSubnav from "@/components/Navigation/TheSubnav.vue";
-import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
-// import SideNav from "@/components/Navigation/SideNav.vue";
-
-const menuItems = ref([
-	{ text: "Gallery", url: "/gallery/" },
-	{ text: "Research", url: "/research/" },
-	{ text: "Text", url: "/text/" },
-	{ text: "Exhibitions", url: "/" },
-	{ text: "Statement", url: "/text/artist-statement" },
-	{ text: "About", url: "/" },
-	{ text: "Contact", url: "/" },
-]);
-
-const userStore = useUserStore();
-const LOGIN_USER = userStore.LOGIN_USER;
-const isLoggedIn = computed(() => userStore.isLoggedIn);
-const headerHeightClass = computed(() => ({
-	"h-16": !isLoggedIn.value,
-	"h-32": isLoggedIn.value,
-}));
-const isActive = ref(false);
-</script>

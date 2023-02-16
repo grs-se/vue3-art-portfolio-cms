@@ -7,6 +7,7 @@ import {
 	faAngleDown,
 	faAngleUp,
 	faSearch,
+	faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import { Cloudinary } from "@cloudinary/vue";
@@ -21,9 +22,7 @@ import "@/index.css";
 import router from "@/router";
 import App from "@/App.vue";
 
-library.add(faAngleDown);
-library.add(faAngleUp);
-library.add(faSearch);
+library.add(faAngleDown, faAngleUp, faSearch, faUser);
 
 const pinia = createPinia();
 

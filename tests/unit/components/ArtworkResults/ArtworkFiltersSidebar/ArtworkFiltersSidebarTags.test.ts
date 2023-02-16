@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 import { createTestingPinia } from "@pinia/testing";
 
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "@/stores/userMovements";
 
 import ArtworkFiltersSidebarTags from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarTags.vue";
 

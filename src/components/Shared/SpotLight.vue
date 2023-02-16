@@ -33,7 +33,7 @@ const displaySpotlights = computed(() => {
 // const spotlights = ref([]);
 
 // const getSpotlights = async () => {
-// 	const baseUrl = import.meta.env.VITE_APP_API_URL;
+// 	const baseUrl = import.meta.env.VITE_API_URL;
 // 	const url = `${baseUrl}/gallery`;
 // 	const response = await axios.get(url);
 // 	const artworks = response.data.data.artworks;

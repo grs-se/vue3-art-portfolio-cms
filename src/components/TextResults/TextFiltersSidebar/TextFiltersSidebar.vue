@@ -26,12 +26,12 @@ import ActionButton from "@/components/Shared/ActionButton.vue";
 import TextFiltersSidebarCheckboxGroup from "@/components/TextResults/TextFiltersSidebar/TextFiltersSidebarCheckboxGroup.vue";
 
 import { useTextsStore } from "@/stores/texts";
-import { useUserStore } from "@/stores/user";
+import { useUserMovementsStore } from "@/stores/userMovements";
 
 const textsStore = useTextsStore();
 const UNIQUE_TEXT_CATEGORIES = computed(
 	() => textsStore.UNIQUE_TEXT_CATEGORIES
 );
 
-const userStore = useUserStore();
+const userStore = useUserMovementsStore();
 </script>

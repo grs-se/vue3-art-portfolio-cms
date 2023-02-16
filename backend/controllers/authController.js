@@ -6,9 +6,9 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const Email = require("../utils/email");
 
-const signToken = (id) => {
+const signToken = id => {
 	return jwt.sign({ id }, process.env.JWT_SECRET, {
-		expiresIn: process.env.JWT_EXPIRES_IN,
+		expiresIn: process.env.JWT_EXPIRES_IN
 	});
 };
 
@@ -18,7 +18,7 @@ const createSendToken = (user, statusCode, res) => {
 		expires: new Date(
 			Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
 		),
-		httpOnly: true,
+		httpOnly: true
 	};
 
 	if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
@@ -32,8 +32,8 @@ const createSendToken = (user, statusCode, res) => {
 		status: "success",
 		token,
 		data: {
-			user,
-		},
+			user
+		}
 	});
 };
 
@@ -72,7 +72,7 @@ exports.logout = (req, res) => {
 	// res.clearCookie('jwt');
 	res.cookie("jwt", "loggedout", {
 		expires: new Date(Date.now() + 10 * 1000),
-		httpOnly: true,
+		httpOnly: true
 	});
 	res.status(200).json({ status: "success" });
 };
@@ -91,7 +91,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 
 	if (!token) {
 		return next(
-			new AppError("You are not logged in! Please log in to get access.", 401)
+			new AppError("Login failed! Please log in to get access.", 401)
 		);
 	}
 
@@ -185,7 +185,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
 		res.status(200).json({
 			status: "success",
-			message: "Token sent to email!",
+			message: "Token sent to email!"
 		});
 	} catch (err) {
 		user.passwordResetToken = undefined;
@@ -209,8 +209,8 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 	const user = await User.findOne({
 		passwordResetToken: hashedToken,
 		passwordResetExpires: {
-			$gt: Date.now(),
-		},
+			$gt: Date.now()
+		}
 	});
 
 	// 2) If token has not expired, and there is user, set the new password

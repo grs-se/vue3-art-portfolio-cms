@@ -3,7 +3,7 @@ import { createPinia, setActivePinia } from "pinia";
 import axios from "axios";
 
 import { useArtworksStore } from "@/stores/artworks";
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "@/stores/userMovements";
 import { createArtwork } from "../../utils/createArtwork";
 
 vi.mock("axios");

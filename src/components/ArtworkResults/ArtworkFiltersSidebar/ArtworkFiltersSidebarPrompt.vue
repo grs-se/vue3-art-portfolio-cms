@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 import ActionButton from "@/components/Shared/ActionButton.vue";
 
-import { useUserStore } from "@/stores/user";
+import { useUserMovementsStore } from "@/stores/userMovements";
 
-const userStore = useUserStore();
+const userStore = useUserMovementsStore();
 </script>

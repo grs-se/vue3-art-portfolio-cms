@@ -3,7 +3,7 @@ import createSetFromNestedArray from "@/utils/createSetFromNestedArray.js";
 
 import getTexts from "@/api/getTexts";
 
-import { useUserStore } from "@/stores/user";
+import { useUserMovementsStore } from "@/stores/userMovements";
 import type { Text } from "@/api/types";
 
 export const FETCH_TEXTS = "FETCH_TEXTS";
@@ -31,10 +31,10 @@ export const useTextsStore = defineStore("texts", {
 		},
 
 		[INCLUDE_TEXT_BY_CATEGORY]: () => (text: Text) => {
-			const userStore = useUserStore();
-			if (userStore.selectedTextCategories.length === 0) return true;
+			const userMovementsStore = useUserMovementsStore();
+			if (userMovementsStore.selectedTextCategories.length === 0) return true;
 			return text.categories.some((cat: string) =>
-				userStore.selectedTextCategories.includes(cat)
+				userMovementsStore.selectedTextCategories.includes(cat)
 			);
 		},
 
@@ -47,7 +47,7 @@ export const useTextsStore = defineStore("texts", {
 // import { computed, ref } from "vue";
 // import { defineStore } from "pinia";
 
-// import { useUserStore } from "@/stores/user";
+// import { useUserMovementsStore } from "@/stores/user";
 
 // import createSet from "@/utils/createSetFromNestedArray.js";
 
@@ -67,10 +67,10 @@ export const useTextsStore = defineStore("texts", {
 // 	});
 
 // 	const INCLUDE_TEXT_BY_CATEGORY = computed((text) => {
-// 		const userStore = useUserStore();
-// 		if (userStore.selectedTextCategories.length === 0) return true;
+// 		const userMovementsStore = useUserMovementsStore();
+// 		if (userMovementsStore.selectedTextCategories.length === 0) return true;
 // 		return text.categories.some((cat: string) =>
-// 			userStore.selectedTextCategories.includes(cat)
+// 			userMovementsStore.selectedTextCategories.includes(cat)
 // 		);
 // 	});
 

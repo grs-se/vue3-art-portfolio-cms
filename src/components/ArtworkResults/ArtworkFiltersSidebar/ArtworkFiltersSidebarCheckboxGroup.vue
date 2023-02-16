@@ -1,31 +1,11 @@
-<template>
-	<div class="mt-5">
-		<fieldset>
-			<ul class="flex flex-row flex-wrap">
-				<li v-for="value in uniqueValues" :key="value" class="h-8 w-1/2">
-					<input
-						:id="value"
-						v-model="selectedValues"
-						:value="value"
-						type="checkbox"
-						class="mr-3"
-						@change="selectValue"
-					/>
-					<label :for="value">{{ value }}</label>
-				</li>
-			</ul>
-		</fieldset>
-	</div>
-</template>
-
 <script lang="ts" setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 import {
-	useUserStore,
+	useUserMovementsStore,
 	CLEAR_USER_ARTWORK_FILTER_SELECTIONS,
-} from "@/stores/user";
+} from "@/stores/userMovements";
 
 const props = defineProps({
 	uniqueValues: {
@@ -46,8 +26,8 @@ const selectValue = () => {
 	router.push({ name: "ArtworkResults" });
 };
 
-const userStore = useUserStore();
-userStore.$onAction(({ after, name }) => {
+const userMovementsStore = useUserMovementsStore();
+userMovementsStore.$onAction(({ after, name }) => {
 	after(() => {
 		if (name === CLEAR_USER_ARTWORK_FILTER_SELECTIONS) {
 			selectedValues.value = [];
@@ -55,3 +35,23 @@ userStore.$onAction(({ after, name }) => {
 	});
 });
 </script>
+
+<template>
+	<div class="mt-5">
+		<fieldset>
+			<ul class="flex flex-row flex-wrap">
+				<li v-for="value in uniqueValues" :key="value" class="h-8 w-1/2">
+					<input
+						:id="value"
+						v-model="selectedValues"
+						:value="value"
+						type="checkbox"
+						class="mr-3"
+						@change="selectValue"
+					/>
+					<label :for="value">{{ value }}</label>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+</template>

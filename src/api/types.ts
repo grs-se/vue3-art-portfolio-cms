@@ -68,3 +68,8 @@ export interface User {
 	passwordResetExpires: Date;
 	active: boolean;
 }
+
+// export interface UserMovement {
+// 	user: string;
+// 	search: string;
+// }

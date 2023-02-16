@@ -1,3 +1,39 @@
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const footerMenuGroups = ref([
+	{
+		header: "Contact",
+		url: "/",
+		listItems: [
+			{
+				item: "Please feel free to contact with enquiries:",
+				url: "/gallery",
+			},
+		],
+	},
+	{
+		header: "Services",
+		url: "/",
+		listItems: [
+			{ item: "Art Teaching", url: "/gallery", link: true },
+			{ item: "Art Technical", url: "/gallery", link: true },
+			{ item: "Web-Development", url: "/gallery", link: true },
+			{ item: "Landscape Construction", url: "/gallery", link: true },
+		],
+	},
+	{
+		header: "Products",
+		url: "/",
+		listItems: [
+			{ item: "Print", url: "/gallery" },
+			{ item: "NFT", url: "/gallery" },
+			{ item: "Objects", url: "/gallery" },
+		],
+	},
+]);
+</script>
+
 <template>
 	<section class="w-full bg-brand-gray-3 text-white">
 		<div class="mx-auto py-16 text-start sm:w-3/4 xl:w-1/2">
@@ -43,39 +79,3 @@
 		</div>
 	</section>
 </template>
-
-<script lang="ts" setup>
-import { ref } from "vue";
-
-const footerMenuGroups = ref([
-	{
-		header: "Contact",
-		url: "/",
-		listItems: [
-			{
-				item: "Please feel free to contact with enquiries:",
-				url: "/gallery",
-			},
-		],
-	},
-	{
-		header: "Services",
-		url: "/",
-		listItems: [
-			{ item: "Art Teaching", url: "/gallery", link: true },
-			{ item: "Art Technical", url: "/gallery", link: true },
-			{ item: "Web-Development", url: "/gallery", link: true },
-			{ item: "Landscape Construction", url: "/gallery", link: true },
-		],
-	},
-	{
-		header: "Products",
-		url: "/",
-		listItems: [
-			{ item: "Print", url: "/gallery" },
-			{ item: "NFT", url: "/gallery" },
-			{ item: "Objects", url: "/gallery" },
-		],
-	},
-]);
-</script>

@@ -8,7 +8,7 @@ import { useRoute } from "vue-router";
 vi.mock("vue-router");
 
 import MainNav from "@/components/Navigation/MainNav.vue";
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "@/stores/userMovements";
 
 const useRouteMock = useRoute as Mock;
 

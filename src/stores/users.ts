@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 import { fetchWrapper } from "@/helpers";
-import { useAuthStore } from "@/stores";
+import { useAuthStore } from "@/stores/auth";
 import type { User } from "@/api/types";
 
 const baseUrl = `${import.meta.env.VITE_API_URL}/users`;
@@ -64,7 +64,7 @@ export const useUsersStore = defineStore({
 			// auto logout if the logged in user deleted their own record
 			const authStore = useAuthStore();
 			if (id === authStore.user.id) {
-				authStore.logout();
+				authStore.LOGOUT();
 			}
 		},
 	},

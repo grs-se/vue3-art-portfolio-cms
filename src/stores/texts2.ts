@@ -1,7 +1,7 @@
 import { computed, ref } from "vue";
 import { defineStore } from "pinia";
 
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "@/stores/userMovements";
 
 import createSet from "@/utils/createSetFromNestedArray.js";
 

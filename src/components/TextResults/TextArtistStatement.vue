@@ -21,7 +21,7 @@ interface ArtistStatement {
 const artistStatement = ref<ArtistStatement>({});
 
 const getArtistStatement = async () => {
-	const baseUrl = import.meta.env.VITE_APP_API_URL;
+	const baseUrl = import.meta.env.VITE_API_URL;
 	const url = `${baseUrl}/text/artist-statement`;
 	const response = await axios.get<ArtistStatement>(url);
 	artistStatement.value = response.data.data;

@@ -1,3 +1,15 @@
+<script lang="ts" setup>
+import { useArtworksStore } from "@/stores/artworks";
+// import CloudImage from "@/components/CloudImage/CloudImage.vue";
+
+import { computed, onMounted } from "vue";
+
+const artworksStore = useArtworksStore();
+onMounted(artworksStore.FETCH_ARTWORKS);
+
+const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
+</script>
+
 <template>
 	<ol>
 		<li v-for="artwork in FILTERED_ARTWORKS" :key="artwork._id" class="">
@@ -13,15 +25,3 @@
 		</li>
 	</ol>
 </template>
-
-<script lang="ts" setup>
-import { useArtworksStore } from "@/stores/artworks";
-// import CloudImage from "@/components/CloudImage/CloudImage.vue";
-
-import { computed, onMounted } from "vue";
-
-const artworksStore = useArtworksStore();
-onMounted(artworksStore.FETCH_ARTWORKS);
-
-const FILTERED_ARTWORKS = computed(() => artworksStore.FILTERED_ARTWORKS);
-</script>

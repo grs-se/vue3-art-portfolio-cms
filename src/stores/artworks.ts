@@ -3,7 +3,7 @@ import createSetFromNestedArray from "@/utils/createSetFromNestedArray.js";
 
 import getArtworks from "@/api/getArtworks";
 
-import { useUserStore } from "@/stores/user";
+import { useUserMovementsStore } from "@/stores/userMovements";
 import type { Artwork } from "@/api/types";
 
 export const FETCH_ARTWORKS = "FETCH_ARTWORKS";
@@ -39,17 +39,18 @@ export const useArtworksStore = defineStore("artworks", {
 			return createSetFromNestedArray(state.artworks, "location");
 		},
 		[INCLUDE_ARTWORK_BY_CATEGORY]: () => (artwork: Artwork) => {
-			const userStore = useUserStore();
-			if (userStore.selectedArtworkCategories.length === 0) return true;
+			const userMovementsStore = useUserMovementsStore();
+			if (userMovementsStore.selectedArtworkCategories.length === 0)
+				return true;
 			return artwork.categories.some((cat) =>
-				userStore.selectedArtworkCategories.includes(cat)
+				userMovementsStore.selectedArtworkCategories.includes(cat)
 			);
 		},
 		[INCLUDE_ARTWORK_BY_LOCATION]: () => (artwork: Artwork) => {
-			const userStore = useUserStore();
-			if (userStore.selectedArtworkLocations.length === 0) return true;
+			const userMovementsStore = useUserMovementsStore();
+			if (userMovementsStore.selectedArtworkLocations.length === 0) return true;
 			return artwork.location.some((loc: string) =>
-				userStore.selectedArtworkLocations.includes(loc)
+				userMovementsStore.selectedArtworkLocations.includes(loc)
 			);
 		},
 		[ARTWORK_SPOTLIGHTS](state) {
@@ -63,10 +64,12 @@ export const useArtworksStore = defineStore("artworks", {
 			);
 		},
 		[INCLUDE_ARTWORK_BY_TAG]: () => (artwork: Artwork) => {
-			const userStore = useUserStore();
-			if (userStore.tagsSearchTerm.length === 0) return true;
+			const userMovementsStore = useUserMovementsStore();
+			if (userMovementsStore.tagsSearchTerm.length === 0) return true;
 			return artwork.tags.some((tag: string) =>
-				userStore.tagsSearchTerm.toLowerCase().includes(tag.toLowerCase())
+				userMovementsStore.tagsSearchTerm
+					.toLowerCase()
+					.includes(tag.toLowerCase())
 			);
 		},
 		// [SORT_ARTWORKS_BY_DATE_ASCENDING](state) {},

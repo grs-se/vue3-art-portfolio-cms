@@ -1,3 +1,22 @@
+<script lang="ts" setup>
+import { computed } from "vue";
+
+import { useArtworksStore } from "@/stores/artworks";
+
+import ArtworkSearchForm from "@/components/ArtworkSearch/ArtworkSearchForm.vue";
+import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
+import SlideShow from "@/components/Shared/SlideShow.vue";
+import TheHeadline from "@/components/ArtworkSearch/TheHeadline.vue";
+
+const artworksStore = useArtworksStore();
+
+const ARTWORK_HERO = computed(() => artworksStore.ARTWORK_HERO);
+
+// const displayedHeroImages = computed(() => {
+// 	return HERO.value;
+// });
+</script>
+
 <template>
 	<main class="flex h-auto flex-col">
 		<section class="pt-10 sm:pb-0 lg:pb-20">
@@ -32,22 +51,3 @@
 		<slide-show />
 	</main>
 </template>
-
-<script lang="ts" setup>
-import { computed } from "vue";
-
-import { useArtworksStore } from "@/stores/artworks";
-
-import ArtworkSearchForm from "@/components/ArtworkSearch/ArtworkSearchForm.vue";
-import HeaderContainer from "@/components/Shared/HeaderContainer.vue";
-import SlideShow from "@/components/Shared/SlideShow.vue";
-import TheHeadline from "@/components/ArtworkSearch/TheHeadline.vue";
-
-const artworksStore = useArtworksStore();
-
-const ARTWORK_HERO = computed(() => artworksStore.ARTWORK_HERO);
-
-// const displayedHeroImages = computed(() => {
-// 	return HERO.value;
-// });
-</script>

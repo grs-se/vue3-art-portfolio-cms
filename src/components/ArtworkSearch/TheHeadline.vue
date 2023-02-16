@@ -1,14 +1,3 @@
-<template>
-	<section class="mb-24">
-		<h1 class="hero-header mb-10 font-normal">
-			<span>George Rice-Smith</span>
-			<!-- <span :class="actionClasses">{{ action }}</span> -->
-			<br />
-		</h1>
-		<h2 class="text-3xl font-light">Artist based in London, UK</h2>
-	</section>
-</template>
-
 <script lang="ts" setup>
 import { computed, ref, onBeforeUnmount, onMounted } from "vue";
 
@@ -34,6 +23,17 @@ onBeforeUnmount(() => {
 	clearInterval(interval.value);
 });
 </script>
+
+<template>
+	<section class="mb-24">
+		<h1 class="hero-header mb-10 font-normal">
+			<span>George Rice-Smith</span>
+			<!-- <span :class="actionClasses">{{ action }}</span> -->
+			<br />
+		</h1>
+		<h2 class="text-3xl font-light">Artist based in London, UK</h2>
+	</section>
+</template>
 
 <style scoped>
 .hero-header {
