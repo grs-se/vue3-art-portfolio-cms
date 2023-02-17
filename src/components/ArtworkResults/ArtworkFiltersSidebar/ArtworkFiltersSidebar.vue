@@ -3,10 +3,12 @@ import { onMounted } from "vue";
 import { useRoute } from "vue-router";
 
 import CollapsibleAccordian from "@/components/Shared/CollapsibleAccordian.vue";
-import ArtworkFiltersSidebarCategories from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarCategories.vue";
-import ArtworkFiltersSidebarLocations from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarLocations.vue";
-import ArtworkFiltersSidebarPrompt from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarPrompt.vue";
-import ArtworkFiltersSidebarTags from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebarTags.vue";
+import {
+	ArtworkFiltersSidebarCategories,
+	ArtworkFiltersSidebarLocations,
+	ArtworkFiltersSidebarPrompt,
+	ArtworkFiltersSidebarTags,
+} from "@/components/ArtworkResults/ArtworkFiltersSidebar";
 
 import { useUserMovementsStore } from "@/stores/userMovements";
 

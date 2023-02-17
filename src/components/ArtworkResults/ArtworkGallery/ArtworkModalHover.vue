@@ -3,11 +3,7 @@
 		<template #default="{ imageCover, title }">
 			<section class="max-w-80 flex max-h-80 flex-col bg-white">
 				<figure>
-					<img
-						:src="imageCover"
-						alt=""
-						class="h-60 w-auto"
-					/>
+					<img :src="imageCover" alt="" class="h-60 w-auto" />
 				</figure>
 				<figcaption class="hidden bg-white">
 					<h3>{{ title }}</h3>
@@ -18,5 +14,5 @@
 </template>
 
 <script lang="ts" setup>
-import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
+import { ArtworkCards } from "@/components/ArtworkResults/ArtworkGallery";
 </script>

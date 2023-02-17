@@ -1,10 +1,10 @@
 <template>
 	<MainNav />
 	<RouterView />
-	<Footer />
+	<FooterNav />
 </template>
 
 <script lang="ts" setup>
-import MainNav from "@/components/Navigation/MainNav.vue";
-import Footer from "@/components/Footer/Footer.vue";
+import { MainNav } from "@/components/Navigation/MainNav";
+import { FooterNav } from "@/components/Footer";
 </script>

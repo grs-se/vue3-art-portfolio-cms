@@ -77,11 +77,11 @@ export default {
 			</div>
 		</div>
 	</div>
-	<button @click="prev">prev</button>
-	<button @click="next">next</button>
+	<button class="carousel__btn" @click="prev">prev</button>
+	<button class="carousel__btn" @click="next">next</button>
 </template>
 
-<style>
+<style @scoped>
 .carousel {
 	width: 170px;
 	overflow: hidden;
@@ -103,7 +103,7 @@ export default {
 	justify-content: center;
 }
 /* optional */
-button {
+.carousel__button {
 	margin-right: 5px;
 	margin-top: 10px;
 }

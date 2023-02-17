@@ -2,7 +2,7 @@
 import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
-import GridCardsGallery from "@/components/ArtworkResults/ArtworkGalleries/GridCardsGallery.vue";
+import { GridCards } from "@/components/data-display/gallery-types";
 import { useArtworksStore } from "@/stores/artworks";
 
 import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages";
@@ -37,7 +37,7 @@ const displayedArtworks = computed(() => {
 		class="mx-auto w-full bg-brand-gray-2 py-8 sm:px-0 md:px-8"
 	>
 		<!-- class="mx-auto h-full w-full rounded border border-solid bg-white p-4" -->
-		<grid-cards-gallery />
+		<GridCards />
 		<div class="mx-auto mt-8">
 			<div class="flex flex-row flex-nowrap">
 				<p class="flex-grow text-sm">Page {{ currentPage }}</p>

@@ -1,20 +1,13 @@
 <template>
 	<main class="flex h-auto flex-col">
-		<Hero>
-			<Headline />
-			<ArtworkSearchForm />
-		</Hero>
-		<SpotlightsHeader />
-		<Slideshow />
+		<Hero />
+		<SpotLightsHeader />
+		<SlideShow />
 	</main>
 </template>
 
 <script lang="ts" setup>
-import {
-	Headline,
-	Hero,
-	Slideshow,
-	SpotlightsHeader,
-} from "@/components/Shared";
-import ArtworkSearchForm from "@/components/ArtworkSearch/ArtworkSearchForm.vue";
+import { Hero } from "@/components/Hero";
+import { SlideShow } from "@/components/data-display/gallery-types";
+import { SpotLightsHeader } from "@/components/SpotLights";
 </script>

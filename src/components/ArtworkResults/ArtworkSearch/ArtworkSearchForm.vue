@@ -4,8 +4,7 @@ import nextElementInList from "@/utils/nextElementInList";
 
 import { useRouter } from "vue-router";
 
-import ActionButton from "@/components/Shared/ActionButton.vue";
-import TextInput from "@/components/Shared/TextInput.vue";
+import { ActionButton, TextInput } from "@/components/Shared";
 
 const tag = ref("");
 
@@ -56,7 +55,7 @@ onBeforeUnmount(() => {
 
 		<action-button
 			text="Search"
-			type="secondary"
+			btn="secondary"
 			class="flex items-center rounded-r-3xl"
 		/>
 	</form>

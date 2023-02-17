@@ -33,8 +33,10 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 
-import ArtworkCards from "@/components/ArtworkResults/ArtworkCards.vue";
-import ArtworkCardHoverModal from "@/components/ArtworkResults/ArtworkCardHoverModal.vue";
+import {
+	ArtworkCards,
+	ArtworkModalHover,
+} from "@/components/ArtworkResults/ArtworkGallery";
 
 const hover = ref<boolean>(false);
 

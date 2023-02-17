@@ -1,5 +1,9 @@
+<script lang="ts" setup>
+import Spotlight from "@/components/SpotLights/SpotLightsCard.vue";
+</script>
+
 <template>
-	<spot-light
+	<Spotlight
 		class="mt-10 flex w-max flex-row justify-center overflow-y-hidden pb-16"
 	>
 		<template #default="{ imageCover, title, medium, description, categories }">
@@ -26,9 +30,5 @@
 				>
 			</router-link>
 		</template>
-	</spot-light>
+	</Spotlight>
 </template>
-
-<script lang="ts" setup>
-import SpotLight from "@/components/Shared/SpotLight.vue";
-</script>

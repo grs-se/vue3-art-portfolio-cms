@@ -6,6 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import ArtworkGallery from "@/components/ArtworkResults/ArtworkGallery.vue";
-import ArtworkFiltersSidebar from "@/components/ArtworkResults/ArtworkFiltersSidebar/ArtworkFiltersSidebar.vue";
+import { ArtworkGallery } from "@/components/ArtworkResults/ArtworkGallery";
+import { ArtworkFiltersSidebar } from "@/components/ArtworkResults/ArtworkFiltersSidebar";
 </script>

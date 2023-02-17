@@ -7,21 +7,27 @@ const props = defineProps({
 		required: false,
 		default: "",
 	},
-	type: {
+	btn: {
 		type: String,
 		required: false,
 		default: "primary",
 		validator(value: string) {
-			return ["primary", "secondary"].includes(value);
+			return [
+				"primary",
+				"secondary",
+				"alert-success",
+				"alert-danger",
+				"slideshow",
+			].includes(value);
 		},
 	},
 });
 
-const { type } = toRefs(props);
+const { btn } = toRefs(props);
 
 const buttonClass = computed(() => {
 	return {
-		[type.value]: true,
+		[btn.value]: true,
 	};
 });
 </script>
@@ -40,7 +46,7 @@ button {
 
 .primary {
 	/* @apply rounded bg-brand-gray-3 text-white hover:shadow-blue; */
-	@apply rounded-md bg-brand-blue-1 font-medium
+	@apply rounded-md bg-brand-blue-1  font-medium
 	text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
 }
 
@@ -57,7 +63,7 @@ button {
 	@apply bg-green-500 text-white;
 }
 
-.slideShow {
+.slide-show {
 	@apply rounded-full bg-brand-gray-3;
 }
 </style>

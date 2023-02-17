@@ -1,5 +1,5 @@
 <template>
-	<artwork-card class="repeat">
+	<artwork-cards class="repeat">
 		<template #default="{ imageCover, title, medium, year }">
 			<figure
 				class="flex flex-col rounded border border-solid border-brand-gray-2 hover:shadow-gray"
@@ -15,11 +15,11 @@
 				</figcaption>
 			</figure>
 		</template>
-	</artwork-card>
+	</artwork-cards>
 </template>
 
 <script lang="ts" setup>
-import ArtworkCard from "@/components/ArtworkResults/ArtworkCard2.vue";
+import { ArtworkCards } from "@/components/ArtworkResults/ArtworkGallery";
 
 // props: {
 // 	artwork: {

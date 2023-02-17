@@ -1,20 +1,3 @@
-<template>
-	<div class="border-b border-solid border-brand-gray-2 py-5">
-		<div
-			class="flex cursor-pointer flex-wrap items-center justify-between"
-			role="button"
-			@click="open"
-		>
-			<h3 class="text-base font-normal">{{ header }}</h3>
-
-			<font-awesome-icon :icon="caretIcon" />
-		</div>
-		<div v-if="isOpen" class="mt-5 w-full">
-			<slot><p>Whoops, somebody forgot to populate me!</p> </slot>
-		</div>
-	</div>
-</template>
-
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 
@@ -35,3 +18,20 @@ const caretIcon = computed(() =>
 	isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"]
 );
 </script>
+
+<template>
+	<div class="border-b border-solid border-brand-gray-2 py-5">
+		<div
+			class="flex cursor-pointer flex-wrap items-center justify-between"
+			role="button"
+			@click="open"
+		>
+			<h3 class="text-base font-normal">{{ header }}</h3>
+
+			<font-awesome-icon :icon="caretIcon" />
+		</div>
+		<div v-if="isOpen" class="mt-5 w-full">
+			<slot><p>Whoops, somebody forgot to populate me!</p> </slot>
+		</div>
+	</div>
+</template>

@@ -45,7 +45,7 @@ import { computed, type PropType, ref } from "vue";
 
 import type { Artwork } from "@/api/types";
 
-import ArtworkCardHoverModal from "@/components/ArtworkResults/ArtworkCardHoverModal.vue";
+import { ArtworkModalHover } from "@/components/ArtworkResults/ArtworkGallery";
 
 const hover = ref<boolean>(false);
 
