@@ -1,7 +1,7 @@
 import { nextTick } from "vue";
 import { render, screen } from "@testing-library/vue";
 
-import TheHeadline from "@/components/ArtworkSearch/Headline.vue";
+import TheHeadline from "@/components/Shared/Headline.vue";
 
 describe("TheHeadline", () => {
 	beforeEach(() => {
