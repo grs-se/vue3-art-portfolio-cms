@@ -5,7 +5,7 @@ import { createTestingPinia } from "@pinia/testing";
 import { useRoute } from "vue-router";
 vi.mock("vue-router");
 
-import TheSubnav from "@/components/Navigation/TheSubnav.vue";
+import TheSubnav from "@/components/Navigation/SubNav.vue";
 import { useArtworksStore } from "@/stores/artworks";
 
 const useRouteMock = useRoute as Mock;

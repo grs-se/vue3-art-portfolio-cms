@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
+import { storeToRefs } from "pinia";
 
-import { useUserMovementsStore } from "@/stores/userMovements";
+import { useAuthStore } from "@/stores";
+
+const authStore = useAuthStore();
+const { user } = storeToRefs(authStore);
 
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "@/components/Navigation/ProfileImage.vue";
-import TheSubnav from "@/components/Navigation/TheSubnav.vue";
+import Subnav from "@/components/Navigation/SubNav.vue";
 import HamburgerMenu from "@/components/Navigation/HamburgerMenu.vue";
 // import SideNav from "@/components/Navigation/SideNav.vue";
 
@@ -19,14 +23,14 @@ const menuItems = ref([
 	{ text: "Contact", url: "/" },
 ]);
 
-const userStore = useUserMovementsStore();
-const LOGIN_USER = userStore.LOGIN_USER;
-const isLoggedIn = computed(() => userStore.isLoggedIn);
+const isLoggedIn = computed(() => user.value);
 const headerHeightClass = computed(() => ({
 	"h-16": !isLoggedIn.value,
 	"h-32": isLoggedIn.value,
 }));
 const isActive = ref(false);
+
+const toggleLoginModal = () => {};
 </script>
 
 <template>
@@ -67,13 +71,13 @@ const isActive = ref(false);
 				<div class="ml-auto flex h-full items-center">
 					<profile-image v-if="isLoggedIn" />
 					<router-link v-else to="/LoginRegister">
-						<action-button text="Sign in" @click="LOGIN_USER" />
+						<action-button text="Sign in" @click="toggleLoginModal" />
 					</router-link>
 				</div>
 			</div>
 
-			<!-- <the-subnav /> -->
-			<the-subnav v-if="isLoggedIn" />
+			<!-- <SubNav /> -->
+			<SubNav v-if="isLoggedIn" />
 			<!-- <side-nav v-if="isActive" /> -->
 		</div>
 	</header>

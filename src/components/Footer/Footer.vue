@@ -26,9 +26,10 @@ const footerMenuGroups = ref([
 		header: "Products",
 		url: "/",
 		listItems: [
-			{ item: "Print", url: "/gallery" },
-			{ item: "NFT", url: "/gallery" },
+			{ item: "Drawings", url: "/gallery" },
 			{ item: "Objects", url: "/gallery" },
+			{ item: "Painting", url: "/gallery" },
+			{ item: "Print", url: "/gallery" },
 		],
 	},
 ]);

@@ -19,6 +19,8 @@ module.exports = {
 	},
 	env: {
 		"vitest-globals/env": true,
+		"vue/setup-compiler-macros": true,
+		"vue/multi-word-component-names": false,
 	},
 	rules: {
 		"prettier/prettier": [

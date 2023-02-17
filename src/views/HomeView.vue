@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import TheHero from "@/components/ArtworkSearch/TheHero.vue";
+import TheHero from "@/components/ArtworkSearch/Hero.vue";
 // import BlogPosts from "@/components/BlogPosts/BlogPosts.vue";
 // import SpotLight from "@/components/ArtworkResults/ArtworkSearch/SpotLight.vue";
 // import ArtworkGallery from "@/components/ArtworkResults/ArtworkGallery.vue";
