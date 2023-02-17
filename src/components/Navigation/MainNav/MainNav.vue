@@ -6,7 +6,7 @@ import { useAuthStore } from "@/stores";
 import {
 	MainNavAccountItems,
 	MainNavLinks,
-	MainNavHamburgerMenu,
+	MainNavHamburger,
 	MainNavSiteTitle,
 } from "@/components/Navigation/MainNav";
 import { SubNav } from "@/components/Navigation/SubNav";
@@ -27,7 +27,7 @@ const navHeightClass = computed(() => ({
 			<div
 				class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
 			>
-				<MainNavHamburgerMenu />
+				<MainNavHamburger />
 				<MainNavSiteTitle />
 				<MainNavLinks />
 				<MainNavAccountItems />

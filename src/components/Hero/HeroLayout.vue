@@ -6,7 +6,7 @@
 				<slot></slot>
 			</div>
 
-			<slot name="hero"></slot>
+			<slot name="hero-image"></slot>
 
 			<div class="col-span-1 col-start-12"></div>
 		</div>

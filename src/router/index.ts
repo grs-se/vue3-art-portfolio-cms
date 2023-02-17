@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import ArtistStatementView from "@/views/ArtistStatementView.vue";
 import ArtworkResultsView from "@/views/ArtworkResultsView.vue";
 import ArtworkView from "@/views/ArtworkView.vue";
-import HomeView from "@/views/Home.vue";
+import HomeView from "@/views/HomeView.vue";
 // import GalleryView from "@/views/GalleryView.vue";
 import ResearchView from "@/views/ResearchView.vue";
 import TextResultsView from "@/views/TextResultsView.vue";

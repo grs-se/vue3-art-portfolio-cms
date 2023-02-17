@@ -14,7 +14,7 @@ const actionClasses = computed(() => {
 
 const changeTitle = () => {
 	interval.value = setInterval(() => {
-		const actions = ["Artist", "Programmer", "Landscaping"];
+		const actions = ["Artist", "Web-Developer", "Landscaping"];
 		action.value = nextElementInList(actions, action.value);
 	}, 3000);
 };
@@ -28,10 +28,10 @@ onBeforeUnmount(() => {
 	<section class="mb-24">
 		<h1 class="hero-header mb-10 font-normal">
 			<span>George Rice-Smith</span>
-			<!-- <span :class="actionClasses">{{ action }}</span> -->
 			<br />
+			<span :class="actionClasses">{{ action }}</span>
 		</h1>
-		<h2 class="text-3xl font-light">Artist based in London, UK</h2>
+		<!-- <h2 class="text-3xl font-light">Artist</h2> -->
 	</section>
 </template>
 
@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
 	color: #1a73e8;
 }
 
-.programmer {
+.web-developer {
 	color: #34a853;
 }
 
