@@ -55,6 +55,10 @@ button {
 	/* @apply flex h-full bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white; */
 }
 
+.tertiary {
+	@apply rounded-sm bg-transparent px-4 py-2 text-brand-blue-1 hover:border hover:border-brand-blue-1;
+	/* @apply flex h-full bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white; */
+}
 .alert-danger {
 	@apply flex h-5 w-5 items-center justify-center rounded-none border-1 border-red-500 bg-white px-1.5 text-3xl font-light text-red-500 hover:bg-red-300;
 }

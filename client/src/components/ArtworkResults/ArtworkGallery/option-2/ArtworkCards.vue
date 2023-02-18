@@ -1,8 +1,25 @@
 <script lang="ts" setup>
 import { useArtworksStore } from "@/stores/artworks";
+import { computed, onMounted } from "vue";
 // import CloudImage from "@/components/CloudImage/CloudImage.vue";
 
-import { computed, onMounted } from "vue";
+const props = defineProps({
+	imageCover: {
+		type: String,
+	},
+	title: {
+		type: String,
+	},
+	medium: {
+		type: String,
+	},
+	dimensions: {
+		type: String,
+	},
+	date: {
+		type: String,
+	},
+});
 
 const artworksStore = useArtworksStore();
 onMounted(artworksStore.FETCH_ARTWORKS);

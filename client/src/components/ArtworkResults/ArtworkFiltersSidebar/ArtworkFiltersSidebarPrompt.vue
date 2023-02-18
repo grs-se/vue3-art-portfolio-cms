@@ -4,7 +4,7 @@
 		<div class="flex items-center text-sm">
 			<action-button
 				text="Clear Filters"
-				type="secondary"
+				btn="tertiary"
 				@click="userStore.CLEAR_USER_ARTWORK_FILTER_SELECTIONS"
 			/>
 		</div>

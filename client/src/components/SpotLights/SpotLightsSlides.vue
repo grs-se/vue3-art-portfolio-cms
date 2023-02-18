@@ -3,13 +3,11 @@ import Spotlight from "@/components/SpotLights/SpotLightsCard.vue";
 </script>
 
 <template>
-	<Spotlight
-		class="mt-10 flex w-max flex-row justify-center overflow-y-hidden pb-16"
-	>
+	<Spotlight class="flex w-max flex-row">
 		<template #default="{ imageCover, title, medium, description, categories }">
 			<router-link
 				to="/gallery"
-				class="mx-5 flex h-auto max-w-sm flex-col rounded-lg border bg-white"
+				class="flex h-auto max-w-sm flex-col rounded-lg border bg-white"
 			>
 				<img :src="imageCover" class="h-64 content-start object-contain" />
 
