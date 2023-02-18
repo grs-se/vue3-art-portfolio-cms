@@ -1,6 +1,7 @@
 *.env
-server/src/assets/data
-server/src/uploads/
+server/dev-data/
+server/uploads/
+server/tmp/
 # Logs
 logs
 *.log
@@ -9,6 +10,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+.gitignore
 
 node_modules
 .DS_Store
