@@ -1,5 +1,7 @@
 <template>
-	<div class="mx-auto flex items-center justify-center p-2 xl:h-80 xl:w-auto">
+	<div
+		class="mx-auto flex items-center justify-center p-2 xl:max-h-80 xl:w-auto"
+	>
 		<figure
 			@mouseover="hover = true"
 			@mouseleave="hover = false"

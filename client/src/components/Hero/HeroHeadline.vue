@@ -29,9 +29,9 @@ onBeforeUnmount(() => {
 		<h1 class="hero-header mb-10 font-normal">
 			<span>George Rice-Smith</span>
 			<br />
-			<span :class="actionClasses">{{ action }}</span>
+			<!-- <span :class="actionClasses">{{ action }}</span> -->
 		</h1>
-		<!-- <h2 class="text-3xl font-light">Artist</h2> -->
+		<h2 class="text-3xl font-light">Artist based in London, UK</h2>
 	</section>
 </template>
 
