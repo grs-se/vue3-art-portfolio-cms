@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
 			<br />
 			<!-- <span :class="actionClasses">{{ action }}</span> -->
 		</h1>
-		<h2 class="text-3xl font-light">Artist based in London, UK</h2>
+		<h2 class="text-3xl font-light">Paintings and Drawings</h2>
 	</section>
 </template>
 
