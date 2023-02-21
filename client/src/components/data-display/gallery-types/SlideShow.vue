@@ -13,9 +13,7 @@ const spotlights = computed(() => artworksStore.ARTWORK_SPOTLIGHTS);
 
 <template>
 	<section>
-		<ul
-			class="mt-10 flex w-max flex-row justify-center overflow-y-hidden pb-16"
-		>
+		<ul class="mt-10 flex w-max flex-row justify-center overflow-x-clip pb-16">
 			<li v-for="spotlight in spotlights" :key="spotlight.id" class="slide">
 				<router-link
 					to="/gallery"
