@@ -20,15 +20,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, type PropType, ref } from "vue";
+import { type PropType } from "vue";
 
 import type { Artwork } from "@/api/types";
 
-// import { ArtworkModalHover } from "@/components/ArtworkResults/ArtworkGallery";
-
-// const hover = ref<boolean>(false);
-
-const props = defineProps({
+defineProps({
 	artwork: {
 		type: Object as PropType<Artwork>,
 		required: true,
@@ -44,25 +40,4 @@ const props = defineProps({
 // 		tooltip.style.left = x + 20 + "px";
 // 	};
 // };
-
-// const artworkPageLink = computed(() => `/artworks/results/${props.artwork.id}`);
 </script>
-
-<!-- <template>
-	<artwork-cards>
-		<template #default="{ imageCover, title }">
-			<section class="max-w-80 flex max-h-80 flex-col bg-white">
-				<figure>
-					<img :src="imageCover" alt="" class="h-60 w-auto" />
-				</figure>
-				<figcaption class="hidden bg-white">
-					<h3>{{ title }}</h3>
-				</figcaption>
-			</section>
-		</template>
-	</artwork-cards>
-</template>
-
-<script lang="ts" setup>
-import { ArtworkCards } from "@/components/ArtworkResults/ArtworkGallery";
-</script> -->
