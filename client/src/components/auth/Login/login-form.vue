@@ -78,7 +78,7 @@ async function onSubmit(values) {
 
 <style scoped>
 .login-form {
-	@apply w-full space-y-4 rounded-md bg-white p-6 shadow dark:border dark:border-gray-700 dark:bg-gray-800 sm:max-w-md sm:p-8 md:mt-0 md:space-y-6;
+	@apply w-full space-y-4 rounded-md bg-white p-6 shadow sm:max-w-md sm:p-8 md:mt-0 md:space-y-6;
 }
 .form__input {
 	height: 100%;
