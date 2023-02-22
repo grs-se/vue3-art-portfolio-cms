@@ -15,6 +15,7 @@ const props = defineProps({
 			return [
 				"primary",
 				"secondary",
+				"tertiary",
 				"alert-success",
 				"alert-danger",
 				"slideshow",

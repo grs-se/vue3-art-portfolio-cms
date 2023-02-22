@@ -5,7 +5,7 @@
 			<action-button
 				text="Clear Filters"
 				btn="tertiary"
-				@click="userStore.CLEAR_USER_ARTWORK_FILTER_SELECTIONS"
+				@click="userMovementsStore.CLEAR_USER_ARTWORK_FILTER_SELECTIONS"
 			/>
 		</div>
 	</div>
@@ -16,5 +16,5 @@ import ActionButton from "@/components/Shared/ActionButton.vue";
 
 import { useUserMovementsStore } from "@/stores/userMovements";
 
-const userStore = useUserMovementsStore();
+const userMovementsStore = useUserMovementsStore();
 </script>

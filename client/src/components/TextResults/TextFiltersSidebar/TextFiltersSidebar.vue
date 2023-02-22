@@ -13,7 +13,7 @@
 			<text-filters-sidebar-checkbox-group
 				header="Categories"
 				:unique-values="UNIQUE_TEXT_CATEGORIES"
-				:action="userStore.ADD_SELECTED_TEXT_CATEGORIES"
+				:action="userMovementsStore.ADD_SELECTED_TEXT_CATEGORIES"
 			/>
 		</section>
 	</div>
@@ -33,5 +33,5 @@ const UNIQUE_TEXT_CATEGORIES = computed(
 	() => textsStore.UNIQUE_TEXT_CATEGORIES
 );
 
-const userStore = useUserMovementsStore();
+const userMovementsStore = useUserMovementsStore();
 </script>

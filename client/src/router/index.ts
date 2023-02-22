@@ -43,7 +43,7 @@ const routes = [
 	},
 	{
 		path: "/text",
-		name: "Text",
+		name: "TextResults",
 		component: TextResultsView,
 	},
 	{
