@@ -1,57 +1,59 @@
-const express = require("express");
-const path = require("path");
-const morgan = require("morgan");
-const rateLimit = require("express-rate-limit");
-const { csp } = require("./utils/helmet_csp_config");
-const mongoSanitize = require("express-mongo-sanitize");
-const xss = require("xss-clean");
-const hpp = require("hpp");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const fileUpload = require("express-fileupload");
-const compression = require("compression");
+const express = require('express');
+const path = require('path');
+const morgan = require('morgan');
+const rateLimit = require('express-rate-limit');
+const { csp } = require('./utils/helmet_csp_config');
+const mongoSanitize = require('express-mongo-sanitize');
+const xss = require('xss-clean');
+const hpp = require('hpp');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+const fileUpload = require('express-fileupload');
+const compression = require('compression');
 
-const AppError = require("./utils/appError");
-const globalErrorHandler = require("./controllers/errorController");
+const AppError = require('./utils/appError');
+const globalErrorHandler = require('./controllers/errorController');
 
 const app = express();
 
 // 1) GLOBAL MIDDLEWARES
 
 // Implement CORS
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: '*' }));
 
 // Set security HTTP headers
 csp(app);
 
 // Serving static files
-app.use("/images/artworks", express.static(path.join(__dirname, "images")));
-app.use(express.static(path.join(__dirname, "dist")));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Use temp file storage
 app.use(
 	fileUpload({
-		useTempFiles: true
+		useTempFiles: true,
 	})
 );
 
 // Development logging
-if (process.env.NODE_ENV === "development") {
-	app.use(morgan("dev"));
+if (process.env.NODE_ENV === 'development') {
+	app.use(morgan('dev'));
 }
 
 // Limit requests from same API
 const limiter = rateLimit({
 	max: 10000, // 1000 for development
 	windowMs: 60 * 60 * 1000,
-	message: "Too many requests from this IP, please try again in an hour!"
+	message: 'Too many requests from this IP, please try again in an hour!',
 });
 // limits requests to all routes starting with '/'
-app.use("/api", limiter);
+app.use('/api', limiter);
 
 // Body parser, reading data from body into req.body
-app.use(express.json({ limit: "10kb" }));
-app.use(express.urlencoded({ extended: true, limit: "10kb" }));
+// app.use(express.json({ limit: '10kb' }));
+// app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
@@ -64,13 +66,13 @@ app.use(xss());
 app.use(
 	hpp({
 		whitelist: [
-			"price",
-			"ratingsQuantity",
-			"ratingsAverage",
-			"date",
-			"medium",
-			"dimensions"
-		]
+			'price',
+			'ratingsQuantity',
+			'ratingsAverage',
+			'date',
+			'medium',
+			'dimensions',
+		],
 	})
 );
 
@@ -84,9 +86,9 @@ app.use((req, res, next) => {
 });
 
 // ROUTES
-require("./startup/routes")(app);
+require('./startup/routes')(app);
 
-app.all("*", (req, res, next) => {
+app.all('*', (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
