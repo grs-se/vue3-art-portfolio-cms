@@ -1,5 +1,7 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
+import VueGtag from "vue-gtag";
+import { VueCookieNext } from "vue-cookie-next";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -26,8 +28,19 @@ library.add(faAngleDown, faAngleUp, faSearch, faUser);
 
 const pinia = createPinia();
 
-createApp(App)
-	.use(pinia)
-	.use(router)
-	.component("font-awesome-icon", FontAwesomeIcon)
-	.mount("#app");
+const app = createApp(App);
+app.use(router);
+app.use(VueCookieNext);
+app.use(
+	VueGtag,
+	{
+		config: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
+	},
+	router
+);
+app.use(pinia);
+app.component("font-awesome-icon", FontAwesomeIcon);
+
+app.provide("gtag", app.config.globalProperties.$gtag);
+
+app.mount("#app");

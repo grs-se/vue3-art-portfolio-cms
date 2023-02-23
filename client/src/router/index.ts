@@ -1,10 +1,13 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+// import { trackRouter } from "vue-gtag-next";
+
 import ArtistStatementView from "@/views/ArtistStatementView.vue";
 import ArtworkResultsView from "@/views/ArtworkResultsView.vue";
 import ArtworkView from "@/views/ArtworkView.vue";
 import HomeView from "@/views/HomeView.vue";
 // import GalleryView from "@/views/GalleryView.vue";
+import CookiePolicy from "@/components/Shared/CookiePolicy.vue";
 import ResearchView from "@/views/ResearchView.vue";
 import TextResultsView from "@/views/TextResultsView.vue";
 import TextView from "@/views/TextView.vue";
@@ -56,6 +59,11 @@ const routes = [
 		name: "LoginRegister",
 		component: LoginRegisterView,
 	},
+	{
+		path: "/cookiesPolicy",
+		name: "CookiePolicy",
+		component: CookiePolicy,
+	},
 ];
 
 const router = createRouter({
@@ -65,5 +73,7 @@ const router = createRouter({
 		return { top: 0, left: 0, behavior: "smooth" };
 	},
 });
+
+// trackRouter(router);
 
 export default router;

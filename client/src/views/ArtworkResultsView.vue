@@ -2,7 +2,7 @@
 	<!-- Layout Option 1: -->
 	<div class="flex w-full flex-nowrap xs:flex-col md:flex-row">
 		<artwork-filters-sidebar />
-		<artwork-gallery /> -->
+		<artwork-gallery />
 	</div>
 
 	<!-- Layput Option 2: Activate for alternative layout -->
