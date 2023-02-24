@@ -1,19 +1,24 @@
 @import url(//db.onlinewebfonts.com/c/0fac23294cabd9471f8ca7816bf12eae?family=FuturaPTW02-Book);
+/* @import "./base.css"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* *,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: inherit;
-	box-sizing: inherit;
+@font-face {
+	font-family: "FuturaPTW02-Book";
+	src: url("//db.onlinewebfonts.com/t/0fac23294cabd9471f8ca7816bf12eae.eot");
+	src: url("//db.onlinewebfonts.com/t/0fac23294cabd9471f8ca7816bf12eae.eot?#iefix")
+			format("embedded-opentype"),
+		url("//db.onlinewebfonts.com/t/0fac23294cabd9471f8ca7816bf12eae.woff2")
+			format("woff2"),
+		url("//db.onlinewebfonts.com/t/0fac23294cabd9471f8ca7816bf12eae.woff")
+			format("woff"),
+		url("//db.onlinewebfonts.com/t/0fac23294cabd9471f8ca7816bf12eae.ttf")
+			format("truetype"),
+		url("//db.onlinewebfonts.com/t/0fac23294cabd9471f8ca7816bf12eae.svg#FuturaPTW02-Book")
+			format("svg");
 }
 
-html {
-	font-size: 62.5%;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-} */
+body {
+	font-family: "FuturaPTW02-Book", Fallback, sans-serif;
+}
