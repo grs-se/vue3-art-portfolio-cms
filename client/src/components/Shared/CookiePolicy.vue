@@ -1,8 +1,10 @@
 <template>
-	<div>
-		<h1>Cookie Policy</h1>
-		<div>
-			<h2>This site uses cookies for Google Analytics, you can disable it here:</h2>
+	<div class="flex flex-col items-center justify-center py-20">
+		<h1 class="text-xl">Cookie Policy</h1>
+		<div class="mt-4">
+			<p>This site uses cookies for Google Analytics.</p>
+			<br />
+			<p>You can disable it here:</p>
 			<input type="checkbox" v-model="allowCookies" />
 		</div>
 		<!-- 

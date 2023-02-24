@@ -1,13 +1,16 @@
 <template>
-	<div class="container absolute bottom-0 rounded-md bg-white px-5 py-5">
+	<div class="container fixed bottom-0 rounded-md bg-white px-5 py-3">
 		<transition name="slide">
 			<div class="banner-container">
 				<p>
-					This site uses 🍪. For more details click
-					<router-link to="cookiesPolicy" class="text-blue">here</router-link>
+					This site uses 🍪's. For more details click
+					<router-link to="cookiesPolicy" class="text-blue-500 underline"
+						>here</router-link
+					>.
 				</p>
-
-				<button @click="okBannerClicked">OK</button>
+				<button @click="okBannerClicked" class="text-blue-500 underline">
+					OK
+				</button>
 			</div>
 		</transition>
 	</div>
@@ -19,9 +22,12 @@ import useCookies from "@/composables/useCookies";
 
 const gtag = inject<any>("gtag");
 const { showBanner, okClicked } = useCookies(gtag);
-const okBannerClicked = () => okClicked();
+const okBannerClicked = () => {
+	okClicked();
+	console.log(okClicked());
+};
 showBanner.value;
-okBannerClicked;
+// okBannerClicked;
 </script>
 
 <style scoped>
